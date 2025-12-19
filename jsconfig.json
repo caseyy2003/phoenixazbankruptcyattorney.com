@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "/components/*": ["components/*"],
+        "/pages-sections/*": ["pages-sections/*"],
+        "/styles/*": ["styles/*"],
+        "/public/*": ["public/*"]
+      }
+    }
+  }
+  
