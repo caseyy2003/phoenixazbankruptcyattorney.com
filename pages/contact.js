@@ -40,13 +40,13 @@ export default function Home() {
           </p>
 
           <div className={classes.ctaRow}>
-            <Link href="/contact" passHref legacyBehavior>
+            <Link href="/contact"  legacyBehavior>
               <Button variant="contained">Contact</Button>
             </Link>
-            <Link href="/chapter-7" passHref legacyBehavior>
+            <Link href="/chapter-7"  legacyBehavior>
               <Button variant="outlined">Chapter 7</Button>
             </Link>
-            <Link href="/chapter-13" passHref legacyBehavior>
+            <Link href="/chapter-13"  legacyBehavior>
               <Button variant="outlined">Chapter 13</Button>
             </Link>
           </div>

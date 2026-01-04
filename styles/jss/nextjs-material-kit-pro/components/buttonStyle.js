@@ -29,14 +29,12 @@ const buttonStyle = {
     minWidth: "auto",
     backgroundColor: grayColor[0],
     color: whiteColor,
-    boxShadow:
-      "0 2px 2px 0 rgba(" +
-      hexToRgb(grayColor[0]) +
-      ", 0.14), 0 3px 1px -2px rgba(" +
-      hexToRgb(grayColor[0]) +
-      ", 0.2), 0 1px 5px 0 rgba(" +
-      hexToRgb(grayColor[0]) +
-      ", 0.12)",
+    boxShadow: "0 4px 10px rgba(0,0,0,0.15)",     // ← stronger base shadow
+     border: "none",
+     borderRadius: "3px",
+     position: "relative",
+     padding: "12px 30px",
+
     border: "none",
     borderRadius: "3px",
     position: "relative",
@@ -49,9 +47,11 @@ const buttonStyle = {
     willChange: "box-shadow, transform",
     transition:
       "box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
-    lineHeight: "1.42857143",
+    lineHeight: "1.25",
     textAlign: "center",
-    whiteSpace: "nowrap",
+    whiteSpace: "normal",
+    maxWidth: "44ch",
+    overflowWrap: "break-word",
     verticalAlign: "middle",
     touchAction: "manipulation",
     cursor: "pointer",
@@ -106,48 +106,45 @@ const buttonStyle = {
   },
   primary: {
     backgroundColor: primaryColor[0],
+    /* stronger default shadow (ambient + core) */
     boxShadow:
-      "0 2px 2px 0 rgba(" +
+      "0 6px 12px -4px rgba(" +
       hexToRgb(primaryColor[0]) +
-      ", 0.14), 0 3px 1px -2px rgba(" +
-      hexToRgb(primaryColor[0]) +
-      ", 0.2), 0 1px 5px 0 rgba(" +
-      hexToRgb(primaryColor[0]) +
-      ", 0.12)",
+      ",0.35), 0 10px 20px -4px rgba(" +
+      hexToRgb(blackColor) +
+      ",0.24)",
+    transition: "transform 0.15s ease, box-shadow 0.2s ease",
     "&:hover,&:focus": {
+      transform: "translateY(-2px)",
       backgroundColor: primaryColor[0],
       boxShadow:
-        "0 14px 26px -12px rgba(" +
+        "0 8px 16px -6px rgba(" +
         hexToRgb(primaryColor[0]) +
-        ", 0.42), 0 4px 23px 0px rgba(" +
+        ",0.45), 0 18px 38px -8px rgba(" +
         hexToRgb(blackColor) +
-        ", 0.12), 0 8px 10px -5px rgba(" +
-        hexToRgb(primaryColor[0]) +
-        ", 0.2)"
+        ",0.32)"
     }
   },
   secondary: {
     color: "rgba(" + hexToRgb(blackColor) + ",.87)",
     backgroundColor: secondaryColor[0],
     boxShadow:
-      "0 2px 2px 0 rgba(" +
+      "0 6px 12px -4px rgba(" +
       hexToRgb(secondaryColor[0]) +
-      ",.14), 0 3px 1px -2px rgba(" +
-      hexToRgb(secondaryColor[0]) +
-      ",.2), 0 1px 5px 0 rgba(" +
-      hexToRgb(secondaryColor[0]) +
-      ",.12)",
+      ",0.35), 0 10px 20px -4px rgba(" +
+      hexToRgb(blackColor) +
+      ",0.24)",
+    transition: "transform 0.15s ease, box-shadow 0.2s ease",
     "&:hover,&:focus": {
-      boxShdow:
-        "0 14px 26px -12px rgba(" +
+      transform: "translateY(-2px)",
+      backgroundColor: secondaryColor[0],
+      boxShadow:
+        "0 8px 16px -6px rgba(" +
         hexToRgb(secondaryColor[0]) +
-        ",.42), 0 4px 23px 0 rgba(" +
+        ",0.45), 0 18px 38px -8px rgba(" +
         hexToRgb(blackColor) +
-        ",.12), 0 8px 10px -5px rgba(" +
-        hexToRgb(secondaryColor[0]) +
-        ",.2)",
-      color: "rgba(" + hexToRgb(blackColor) + ",.87)",
-      backgroundColor: grayColor[19]
+        ",0.32)",
+      color: "rgba(" + hexToRgb(blackColor) + ",.87)"
     }
   },
   info: {

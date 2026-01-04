@@ -5,11 +5,11 @@ import PerfPageLayout from "/components/PerfPageLayout";
 import Button from "/components/CustomButtons/Button.js";
 import LcpImagePreload from "/components/LcpImagePreload";
 import JsonLd from "/components/JsonLd";
-import HomePage from "../content/HomePage.js";
+import TucsonHomePage from "../../content/TucsonHomePage.js";
 import AzAreas from "/components/AzAreas/AzAreas.js";
 
 const HEADER_HEIGHT = 52;
-const LocalNavBar = dynamic(() => import("../components/LocalNavBar/LocalNavBar.js"), {
+const LocalNavBar = dynamic(() => import("../../components/LocalNavBar/LocalNavBar.js"), {
   ssr: true,
   loading: () => <nav style={{ height: HEADER_HEIGHT }} />,
 });
@@ -23,8 +23,8 @@ const PAGE_URL = "https://www.usbankruptcyhelp.com/bankruptcy-info-by-state/mary
 const PRIMARY_IMAGE_ID = `${PAGE_URL}#hero-image`;
 
 // hero assets
-const HERO_WEBP = "/img/phoenix-arizona-desert-skyline-hero-background.webp";
-const HERO_JPG = "/img/phoenix-arizona-desert-skyline-hero-background.jpg";
+const HERO_WEBP = "/img/prescott-az-bankruptcy-lawyer-hero-courthouse-plaza-thumb-butte-yavapai-us-bankruptcy-help.webp";
+const HERO_JPG = "/img/prescott-az-bankruptcy-lawyer-hero-courthouse-plaza-thumb-butte-yavapai-us-bankruptcy-help.jpg";
 
 // dates
 const PUBLISHED_ISO = "2025-12-12T00:00:00-07:00";
@@ -352,14 +352,14 @@ export default function MarylandBankruptcyLawsPage() {
   return (
     <PerfPageLayout
       title="Maryland Bankruptcy Laws: Essential Guide & Process"
-      description="Understand Maryland bankruptcy laws, court process, costs and protections with this clear guide for individuals and small businesses."
+      description="Wide hero background showing Mesa, Arizona at sunrise with saguaro cacti in the foreground and the Superstition Mountains in the distance."
       canonical={PAGE_URL}
       hero={{
         srcWebp: HERO_WEBP,
         srcJpg: HERO_JPG,
-        width: 1000,
-        height: 667,
-        alt: 'Wide hero image showing the Maryland state flag in the background with the heading “Bankruptcy in Maryland” in bold navy text and the US Bankruptcy Help logo in an oval badge in the lower right corner.',
+        width: 900,
+        height: 600,
+        alt: 'Wide hero background image of Prescott, Arizona featuring Courthouse Plaza and downtown landmarks with pine-covered hills near Thumb Butte in the background, representing local bankruptcy legal help for Prescott residents.',
         priority: true,
 
         // DROP-IN CHANGE: logo + button inside hero.cta
@@ -384,7 +384,7 @@ export default function MarylandBankruptcyLawsPage() {
       <JsonLd id="md-bankruptcy-laws-faq" data={faqSchema} />
 
       <LocalNavBar />
-      <HomePage />
+      <TucsonHomePage />
       <AzAreas />
     </PerfPageLayout>
   );
