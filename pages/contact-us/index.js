@@ -1,30 +1,33 @@
 /* eslint-disable */
 import React from "react";
+import dynamic from "next/dynamic";
 import PerfPageLayout from "/components/PerfPageLayout";
 import Button from "/components/CustomButtons/Button.js";
 import LcpImagePreload from "/components/LcpImagePreload";
 import JsonLd from "/components/JsonLd";
-
-import HomePage from "../content/HomePage.js";
+import ContactUs from "../../content/ContactUs.js";
 import AzAreas from "/components/AzAreas/AzAreas.js";
 
 const HEADER_HEIGHT = 52;
 
-const SITE_URL = "https://www.phoenixazbankruptcyattorney.com";
-const PAGE_URL = "https://www.phoenixazbankruptcyattorney.com/";
 
+/* ---------- Canonicals & shared IDs ---------- */
+
+const SITE_URL = "https://www.usbankruptcyhelp.com";
+const PAGE_URL = "https://www.usbankruptcyhelp.com/bankruptcy-info-by-state/maryland";
+
+// hero image id used across schemas
 const PRIMARY_IMAGE_ID = `${PAGE_URL}#hero-image`;
 
+// hero assets
 const HERO_WEBP = "/img/bankruptcy-technical-topic.webp";
 const HERO_JPG = "/img/bankruptcy-technical-topic.jpg";
 
-const PUBLISHED_ISO = "2017-05-22T00:00:00-07:00";
-const MODIFIED_ISO = "2026-01-10T00:00:00-07:00";
+// dates
+const PUBLISHED_ISO = "2025-12-12T00:00:00-07:00";
+const MODIFIED_ISO = "2025-12-12T00:00:00-07:00";
 
-const DOC_CHECKLIST_WEBP = "/img/phoenix-bankruptcy-lawyer-consultation-document-checklist.webp";
-const DOC_CHECKLIST_ID = `${PAGE_URL}#img-phoenix-consultation-document-checklist`;
-const DOC_CHECKLIST_ALT =
-  "Checklist graphic showing documents to gather before meeting with a Phoenix bankruptcy lawyer, including recent pay stubs, tax returns, bank statements, car loan or mortgage statements, and recent creditor notices or lawsuit papers.";
+/* ---------- DROP-IN: Inline SVG Logo Component (lives in this file) ---------- */
 
 const YontzLawLogo = ({ width = 280 }) => (
   <svg
@@ -35,6 +38,7 @@ const YontzLawLogo = ({ width = 280 }) => (
     role="img"
     aria-label="Yontz Law, PLLC"
   >
+    {/* Badge */}
     <g transform="translate(80,120)">
       <circle r="76" stroke="#caa24a" strokeWidth="10" fill="none" />
       <circle r="66" stroke="rgba(255,255,255,0.25)" strokeWidth="2" fill="none" />
@@ -58,6 +62,7 @@ const YontzLawLogo = ({ width = 280 }) => (
       <circle cx="56" cy="-52" r="8" fill="#caa24a" />
     </g>
 
+    {/* Wordmark */}
     <g transform="translate(190,92)">
       <text
         x="0"
@@ -87,11 +92,13 @@ const YontzLawLogo = ({ width = 280 }) => (
         fontSize="22"
         fill="#e5e7eb"
       >
-        Arizona Bankruptcy Lawyers
+        Phoenix Bankruptcy Lawyers
       </text>
     </g>
   </svg>
 );
+
+/* ---------- DROP-IN: Hero CTA wrapper that includes logo + button ---------- */
 
 const HeroCtaWithLogo = () => (
   <div
@@ -108,10 +115,14 @@ const HeroCtaWithLogo = () => (
     </div>
 
     <Button color="primary" size="lg" href="/consultation-request" style={{ marginTop: 0 }}>
-      <strong>Request a Free Bankruptcy Consult</strong>
+      <strong>
+        Request a Free Bankruptcy Consult
+      </strong>
     </Button>
   </div>
 );
+
+/* ---------- Image graph (Maryland-specific) ---------- */
 
 const imageSchemas = {
   "@context": "https://schema.org",
@@ -119,30 +130,47 @@ const imageSchemas = {
     {
       "@type": "ImageObject",
       "@id": PRIMARY_IMAGE_ID,
-      "name": "Phoenix, AZ Bankruptcy Lawyer — Hero",
+      "name": "Bankruptcy in Maryland — Hero",
       "description":
-        "Wide hero image for Arizona Bankruptcy Lawyers, branded for Yontz Law, PLLC in Phoenix, Arizona.",
+        "Wide hero background showing Arizona desert landscape with saguaro cacti, Phoenix skyline, and mountains at sunset.",
       "inLanguage": "en-US",
       "contentUrl": `${SITE_URL}${HERO_JPG}`,
       "thumbnailUrl": `${SITE_URL}${HERO_JPG}`,
       "representativeOfPage": true,
       "license": `${SITE_URL}/terms-and-conditions`,
-      "creator": { "@type": "Organization", "name": "Yontz Law, PLLC" },
+      "creator": { "@type": "Organization", "name": "US Bankruptcy Help" },
     },
     {
       "@type": "ImageObject",
-      "@id": DOC_CHECKLIST_ID,
-      "name": "Phoenix Bankruptcy Consultation Document Checklist",
-      "description": DOC_CHECKLIST_ALT,
-      "caption": "Document checklist to prepare for a Phoenix bankruptcy consultation.",
+      "@id": `${PAGE_URL}#img-maryland-beaver-teacher`,
+      "name": "Maryland Bankruptcy Beaver Teacher Illustration",
+      "description":
+        "Cartoon beaver teaching a class on “Bankruptcy in Maryland,” standing by a chalkboard with a Maryland state outline and the US Bankruptcy Help logo in the corner.",
+      "caption": "Playful beaver illustration teaching bankruptcy in Maryland, branded with the US Bankruptcy Help logo.",
       "inLanguage": "en-US",
-      "contentUrl": `${SITE_URL}${DOC_CHECKLIST_WEBP}`,
-      "thumbnailUrl": `${SITE_URL}${DOC_CHECKLIST_WEBP}`,
+      "contentUrl": `${SITE_URL}/img/maryland-bankruptcy-beaver-teacher-us-bankruptcy-help.webp`,
+      "thumbnailUrl": `${SITE_URL}/img/maryland-bankruptcy-beaver-teacher-us-bankruptcy-help.webp`,
       "license": `${SITE_URL}/terms-and-conditions`,
-      "creator": { "@type": "Organization", "name": "Yontz Law, PLLC" },
+      "creator": { "@type": "Organization", "name": "US Bankruptcy Help" },
+    },
+    {
+      "@type": "ImageObject",
+      "@id": `${PAGE_URL}#img-maryland-bankruptcy-basics`,
+      "name": "Maryland Bankruptcy Basics — Courts and Divisions",
+      "description":
+        "Infographic titled “Maryland Bankruptcy” showing a navy silhouette of the state of Maryland, the Maryland flag, bullet points about the exemption scheme, 4th Circuit and U.S. District Court for the District of Maryland, plus a note about two bankruptcy divisions and the US Bankruptcy Help logo at the bottom.",
+      "caption":
+        "Maryland bankruptcy basics infographic showing courts, divisions and Maryland map with US Bankruptcy Help branding.",
+      "inLanguage": "en-US",
+      "contentUrl": `${SITE_URL}/img/maryland-bankruptcy-basics-courts-divisions-us-bankruptcy-help.webp`,
+      "thumbnailUrl": `${SITE_URL}/img/maryland-bankruptcy-basics-courts-divisions-us-bankruptcy-help.webp`,
+      "license": `${SITE_URL}/terms-and-conditions`,
+      "creator": { "@type": "Organization", "name": "US Bankruptcy Help" },
     },
   ],
 };
+
+/* ---------- FAQ schema (MD) ---------- */
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -174,7 +202,7 @@ const faqSchema = {
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "Many people who file bankruptcy in Phoenix are trying to protect housing and reliable transportation. Whether you can keep a home or car depends on factors like Arizona bankruptcy exemptions, how much equity you have, whether you’re behind on payments, and which bankruptcy chapter you file. A consultation typically focuses on your current payment status, payoff amounts, and the protect-versus-catch-up strategy that best fits your goals.",
+          "Many people who file bankruptcy in Phoenix are trying to protect housing and reliable transportation. Whether you can keep a home or car depends on factors like Arizona exemption rules, how much equity you have, whether you’re behind on payments, and which bankruptcy chapter you file. A consultation typically focuses on your current payment status, payoff amounts, and the protect-versus-catch-up strategy that best fits your goals.",
       },
     },
     {
@@ -192,17 +220,20 @@ const faqSchema = {
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "Timing varies by chapter and by how quickly documents are gathered, but many cases follow a predictable flow: pre-filing credit counseling, filing the petition, attending the 341 meeting with the trustee (often by phone or video), completing the post-filing debtor education course, and then receiving a discharge in eligible cases. Your exact timeline depends on your case complexity, the chapter you file under, and any issues that need extra review.",
+          "Timing varies by chapter and by how quickly documents are gathered, but many cases follow a predictable flow: completing a pre-filing credit counseling course, filing the petition, attending the 341 meeting with the trustee (often by phone or video), completing the post-filing debtor education course, and then receiving a discharge in eligible cases. Your exact timeline depends on your case complexity, the chapter you file under, and any issues that need extra review.",
       },
     },
   ],
 };
 
+
+/* ---------- Site-wide schemas (unchanged, but reused) ---------- */
+
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": `${SITE_URL}#organization`,
-  "name": "Yontz Law, PLLC",
+  "@id": `${SITE_URL}/#organization`,
+  "name": "US Bankruptcy Help",
   "url": SITE_URL,
   "logo": {
     "@type": "ImageObject",
@@ -213,63 +244,59 @@ const orgSchema = {
   },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "4425 E Agave Rd Suite 106",
+    "streetAddress": "4425 E Agave Rd. Suite 110",
     "addressLocality": "Phoenix",
     "addressRegion": "AZ",
     "postalCode": "85044",
     "addressCountry": "US",
   },
-  "telephone": "+1-480-886-0339",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "help@usbankruptcyhelp.com",
+      "availableLanguage": ["English"],
+      "areaServed": "US",
+    },
+  ],
 };
 
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": `${SITE_URL}#website`,
+  "@id": `${SITE_URL}/#website`,
   "url": SITE_URL,
-  "name": "Arizona Bankruptcy Lawyers | Yontz Law, PLLC",
-  "publisher": { "@id": `${SITE_URL}#organization` },
-  "inLanguage": "en-US",
+  "name": "US Bankruptcy Help",
+  "publisher": { "@id": `${SITE_URL}/#organization` },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": `${SITE_URL}/search?q={search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
 };
 
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": `${SITE_URL}/about#casey-yontz`,
+  "@id": `${SITE_URL}/about-us#casey-yontz`,
   "name": "Casey Yontz",
   "jobTitle": "Bankruptcy Attorney",
-  "worksFor": { "@id": `${SITE_URL}#organization` },
-  "url": `${SITE_URL}/about`,
-  "inLanguage": "en-US",
+  "description": "Attorney with 18+ years of bankruptcy experience.",
+  "worksFor": { "@id": `${SITE_URL}/#organization` },
+  "url": `${SITE_URL}/about-us#casey-yontz`,
 };
 
-const legalServiceSchema = {
-  "@context": "https://schema.org",
-  "@type": "LegalService",
-  "@id": `${SITE_URL}#legalservice`,
-  "name": "Arizona Bankruptcy Lawyers | Yontz Law, PLLC",
-  "url": SITE_URL,
-  "telephone": "+1-480-886-0339",
-  "image": [{ "@id": PRIMARY_IMAGE_ID }],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "4425 E Agave Rd Suite 106",
-    "addressLocality": "Phoenix",
-    "addressRegion": "AZ",
-    "postalCode": "85044",
-    "addressCountry": "US",
-  },
-  "areaServed": [{ "@type": "City", "name": "Phoenix" }, { "@type": "State", "name": "Arizona" }],
-  "parentOrganization": { "@id": `${SITE_URL}#organization` },
-  "founder": { "@id": `${SITE_URL}/about#casey-yontz` },
-  "inLanguage": "en-US",
-};
+/* ---------- Breadcrumbs & page/article schema ---------- */
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "@id": `${PAGE_URL}#breadcrumb`,
-  "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": PAGE_URL }],
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE_URL}/` },
+    { "@type": "ListItem", "position": 2, "name": "Bankruptcy Info by State", "item": `${SITE_URL}/bankruptcy-info-by-state/` },
+    { "@type": "ListItem", "position": 3, "name": "Maryland Bankruptcy Laws", "item": PAGE_URL },
+  ],
 };
 
 const webPageSchema = {
@@ -277,32 +304,54 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `${PAGE_URL}#webpage`,
   "url": PAGE_URL,
-  "name": "Phoenix, AZ Bankruptcy Lawyer | Yontz Law, PLLC",
+  "name": "Maryland Bankruptcy Laws: Essential Guide & Process",
   "description":
-    "Trusted Phoenix bankruptcy lawyer at Yontz Law, PLLC. Get help with chapter 7 or chapter 13, stop garnishments, and request a free consultation.",
+    "Understand Maryland bankruptcy laws, court process, costs and protections with this clear guide for individuals and small businesses.",
   "inLanguage": "en-US",
   "breadcrumb": { "@id": `${PAGE_URL}#breadcrumb` },
-  "isPartOf": { "@id": `${SITE_URL}#website` },
-  "publisher": { "@id": `${SITE_URL}#organization` },
+  "isPartOf": { "@id": `${SITE_URL}/#website` },
+  "publisher": { "@id": `${SITE_URL}/#organization` },
   "primaryImageOfPage": { "@id": PRIMARY_IMAGE_ID },
   "datePublished": PUBLISHED_ISO,
   "dateModified": MODIFIED_ISO,
 };
 
-export default function PhoenixHome() {
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": `${PAGE_URL}#article`,
+  "mainEntityOfPage": { "@id": `${PAGE_URL}#webpage` },
+  "headline": "Maryland Bankruptcy Laws: Essential Guide & Process",
+  "name": "Maryland Bankruptcy Laws: Essential Guide & Process",
+  "description":
+    "Comprehensive overview of Maryland bankruptcy laws, including filing steps, court process, eligibility, costs, and life after bankruptcy.",
+  "inLanguage": "en-US",
+  "author": { "@id": `${SITE_URL}/about-us#casey-yontz` },
+  "publisher": { "@id": `${SITE_URL}/#organization` },
+  "isPartOf": { "@id": `${SITE_URL}/#website` },
+  "image": [{ "@id": PRIMARY_IMAGE_ID }],
+  "datePublished": PUBLISHED_ISO,
+  "dateModified": MODIFIED_ISO,
+  "isAccessibleForFree": true,
+};
+
+/* ---------- Page component ---------- */
+
+export default function Contact() {
   return (
     <PerfPageLayout
-      title="Phoenix, AZ Bankruptcy Lawyer | Yontz Law, PLLC"
-      description="Trusted Phoenix bankruptcy lawyer at Yontz Law, PLLC. Get help with chapter 7 or chapter 13, stop garnishments, and request a free consultation."
+      title="Maryland Bankruptcy Laws: Essential Guide & Process"
+      description="Wide hero background showing Mesa, Arizona at sunrise with saguaro cacti in the foreground and the Superstition Mountains in the distance."
       canonical={PAGE_URL}
       hero={{
         srcWebp: HERO_WEBP,
         srcJpg: HERO_JPG,
         width: 900,
         height: 600,
-        alt:
-          "Wide hero image for Arizona Bankruptcy Lawyers branded for Yontz Law, PLLC in Phoenix, Arizona.",
+        alt: 'Wide hero background image of Tucson, Arizona with saguaro cacti in the foreground and the city skyline below the Santa Catalina Mountains at sunset, representing bankruptcy legal help for Tucson residents.',
         priority: true,
+
+        // DROP-IN CHANGE: logo + button inside hero.cta
         cta: <HeroCtaWithLogo />,
       }}
     >
@@ -313,16 +362,18 @@ export default function PhoenixHome() {
         preloadWidth={828}
       />
 
-      <JsonLd id="phoenix-home-image-graph" data={imageSchemas} />
-      <JsonLd id="phoenix-home-org" data={orgSchema} />
-      <JsonLd id="phoenix-home-website" data={websiteSchema} />
-      <JsonLd id="phoenix-home-author" data={personSchema} />
-      <JsonLd id="phoenix-home-legalservice" data={legalServiceSchema} />
-      <JsonLd id="phoenix-home-breadcrumb" data={breadcrumbSchema} />
-      <JsonLd id="phoenix-home-webpage" data={webPageSchema} />
-      <JsonLd id="phoenix-home-faq" data={faqSchema} />
+      {/* JSON-LD blocks */}
+      <JsonLd id="md-bankruptcy-laws-image-graph" data={imageSchemas} />
+      <JsonLd id="md-bankruptcy-laws-org" data={orgSchema} />
+      <JsonLd id="md-bankruptcy-laws-website" data={websiteSchema} />
+      <JsonLd id="md-bankruptcy-laws-author" data={personSchema} />
+      <JsonLd id="md-bankruptcy-laws-breadcrumb" data={breadcrumbSchema} />
+      <JsonLd id="md-bankruptcy-laws-webpage" data={webPageSchema} />
+      <JsonLd id="md-bankruptcy-laws-article" data={articleSchema} />
+      <JsonLd id="phx-bankruptcy-lawyer-faq" data={faqSchema} />
 
-      <HomePage />
+     
+      <ContactUs />
       <AzAreas />
     </PerfPageLayout>
   );

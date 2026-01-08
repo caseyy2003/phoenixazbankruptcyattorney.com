@@ -1,32 +1,30 @@
 /* eslint-disable */
 import React from "react";
-import dynamic from "next/dynamic";
+//import dynamic from "next/dynamic";
 import PerfPageLayout from "/components/PerfPageLayout";
 import Button from "/components/CustomButtons/Button.js";
 import LcpImagePreload from "/components/LcpImagePreload";
 import JsonLd from "/components/JsonLd";
-import PrescottHomePage from "../../content/PrescottHomePage.js";
+import AzBkExemptions from "../../content/AzBankruptcyExemptions.js";
 import AzAreas from "/components/AzAreas/AzAreas.js";
 
 const HEADER_HEIGHT = 52;
 
 const SITE_URL = "https://www.phoenixazbankruptcyattorney.com";
-const PAGE_URL = "https://www.phoenixazbankruptcyattorney.com/prescott-az-bankruptcy-lawyer";
+const PAGE_URL = "https://www.phoenixazbankruptcyattorney.com/arizona-bankruptcy-exemptions";
 
 const PRIMARY_IMAGE_ID = `${PAGE_URL}#hero-image`;
 
-const HERO_WEBP =
-  "/img/prescott-az-bankruptcy-lawyer-hero-courthouse-plaza-thumb-butte-yavapai-us-bankruptcy-help.webp";
-const HERO_JPG =
-  "/img/prescott-az-bankruptcy-lawyer-hero-courthouse-plaza-thumb-butte-yavapai-us-bankruptcy-help.jpg";
+const HERO_WEBP = "/img/bankruptcy-technical-topic.webp";
+const HERO_JPG = "/img/bankruptcy-technical-topic.jpg";
 
 const PUBLISHED_ISO = "2026-01-10T00:00:00-07:00";
 const MODIFIED_ISO = "2026-01-10T00:00:00-07:00";
 
-const DOC_CHECKLIST_WEBP = "/img/prescott-bankruptcy-consultation-document-checklist.webp";
-const DOC_CHECKLIST_ID = `${PAGE_URL}#img-prescott-consultation-document-checklist`;
-const DOC_CHECKLIST_ALT =
-  "Checklist graphic of documents to gather before speaking with a Prescott bankruptcy lawyer, including pay stubs, tax returns, bank statements, and creditor notices.";
+const OPT_OUT_WEBP = "/img/arizona-opt-out-federal-bankruptcy-exemptions-arizona-state-flag.webp";
+const OPT_OUT_ID = `${PAGE_URL}#img-arizona-opt-out-federal-exemptions`;
+const OPT_OUT_ALT =
+  "Bold headline text reading “Arizona opts out of federal bankruptcy exemptions” over the Arizona state flag background, illustrating that Arizona residents generally use state bankruptcy exemptions instead of the federal exemption list.";
 
 const YontzLawLogo = ({ width = 280 }) => (
   <svg
@@ -121,9 +119,9 @@ const imageSchemas = {
     {
       "@type": "ImageObject",
       "@id": PRIMARY_IMAGE_ID,
-      "name": "Prescott, AZ Bankruptcy Lawyer — Hero",
+      "name": "Arizona Bankruptcy Exemptions — Hero",
       "description":
-        "Wide hero background image of Prescott, Arizona featuring Courthouse Plaza and downtown landmarks with pine-covered hills near Thumb Butte in the background, representing local bankruptcy legal help for Prescott residents.",
+        "Wide hero image for Arizona Bankruptcy Lawyers, branded for Yontz Law, PLLC in Phoenix, Arizona.",
       "inLanguage": "en-US",
       "contentUrl": `${SITE_URL}${HERO_JPG}`,
       "thumbnailUrl": `${SITE_URL}${HERO_JPG}`,
@@ -133,13 +131,13 @@ const imageSchemas = {
     },
     {
       "@type": "ImageObject",
-      "@id": DOC_CHECKLIST_ID,
-      "name": "Prescott Bankruptcy Consultation Document Checklist",
-      "description": DOC_CHECKLIST_ALT,
-      "caption": "Document checklist to prepare for a Prescott bankruptcy consultation.",
+      "@id": OPT_OUT_ID,
+      "name": "Arizona Opt-Out of Federal Bankruptcy Exemptions",
+      "description": OPT_OUT_ALT,
+      "caption": "Arizona opts out of the federal bankruptcy exemption list.",
       "inLanguage": "en-US",
-      "contentUrl": `${SITE_URL}${DOC_CHECKLIST_WEBP}`,
-      "thumbnailUrl": `${SITE_URL}${DOC_CHECKLIST_WEBP}`,
+      "contentUrl": `${SITE_URL}${OPT_OUT_WEBP}`,
+      "thumbnailUrl": `${SITE_URL}${OPT_OUT_WEBP}`,
       "license": `${SITE_URL}/terms-and-conditions`,
       "creator": { "@type": "Organization", "name": "Yontz Law, PLLC" },
     },
@@ -154,47 +152,47 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What should I expect when I contact a Prescott bankruptcy lawyer for a consultation?",
+      "name": "Does Arizona use federal bankruptcy exemptions?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "A consultation should feel practical: we identify the pressure you’re facing (lawsuit, garnishment, vehicle issues, medical debt, or overwhelm), review your income and a basic budget snapshot, and talk through your assets and goals. From there, we explain whether bankruptcy is likely to help, which chapter is usually worth comparing, and what timing or paperwork decisions matter most. The goal is clarity and a realistic next step—not hype.",
+          "Arizona generally opts out of the federal bankruptcy exemptions, so most Arizona residents use Arizona’s state exemptions when they file. There are timing rules and special situations, so the best approach is to confirm which exemption set applies based on where you have lived during the lookback period.",
       },
     },
     {
       "@type": "Question",
-      "name": "Will bankruptcy stop creditor calls, lawsuits, and wage garnishments in Prescott, AZ?",
+      "name": "Can bankruptcy exemptions help me keep my home or car in Arizona?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "In many cases, filing bankruptcy triggers an automatic stay that pauses most collection activity, including many lawsuits and wage garnishments. Timing can matter if you have a court date, a garnishment start date, or a repossession risk, so it helps to share any lawsuit or garnishment paperwork as early as possible. Some situations have exceptions, so a quick review is the best way to understand what applies in your specific case.",
+          "Exemptions are designed to protect certain property up to specific limits. Whether you can keep a home or car depends on your equity, the applicable Arizona exemptions, and your payment status. A quick review of equity and liens usually clarifies what is protected and what strategy makes sense.",
       },
     },
     {
       "@type": "Question",
-      "name": "How do chapter 7 and chapter 13 work for Prescott residents?",
+      "name": "What property is commonly protected by Arizona bankruptcy exemptions?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "Prescott residents usually compare chapter 7 and chapter 13 based on the goal. chapter 7 is typically faster and is often used to address unsecured debts like credit cards, medical bills, and many personal loans (if the eligibility numbers line up and assets can be protected with exemptions). chapter 13 is a court-approved repayment plan (often 3–5 years) that can be used to catch up on certain obligations or protect assets through a structured plan. The right fit depends on income, assets, equity, and what you’re trying to protect.",
+          "Many exemptions focus on essential assets—like a portion of home equity, vehicle equity up to a limit, household goods, certain personal property, and some benefits. The exact protection depends on the specific asset type and the current exemption amounts.",
       },
     },
     {
       "@type": "Question",
-      "name": "Where do Prescott residents attend the 341 meeting of creditors?",
+      "name": "Do exemptions work the same in chapter 7 and chapter 13?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "The 341 meeting (meeting of creditors) is usually a short, scheduled appointment with the trustee to confirm basic information from your bankruptcy paperwork. In Arizona, many 341 meetings are commonly handled remotely (often by Zoom or similar procedures listed on your official notice). After your case is filed, you receive a court notice with your trustee information and specific instructions for the date, time, and how to attend—so your notice controls the details for your case.",
+          "Exemptions matter in both chapters, but they can affect the case in different ways. In chapter 7, exemptions help determine what property is protected from liquidation. In chapter 13, exemptions often affect plan structure and what creditors must receive. The right approach depends on your goals and your overall financial picture.",
       },
     },
     {
       "@type": "Question",
-      "name": "What documents should I gather before speaking with a Prescott bankruptcy attorney?",
+      "name": "What if I recently moved to Arizona?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "You don’t need a perfect folder to start, but a few items help you get clear answers faster: recent pay stubs (or income records if self-employed), a basic list of creditors/collections, any lawsuit or garnishment paperwork, and your housing/vehicle payment details. If you have recent tax returns and bank statements, those can also help with planning and timing. If you’re facing a deadline, mention it—deadlines can change the best next step.",
+          "Federal law includes residency lookback rules that can determine which state’s exemptions apply if you have not lived in Arizona long enough. If you moved recently, timing can be important—so it’s smart to review your move dates before filing.",
       },
     },
   ],
@@ -250,7 +248,7 @@ const breadcrumbSchema = {
   "@id": `${PAGE_URL}#breadcrumb`,
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE_URL}/` },
-    { "@type": "ListItem", "position": 2, "name": "Prescott, AZ Bankruptcy Lawyer", "item": PAGE_URL },
+    { "@type": "ListItem", "position": 2, "name": "Arizona Bankruptcy Exemptions", "item": PAGE_URL },
   ],
 };
 
@@ -259,9 +257,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `${PAGE_URL}#webpage`,
   "url": PAGE_URL,
-  "name": "Prescott, AZ Bankruptcy Lawyer | Yontz Law, PLLC",
+  "name": "Arizona Bankruptcy Exemptions | Yontz Law, PLLC",
   "description":
-    "Prescott bankruptcy lawyer for chapter 7 and chapter 13 options. Get help stopping garnishments and request a free consultation.",
+    "Arizona bankruptcy exemptions explained, including opt-out rules and how exemptions can protect property. Request a free consultation with Yontz Law, PLLC.",
   "inLanguage": "en-US",
   "breadcrumb": { "@id": `${PAGE_URL}#breadcrumb` },
   "isPartOf": { "@id": `${SITE_URL}/#website` },
@@ -276,10 +274,10 @@ const articleSchema = {
   "@type": "Article",
   "@id": `${PAGE_URL}#article`,
   "mainEntityOfPage": { "@id": `${PAGE_URL}#webpage` },
-  "headline": "Prescott, AZ Bankruptcy Lawyer | Yontz Law, PLLC",
-  "name": "Prescott, AZ Bankruptcy Lawyer | Yontz Law, PLLC",
+  "headline": "Arizona Bankruptcy Exemptions | Yontz Law, PLLC",
+  "name": "Arizona Bankruptcy Exemptions | Yontz Law, PLLC",
   "description":
-    "Guidance for Prescott residents on stopping collection pressure and comparing chapter 7 and chapter 13.",
+    "A practical guide to Arizona bankruptcy exemptions, including the opt-out rule and how exemptions can protect assets in chapter 7 and chapter 13.",
   "inLanguage": "en-US",
   "author": { "@id": `${SITE_URL}/about#casey-yontz` },
   "publisher": { "@id": `${SITE_URL}/#organization` },
@@ -290,11 +288,11 @@ const articleSchema = {
   "isAccessibleForFree": true,
 };
 
-export default function TucsonBankruptcy() {
+export default function Chp13AZ() {
   return (
     <PerfPageLayout
-      title="Prescott, AZ Bankruptcy Lawyer | Yontz Law, PLLC"
-      description="Prescott bankruptcy lawyer for chapter 7 and chapter 13 options. Stop garnishments and request a free consultation."
+      title="Arizona Bankruptcy Exemptions | Yontz Law, PLLC"
+      description="Arizona bankruptcy exemptions explained, including opt-out rules and how exemptions protect property. Request a free consultation."
       canonical={PAGE_URL}
       hero={{
         srcWebp: HERO_WEBP,
@@ -302,7 +300,7 @@ export default function TucsonBankruptcy() {
         width: 900,
         height: 600,
         alt:
-          "Wide hero background image of Prescott, Arizona featuring Courthouse Plaza and downtown landmarks with pine-covered hills near Thumb Butte in the background, representing local bankruptcy legal help for Prescott residents.",
+          "Wide hero image introducing Arizona bankruptcy exemptions, branded for Arizona Bankruptcy Lawyers at Yontz Law, PLLC.",
         priority: true,
         cta: <HeroCtaWithLogo />,
       }}
@@ -314,16 +312,16 @@ export default function TucsonBankruptcy() {
         preloadWidth={828}
       />
 
-      <JsonLd id="prescott-az-bankruptcy-image-graph" data={imageSchemas} />
-      <JsonLd id="prescott-az-bankruptcy-org" data={orgSchema} />
-      <JsonLd id="prescott-az-bankruptcy-website" data={websiteSchema} />
-      <JsonLd id="prescott-az-bankruptcy-author" data={personSchema} />
-      <JsonLd id="prescott-az-bankruptcy-breadcrumb" data={breadcrumbSchema} />
-      <JsonLd id="prescott-az-bankruptcy-webpage" data={webPageSchema} />
-      <JsonLd id="prescott-az-bankruptcy-article" data={articleSchema} />
-      <JsonLd id="prescott-az-bankruptcy-faq" data={faqSchema} />
+      <JsonLd id="arizona-bankruptcy-exemptions-image-graph" data={imageSchemas} />
+      <JsonLd id="arizona-bankruptcy-exemptions-org" data={orgSchema} />
+      <JsonLd id="arizona-bankruptcy-exemptions-website" data={websiteSchema} />
+      <JsonLd id="arizona-bankruptcy-exemptions-author" data={personSchema} />
+      <JsonLd id="arizona-bankruptcy-exemptions-breadcrumb" data={breadcrumbSchema} />
+      <JsonLd id="arizona-bankruptcy-exemptions-webpage" data={webPageSchema} />
+      <JsonLd id="arizona-bankruptcy-exemptions-article" data={articleSchema} />
+      <JsonLd id="arizona-bankruptcy-exemptions-faq" data={faqSchema} />
 
-      <PrescottHomePage />
+      <AzBkExemptions />
       <AzAreas />
     </PerfPageLayout>
   );

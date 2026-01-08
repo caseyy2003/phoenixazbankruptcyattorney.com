@@ -1,32 +1,25 @@
 /* eslint-disable */
 import React from "react";
-import dynamic from "next/dynamic";
+//import dynamic from "next/dynamic";
 import PerfPageLayout from "/components/PerfPageLayout";
 import Button from "/components/CustomButtons/Button.js";
 import LcpImagePreload from "/components/LcpImagePreload";
 import JsonLd from "/components/JsonLd";
-import PrescottHomePage from "../../content/PrescottHomePage.js";
+import BankruptcyAndCivilLawsuitDebt from "../../content/BankruptcyAndCivilLawsuitDebt.js";
 import AzAreas from "/components/AzAreas/AzAreas.js";
 
 const HEADER_HEIGHT = 52;
 
 const SITE_URL = "https://www.phoenixazbankruptcyattorney.com";
-const PAGE_URL = "https://www.phoenixazbankruptcyattorney.com/prescott-az-bankruptcy-lawyer";
+const PAGE_URL = "https://www.phoenixazbankruptcyattorney.com/bankruptcy-and-lawsuit-debt";
 
 const PRIMARY_IMAGE_ID = `${PAGE_URL}#hero-image`;
 
-const HERO_WEBP =
-  "/img/prescott-az-bankruptcy-lawyer-hero-courthouse-plaza-thumb-butte-yavapai-us-bankruptcy-help.webp";
-const HERO_JPG =
-  "/img/prescott-az-bankruptcy-lawyer-hero-courthouse-plaza-thumb-butte-yavapai-us-bankruptcy-help.jpg";
+const HERO_WEBP = "/img/bankruptcy-technical-topic.webp";
+const HERO_JPG = "/img/bankruptcy-technical-topic.jpg";
 
 const PUBLISHED_ISO = "2026-01-10T00:00:00-07:00";
 const MODIFIED_ISO = "2026-01-10T00:00:00-07:00";
-
-const DOC_CHECKLIST_WEBP = "/img/prescott-bankruptcy-consultation-document-checklist.webp";
-const DOC_CHECKLIST_ID = `${PAGE_URL}#img-prescott-consultation-document-checklist`;
-const DOC_CHECKLIST_ALT =
-  "Checklist graphic of documents to gather before speaking with a Prescott bankruptcy lawyer, including pay stubs, tax returns, bank statements, and creditor notices.";
 
 const YontzLawLogo = ({ width = 280 }) => (
   <svg
@@ -121,25 +114,13 @@ const imageSchemas = {
     {
       "@type": "ImageObject",
       "@id": PRIMARY_IMAGE_ID,
-      "name": "Prescott, AZ Bankruptcy Lawyer — Hero",
+      "name": "Bankruptcy and Lawsuit Debt — Hero",
       "description":
-        "Wide hero background image of Prescott, Arizona featuring Courthouse Plaza and downtown landmarks with pine-covered hills near Thumb Butte in the background, representing local bankruptcy legal help for Prescott residents.",
+        "Wide hero image for Arizona Bankruptcy Lawyers, branded for Yontz Law, PLLC in Phoenix, Arizona.",
       "inLanguage": "en-US",
       "contentUrl": `${SITE_URL}${HERO_JPG}`,
       "thumbnailUrl": `${SITE_URL}${HERO_JPG}`,
       "representativeOfPage": true,
-      "license": `${SITE_URL}/terms-and-conditions`,
-      "creator": { "@type": "Organization", "name": "Yontz Law, PLLC" },
-    },
-    {
-      "@type": "ImageObject",
-      "@id": DOC_CHECKLIST_ID,
-      "name": "Prescott Bankruptcy Consultation Document Checklist",
-      "description": DOC_CHECKLIST_ALT,
-      "caption": "Document checklist to prepare for a Prescott bankruptcy consultation.",
-      "inLanguage": "en-US",
-      "contentUrl": `${SITE_URL}${DOC_CHECKLIST_WEBP}`,
-      "thumbnailUrl": `${SITE_URL}${DOC_CHECKLIST_WEBP}`,
       "license": `${SITE_URL}/terms-and-conditions`,
       "creator": { "@type": "Organization", "name": "Yontz Law, PLLC" },
     },
@@ -154,47 +135,47 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What should I expect when I contact a Prescott bankruptcy lawyer for a consultation?",
+      "name": "Can bankruptcy stop a lawsuit in Arizona?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "A consultation should feel practical: we identify the pressure you’re facing (lawsuit, garnishment, vehicle issues, medical debt, or overwhelm), review your income and a basic budget snapshot, and talk through your assets and goals. From there, we explain whether bankruptcy is likely to help, which chapter is usually worth comparing, and what timing or paperwork decisions matter most. The goal is clarity and a realistic next step—not hype.",
+          "In many cases, filing bankruptcy triggers an automatic stay that pauses most civil collection lawsuits right away. Timing still matters—if you have a hearing date or a default deadline, it’s smart to get advice before the deadline passes so you don’t lose options.",
       },
     },
     {
       "@type": "Question",
-      "name": "Will bankruptcy stop creditor calls, lawsuits, and wage garnishments in Prescott, AZ?",
+      "name": "Can bankruptcy discharge a lawsuit judgment?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "In many cases, filing bankruptcy triggers an automatic stay that pauses most collection activity, including many lawsuits and wage garnishments. Timing can matter if you have a court date, a garnishment start date, or a repossession risk, so it helps to share any lawsuit or garnishment paperwork as early as possible. Some situations have exceptions, so a quick review is the best way to understand what applies in your specific case.",
+          "Often, yes—many money judgments based on typical consumer debts (like credit cards or personal loans) are treated as unsecured debts and may be discharged. Some judgments tied to fraud, intentional injury, or other special categories can follow different discharge rules, so the underlying claim matters—not just the fact that there is a judgment.",
       },
     },
     {
       "@type": "Question",
-      "name": "How do chapter 7 and chapter 13 work for Prescott residents?",
+      "name": "What if a lawsuit is for fraud or intentional wrongdoing?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "Prescott residents usually compare chapter 7 and chapter 13 based on the goal. chapter 7 is typically faster and is often used to address unsecured debts like credit cards, medical bills, and many personal loans (if the eligibility numbers line up and assets can be protected with exemptions). chapter 13 is a court-approved repayment plan (often 3–5 years) that can be used to catch up on certain obligations or protect assets through a structured plan. The right fit depends on income, assets, equity, and what you’re trying to protect.",
+          "Some debts based on fraud or certain intentional acts may be challenged as non-dischargeable. The facts, the type of claim, and what happened in the lawsuit can matter a lot. If you have a pending fraud allegation or a judgment that mentions fraud, it’s important to review the complaint and any court orders before assuming bankruptcy will wipe it out.",
       },
     },
     {
       "@type": "Question",
-      "name": "Where do Prescott residents attend the 341 meeting of creditors?",
+      "name": "Can bankruptcy stop wage garnishment from a lawsuit judgment?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "The 341 meeting (meeting of creditors) is usually a short, scheduled appointment with the trustee to confirm basic information from your bankruptcy paperwork. In Arizona, many 341 meetings are commonly handled remotely (often by Zoom or similar procedures listed on your official notice). After your case is filed, you receive a court notice with your trustee information and specific instructions for the date, time, and how to attend—so your notice controls the details for your case.",
+          "In many cases, yes. Filing usually triggers the automatic stay, which can stop many wage garnishments going forward. Real-world timing can depend on notice and payroll processing, so if a garnishment is active, share the writ and employer paperwork early.",
       },
     },
     {
       "@type": "Question",
-      "name": "What documents should I gather before speaking with a Prescott bankruptcy attorney?",
+      "name": "Is chapter 7 or chapter 13 better for lawsuit debt?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "You don’t need a perfect folder to start, but a few items help you get clear answers faster: recent pay stubs (or income records if self-employed), a basic list of creditors/collections, any lawsuit or garnishment paperwork, and your housing/vehicle payment details. If you have recent tax returns and bank statements, those can also help with planning and timing. If you’re facing a deadline, mention it—deadlines can change the best next step.",
+          "It depends on your goals and what else is going on. chapter 7 is often explored when someone wants to eliminate qualifying unsecured debt quickly and the eligibility numbers line up. chapter 13 is often explored when someone needs time to catch up on certain obligations or protect assets through a repayment plan. A quick review of your income, assets, and deadlines usually determines which path fits best.",
       },
     },
   ],
@@ -250,7 +231,7 @@ const breadcrumbSchema = {
   "@id": `${PAGE_URL}#breadcrumb`,
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE_URL}/` },
-    { "@type": "ListItem", "position": 2, "name": "Prescott, AZ Bankruptcy Lawyer", "item": PAGE_URL },
+    { "@type": "ListItem", "position": 2, "name": "Bankruptcy and Lawsuit Debt", "item": PAGE_URL },
   ],
 };
 
@@ -259,9 +240,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `${PAGE_URL}#webpage`,
   "url": PAGE_URL,
-  "name": "Prescott, AZ Bankruptcy Lawyer | Yontz Law, PLLC",
+  "name": "Bankruptcy and Lawsuit Debt | Arizona Guide",
   "description":
-    "Prescott bankruptcy lawyer for chapter 7 and chapter 13 options. Get help stopping garnishments and request a free consultation.",
+    "Learn how bankruptcy can affect lawsuits, judgments, and garnishments in Arizona, including what bankruptcy may not discharge.",
   "inLanguage": "en-US",
   "breadcrumb": { "@id": `${PAGE_URL}#breadcrumb` },
   "isPartOf": { "@id": `${SITE_URL}/#website` },
@@ -276,10 +257,10 @@ const articleSchema = {
   "@type": "Article",
   "@id": `${PAGE_URL}#article`,
   "mainEntityOfPage": { "@id": `${PAGE_URL}#webpage` },
-  "headline": "Prescott, AZ Bankruptcy Lawyer | Yontz Law, PLLC",
-  "name": "Prescott, AZ Bankruptcy Lawyer | Yontz Law, PLLC",
+  "headline": "Bankruptcy and Lawsuit Debt | Arizona Guide",
+  "name": "Bankruptcy and Lawsuit Debt | Arizona Guide",
   "description":
-    "Guidance for Prescott residents on stopping collection pressure and comparing chapter 7 and chapter 13.",
+    "A practical overview of how bankruptcy interacts with civil lawsuits in Arizona, including the automatic stay and discharge rules.",
   "inLanguage": "en-US",
   "author": { "@id": `${SITE_URL}/about#casey-yontz` },
   "publisher": { "@id": `${SITE_URL}/#organization` },
@@ -290,11 +271,11 @@ const articleSchema = {
   "isAccessibleForFree": true,
 };
 
-export default function TucsonBankruptcy() {
+export default function BankruptcyClearCivilLawsuitDebt() {
   return (
     <PerfPageLayout
-      title="Prescott, AZ Bankruptcy Lawyer | Yontz Law, PLLC"
-      description="Prescott bankruptcy lawyer for chapter 7 and chapter 13 options. Stop garnishments and request a free consultation."
+      title="Bankruptcy and Lawsuit Debt | Arizona Guide"
+      description="Bankruptcy and lawsuit debt in Arizona: stopping lawsuits, judgments, and garnishments. Learn your options and next steps."
       canonical={PAGE_URL}
       hero={{
         srcWebp: HERO_WEBP,
@@ -302,7 +283,7 @@ export default function TucsonBankruptcy() {
         width: 900,
         height: 600,
         alt:
-          "Wide hero background image of Prescott, Arizona featuring Courthouse Plaza and downtown landmarks with pine-covered hills near Thumb Butte in the background, representing local bankruptcy legal help for Prescott residents.",
+          "Wide hero image introducing an Arizona guide on bankruptcy and lawsuit debt, branded for Arizona Bankruptcy Lawyers at Yontz Law, PLLC.",
         priority: true,
         cta: <HeroCtaWithLogo />,
       }}
@@ -314,16 +295,16 @@ export default function TucsonBankruptcy() {
         preloadWidth={828}
       />
 
-      <JsonLd id="prescott-az-bankruptcy-image-graph" data={imageSchemas} />
-      <JsonLd id="prescott-az-bankruptcy-org" data={orgSchema} />
-      <JsonLd id="prescott-az-bankruptcy-website" data={websiteSchema} />
-      <JsonLd id="prescott-az-bankruptcy-author" data={personSchema} />
-      <JsonLd id="prescott-az-bankruptcy-breadcrumb" data={breadcrumbSchema} />
-      <JsonLd id="prescott-az-bankruptcy-webpage" data={webPageSchema} />
-      <JsonLd id="prescott-az-bankruptcy-article" data={articleSchema} />
-      <JsonLd id="prescott-az-bankruptcy-faq" data={faqSchema} />
+      <JsonLd id="bankruptcy-and-lawsuit-debt-image-graph" data={imageSchemas} />
+      <JsonLd id="bankruptcy-and-lawsuit-debt-org" data={orgSchema} />
+      <JsonLd id="bankruptcy-and-lawsuit-debt-website" data={websiteSchema} />
+      <JsonLd id="bankruptcy-and-lawsuit-debt-author" data={personSchema} />
+      <JsonLd id="bankruptcy-and-lawsuit-debt-breadcrumb" data={breadcrumbSchema} />
+      <JsonLd id="bankruptcy-and-lawsuit-debt-webpage" data={webPageSchema} />
+      <JsonLd id="bankruptcy-and-lawsuit-debt-article" data={articleSchema} />
+      <JsonLd id="bankruptcy-and-lawsuit-debt-faq" data={faqSchema} />
 
-      <PrescottHomePage />
+      <BankruptcyAndCivilLawsuitDebt />
       <AzAreas />
     </PerfPageLayout>
   );

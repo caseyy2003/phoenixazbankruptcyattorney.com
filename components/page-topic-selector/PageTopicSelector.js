@@ -69,7 +69,7 @@ export default function PageTopicSelector() {
       <GridContainer justifyContent="center">
         {/* Chapter 7 */}
         <GridItem xs={12} sm={4} md={4}>
-          <Link href="/bankruptcy-info-by-state/arizona/chapter-7" passHref legacyBehavior>
+          <Link href="/chapter-7-bankruptcy-arizona" passHref legacyBehavior>
             <a className={classes.cardLink}>
               <div className={classes.hoverEffect}>
                 <InfoArea
@@ -86,7 +86,7 @@ export default function PageTopicSelector() {
 
         {/* Chapter 13 */}
         <GridItem xs={12} sm={4} md={4}>
-          <Link href="/bankruptcy-info-by-state/arizona/chapter-13" passHref legacyBehavior>
+          <Link href="/chapter-13-bankruptcy-arizona" passHref legacyBehavior>
             <a className={classes.cardLink}>
               <div className={classes.hoverEffect}>
                 <InfoArea
@@ -104,7 +104,7 @@ export default function PageTopicSelector() {
         {/* Exemptions */}
         <GridItem xs={12} sm={4} md={4}>
           <Link
-            href="/bankruptcy-info-by-state/arizona/arizona-bankruptcy-exemptions"
+            href="/arizona-bankruptcy-exemptions"
             passHref
             legacyBehavior
           >

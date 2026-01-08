@@ -249,26 +249,90 @@ export default function PrescottHomePage() {
   matters.
 </p>
 
-<h2 className={classes.title}>Chapter 7 vs. Chapter 13 for Prescott Residents</h2>
+<h2 className={classes.title}>Choosing Between Chapter 7 and Chapter 13 in Prescott</h2>
 
 <p>
-  The right chapter depends on income, assets, and your goals. Here’s a
-  plain-English way to think about it:
+  Most people are really trying to solve one of a few problems: stop a garnishment, deal with a lawsuit, keep a car, catch up a
+  payment, or lower the monthly pressure. The chapter that fits depends on your goals and your overall financial snapshot.
 </p>
 
-<h3 className={classes.title}>Chapter 7</h3>
+<div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+    gap: 14,
+    margin: "1rem 0 1.25rem",
+  }}
+>
+  <div
+    style={{
+      border: "1px solid #e6e6e6",
+      borderRadius: 12,
+      background: "#fafafa",
+      padding: "14px 16px",
+    }}
+  >
+    <p style={{ margin: "0 0 6px", fontWeight: 800 }}>chapter 7</p>
+    <p style={{ margin: 0 }}>
+      Often explored when the priority is relief from unsecured debt and the numbers fit. It tends to be the simpler path, but
+      planning and timing still matter.
+    </p>
+    <p style={{ margin: "10px 0 0" }}>
+      <Link
+        href="/chapter-7-bankruptcy-arizona"
+        style={{ color: "#0656d3", textDecoration: "underline" }}
+      >
+        Read the Arizona chapter 7 guide
+      </Link>
+    </p>
+  </div>
+
+  <div
+    style={{
+      border: "1px solid #e6e6e6",
+      borderRadius: 12,
+      background: "#fafafa",
+      padding: "14px 16px",
+    }}
+  >
+    <p style={{ margin: "0 0 6px", fontWeight: 800 }}>chapter 13</p>
+    <p style={{ margin: 0 }}>
+      Often explored when you need time and structure—like catching up on certain payments or protecting important assets with a
+      plan.
+    </p>
+    <p style={{ margin: "10px 0 0" }}>
+      <Link
+        href="/chapter-13-bankruptcy-arizona"
+        style={{ color: "#0656d3", textDecoration: "underline" }}
+      >
+        Read the Arizona chapter 13 guide
+      </Link>
+    </p>
+  </div>
+</div>
 
 <p>
-  Chapter 7 is typically faster and is often used to address unsecured debts
-  like credit cards, medical bills, and many personal loans. The big issues are
-  (1) qualification under the means test and (2) whether your assets can be
-  protected with exemptions.
+  If protecting property is a big concern, exemptions can be a key part of the conversation. For the deep details and current
+  limits, start here:{" "}
+  <Link
+    href="/arizona-bankruptcy-exemptions"
+    style={{ color: "#0656d3", textDecoration: "underline" }}
+  >
+    Arizona bankruptcy exemptions
+  </Link>
+  .
 </p>
+
 
 <h3 className={classes.title}>Chapter 13</h3>
 
 <p>
-  Chapter 13 is a court-supervised repayment plan (usually 3–5 years). It’s
+<Link
+          href="/chapter-13-bankruptcy-arizona"
+          style={{ color: "#0656d3", textDecoration: "underline" }}
+        >
+          Chapter 13
+        </Link> is a court-supervised repayment plan (usually 3–5 years). It’s
   commonly used when someone needs time to catch up on a home or vehicle, has
   income above certain limits, or has assets that need added protection.
   Exemptions still matter, but in a different way: they can affect how much
@@ -467,42 +531,7 @@ export default function PrescottHomePage() {
   meeting is important for your situation, we can talk through what makes sense.
 </p>
 
-<h2 className={classes.title}>
-  Common Questions We Hear From Prescott AZ Bankruptcy Lawyer Consultations
-</h2>
 
-<h3 className={classes.title}>“Do I qualify?”</h3>
-
-<p>
-  Qualification depends on household income, household size, and the type of
-  debt you have. We’ll walk through the means-test basics and your monthly
-  budget to see what’s realistic.
-</p>
-
-<h3 className={classes.title}>“Will I lose my house or car?”</h3>
-
-<p>
-  The honest answer is: it depends on equity, exemptions, and whether you’re
-  current. Many clients are surprised by what can be protected—but there are
-  also scenarios where filing without planning creates avoidable risk. We’ll
-  identify the safe path before you commit.
-</p>
-
-<h3 className={classes.title}>“How fast does this stop creditors?”</h3>
-
-<p>
-  In many cases, the automatic stay begins when the case is filed. Timing
-  matters if there’s a pending lawsuit, garnishment, or repossession risk, so
-  earlier planning usually creates more options.
-</p>
-
-<h3 className={classes.title}>“What will this cost?”</h3>
-
-<p>
-  Fees vary based on complexity and chapter type. During a consultation, we’ll
-  explain typical cost ranges and the factors that can change them—no pressure,
-  no sales games.
-</p>
 
 <h2 className={classes.title}>What Clients Say About Our Prescott Bankruptcy Lawyer Services</h2>
 
@@ -714,6 +743,35 @@ export default function PrescottHomePage() {
   consultation is simple: get your facts on the table, understand your realistic
   options, and leave with a plan. No legal guarantees—just experienced guidance
   and a clear next step.
+</p>
+<div className={classes.moduleWrapper}>
+            <PageTopicSelector />
+</div>
+<h2 className={classes.title}>Prescott Bankruptcy FAQs</h2>
+
+<h3 className={classes.title}>What should I expect when I contact a Prescott bankruptcy lawyer for a consultation?</h3>
+<p>
+  A consultation should feel practical: we identify the pressure you’re facing (lawsuit, garnishment, vehicle issues, medical debt, or overwhelm), review your income and a basic budget snapshot, and talk through your assets and goals. From there, we explain whether bankruptcy is likely to help, which chapter is usually worth comparing, and what timing or paperwork decisions matter most. The goal is clarity and a realistic next step—not hype.
+</p>
+
+<h3 className={classes.title}>Will bankruptcy stop creditor calls, lawsuits, and wage garnishments in Prescott, AZ?</h3>
+<p>
+  In many cases, filing bankruptcy triggers an “automatic stay” that pauses most collection activity, including many lawsuits and wage garnishments. Timing can matter if you have a court date, a garnishment start date, or a repossession risk, so it helps to share any lawsuit or garnishment paperwork as early as possible. Some situations have exceptions, so a quick review is the best way to understand what applies in your specific case.
+</p>
+
+<h3 className={classes.title}>How do chapter 7 and chapter 13 work for Prescott residents?</h3>
+<p>
+  Prescott residents usually compare chapter 7 and chapter 13 based on the goal. chapter 7 is typically faster and is often used to address unsecured debts like credit cards, medical bills, and many personal loans (if the eligibility numbers line up and assets can be protected with exemptions). chapter 13 is a court-approved repayment plan (often 3–5 years) that can be used to catch up on certain obligations or protect assets through a structured plan. The right fit depends on income, assets, equity, and what you’re trying to protect.
+</p>
+
+<h3 className={classes.title}>Where do Prescott residents attend the 341 meeting of creditors?</h3>
+<p>
+  The 341 meeting (meeting of creditors) is usually a short, scheduled appointment with the trustee to confirm basic information from your bankruptcy paperwork. In Arizona, many 341 meetings are commonly handled remotely (often by Zoom or similar procedures listed on your official notice). After your case is filed, you receive a court notice with your trustee information and specific instructions for the date, time, and how to attend—so your notice controls the details for your case.
+</p>
+
+<h3 className={classes.title}>What documents should I gather before speaking with a Prescott bankruptcy attorney?</h3>
+<p>
+  You don’t need a perfect folder to start, but a few items help you get clear answers faster: recent pay stubs (or income records if self-employed), a basic list of creditors/collections, any lawsuit or garnishment paperwork, and your housing/vehicle payment details. If you have recent tax returns and bank statements, those can also help with planning and timing. If you’re facing a deadline, mention it—deadlines can change the best next step.
 </p>
 
           </GridItem>

@@ -54,6 +54,14 @@ export default function HeaderLinks(props) {
           buttonIcon={Gavel}
           dropdownList={[
             <Link
+            href="/"
+            key="Phoenix"
+            className={classes.dropdownLink}
+          >
+            Bankruptcy Attorneys Serving Phoenix AZ
+          </Link>,
+            
+            <Link
               href="/mesa-az-bankruptcy-attorney"
               key="Mesa"
               className={classes.dropdownLink}
@@ -74,13 +82,7 @@ export default function HeaderLinks(props) {
           >
             Bankruptcy Attorneys Serving Tucson AZ
           </Link>,
-            <Link
-              href="/bankruptcy-faq"
-              key="faq"
-              className={classes.dropdownLink}
-            >
-              Bankruptcy FAQs
-            </Link>,
+            
           ]}
         />
       </ListItem>
@@ -101,26 +103,47 @@ export default function HeaderLinks(props) {
           buttonIcon={MenuBook}
           dropdownList={[
             <Link
-              href="/bankruptcy-basics"
+              href="/chapter-7-bankruptcy-arizona"
               key="basics"
               className={classes.dropdownLink}
             >
-              Bankruptcy Basics
+              Chatper 7 Bankruptcy in Arizona Guide 
             </Link>,
             <Link
-              href="/stop-wage-garnishment-phoenix"
-              key="garnishment"
+            href="/chapter-13-bankruptcy-arizona"
+            key="basics"
+            className={classes.dropdownLink}
+          >
+            Chapter 13 Bankruptcy in Arizona Guide 
+          </Link>,
+          <Link
+          href="/arizona-bankruptcy-exemptions"
+          key="basics"
+          className={classes.dropdownLink}
+        >
+          Arizona Bankruptcy Exemptions Guide
+        </Link>,
+            <Link
+              href="/does-bankruptcy-stop-creditors"
+              key="creditors"
               className={classes.dropdownLink}
             >
-              Stop Wage Garnishment
+              Does Bankruptcy Stop Creditors?
             </Link>,
             <Link
-              href="/rebuild-credit-after-bankruptcy"
-              key="credit"
+              href="/chapter-13-vehicle-cram-down"
+              key="Chapter 13 Cramdown"
               className={classes.dropdownLink}
             >
-              Rebuild Credit After Bankruptcy
+              The Chapter 13 Vehicle Cramdown Explained
             </Link>,
+            <Link
+            href="/bankruptcy-and-lawsuit-debt"
+            key="Chapter 13 Cramdown"
+            className={classes.dropdownLink}
+          >
+            Does Bankruptcy Clear Civil Lawsuit Debt?
+          </Link>,
           ]}
         />
       </ListItem>

@@ -119,7 +119,7 @@ export default function PrescottHomePage() {
         <GridContainer justifyContent="center">
           <GridItem xs={12} sm={10} md={10}>
           <h1 className={classes.title}>Bankruptcy Attorneys in Tucson, Arizona</h1>
-          <div
+<div
   style={{
     display: "flex",
     alignItems: "center",
@@ -168,14 +168,13 @@ export default function PrescottHomePage() {
 </div>
 
 <p>
-  If you’re searching for <strong>bankruptcy attorneys tucson arizona</strong>, there’s a good chance something feels urgent:
+  If you’re searching for <strong>bankruptcy attorneys in Tucson Arizona</strong>, there’s a good chance something feels urgent:
   a lawsuit, a wage garnishment, a repossession threat, or creditor calls that won’t quit. When pressure is high, you don’t
   need hype — you need clear answers and a plan you can actually follow.
 </p>
 
 <p>
-  I’m Casey Yontz, a bankruptcy attorney with <strong>18+ years</strong> of experience helping Arizonans through tough financial
-  situations. If you’re looking for a <strong>bankruptcy lawyer tucson</strong> residents can trust for straightforward guidance,
+  Our office has decades of experience representing tousands of bankruptcy cases throughout the state of Arizona. If you’re looking for a <strong>bankruptcy lawyer Tucson</strong> residents can trust for straightforward guidance,
   we’ll walk through your options, explain what matters most in your situation, and help you avoid the common mistakes that
   can complicate a case.
 </p>
@@ -212,11 +211,25 @@ export default function PrescottHomePage() {
   </li>
 </ul>
 
-<h2 className={classes.title}>Chapter 7 vs. Chapter 13: Which Fits Your Situation?</h2>
+<h2 className={classes.title}>Choosing Between Chapter 7 and Chapter 13</h2>
 
 <p>
-  Most individual cases fall under <strong>chapter 7</strong> or <strong>chapter 13</strong>. The right option depends on income,
-  the type of debt, your assets, and your goals — not a one-size-fits-all slogan.
+  Most people in Tucson end up comparing two paths:{" "}
+  <Link
+    href="/chapter-7-bankruptcy-arizona"
+    style={{ color: "#0656d3", textDecoration: "underline" }}
+  >
+    our chapter 7 guide
+  </Link>{" "}
+  and{" "}
+  <Link
+    href="/chapter-13-bankruptcy-arizona"
+    style={{ color: "#0656d3", textDecoration: "underline" }}
+  >
+    our chapter 13 guide
+  </Link>
+  . The better fit depends on your goals and your numbers—like income stability, what you’re trying to protect, and whether
+  there are urgent deadlines.
 </p>
 
 <div
@@ -237,8 +250,8 @@ export default function PrescottHomePage() {
   >
     <p style={{ margin: "0 0 6px", fontWeight: 800 }}>Chapter 7</p>
     <p style={{ margin: 0 }}>
-      Often used to wipe out qualifying unsecured debt (like credit cards and medical bills) when income and assets fit the
-      requirements. Timing and planning matter more than people realize.
+      Often explored when the main goal is relief from unsecured debt and the numbers fit. It’s usually the “simpler” path,
+      but planning still matters.
     </p>
   </div>
 
@@ -252,16 +265,30 @@ export default function PrescottHomePage() {
   >
     <p style={{ margin: "0 0 6px", fontWeight: 800 }}>Chapter 13</p>
     <p style={{ margin: 0 }}>
-      Often used to catch up on important obligations over time and protect assets through a structured repayment plan. It can
-      be a powerful tool when you need breathing room and a framework.
+      Often explored when you need time and structure—like catching up on certain payments or protecting assets with a plan.
     </p>
   </div>
 </div>
 
 <p>
-  In a consultation, we’ll map your goals (stop garnishment, keep a car, deal with a lawsuit, catch up a payment, reduce stress)
-  to the option that actually fits — without making promises we can’t guarantee.
+  During a consultation, we focus on your priorities (stop a garnishment, deal with a lawsuit, keep a vehicle, or catch up a
+  payment) and map them to the option that fits—without oversimplifying. If you want the deeper details, start with{" "}
+  <Link
+    href="/chapter-7-bankruptcy-arizona"
+    style={{ color: "#0656d3", textDecoration: "underline" }}
+  >
+    Arizona chapter 7 basics
+  </Link>{" "}
+  and{" "}
+  <Link
+    href="/chapter-13-bankruptcy-arizona"
+    style={{ color: "#0656d3", textDecoration: "underline" }}
+  >
+    Arizona chapter 13 basics
+  </Link>
+  .
 </p>
+
 
 <h2 className={classes.title}>Local Insights: Tucson Details That Matter</h2>
 
@@ -362,9 +389,9 @@ export default function PrescottHomePage() {
   <div style={{ padding: "14px 16px", borderLeft: "4px solid #e6e6e6", background: "#fafafa", borderRadius: 12 }}>
     <p style={{ margin: "0 0 6px", fontWeight: 800 }}>Clear Answers, No Pressure</p>
     <p style={{ margin: 0, fontStyle: "italic" }}>
-      “He explained my options in plain English and didn’t push me. I finally felt like I had a plan.”
+      “The office explained my options in plain English and didn’t push me. For once, I finally felt like I had a plan.”
     </p>
-    <p style={{ margin: "8px 0 0", fontWeight: 800 }}>— Client</p>
+    <p style={{ margin: "8px 0 0", fontWeight: 800 }}>— Dan J.</p>
   </div>
 
   <div style={{ padding: "14px 16px", borderLeft: "4px solid #e6e6e6", background: "#fafafa", borderRadius: 12 }}>
@@ -372,7 +399,7 @@ export default function PrescottHomePage() {
     <p style={{ margin: 0, fontStyle: "italic" }}>
       “Very professional, knowledgeable, and organized. The process felt manageable instead of overwhelming.”
     </p>
-    <p style={{ margin: "8px 0 0", fontWeight: 800 }}>— Client</p>
+    <p style={{ margin: "8px 0 0", fontWeight: 800 }}>— Amanda H.</p>
   </div>
 
   <div style={{ padding: "14px 16px", borderLeft: "4px solid #e6e6e6", background: "#fafafa", borderRadius: 12 }}>
@@ -380,7 +407,7 @@ export default function PrescottHomePage() {
     <p style={{ margin: 0, fontStyle: "italic" }}>
       “I was stressed nonstop. After the consult, I understood what to do next and felt calmer immediately.”
     </p>
-    <p style={{ margin: "8px 0 0", fontWeight: 800 }}>— Client</p>
+    <p style={{ margin: "8px 0 0", fontWeight: 800 }}>— Kim J.</p>
   </div>
 
   <div style={{ padding: "14px 16px", borderLeft: "4px solid #e6e6e6", background: "#fafafa", borderRadius: 12 }}>
@@ -388,7 +415,7 @@ export default function PrescottHomePage() {
     <p style={{ margin: 0, fontStyle: "italic" }}>
       “I never felt judged. Every question was taken seriously, and everything was explained step by step.”
     </p>
-    <p style={{ margin: "8px 0 0", fontWeight: 800 }}>— Client</p>
+    <p style={{ margin: "8px 0 0", fontWeight: 800 }}>— Michael W.</p>
   </div>
 </div>
 
@@ -417,6 +444,10 @@ export default function PrescottHomePage() {
   </li>
   <li style={{ marginBottom: 0 }}>
     <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+    <strong>Tax Returns:</strong> Not necessary for the first consult, but eventually tax returns will need to be reviewed.
+  </li>
+  <li style={{ marginBottom: 0 }}>
+    <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
     <strong>Any court papers:</strong> especially lawsuits, garnishments, or notices with deadlines.
   </li>
 </ul>
@@ -428,7 +459,19 @@ export default function PrescottHomePage() {
   that’s convenient, and if an in-person meeting is important for your situation, we’ll discuss what makes the most sense. The goal
   is simple: make it easy to get answers without pretending we have offices all over the state.
 </p>
-
+<div className={classes.imgContainer}>
+              <NextImage
+                src="/img/tucson-bankruptcy-lawyer-consultation-document-checklist.webp"
+                alt="Checklist graphic showing documents to gather before meeting with a Tucson bankruptcy lawyer, including pay stubs from the past six months, tax returns from the past two years, bank account statements, car loan and mortgage statements, and recent creditor notices or lawsuit papers."
+                layout="responsive"
+                width={850}           
+                height={567}
+                sizes="(max-width: 768px) 92vw, (max-width: 1200px) 700px, 900px"
+                quality={75}
+                priority={false}
+                decoding="async"
+              />
+            </div>
 <h2 className={classes.title}>Searching Another City Too?</h2>
 
 <p>
@@ -450,6 +493,35 @@ export default function PrescottHomePage() {
     Request a Free Consultation
   </Button>
 </div>
+<div className={classes.moduleWrapper}>
+            <PageTopicSelector />
+</div>
+<h2 className={classes.title}>Tucson Bankruptcy FAQs</h2>
+
+<h3 className={classes.title}>What does a Tucson bankruptcy consultation cover?</h3>
+<p>
+  A consultation is designed to replace guesswork with a practical plan. We start with what’s driving the urgency (lawsuit, wage garnishment, repossession risk, nonstop creditor calls, or behind-on payments), then review your income pattern, debts, and assets at a high level. From there, we explain which option fits best—whether that’s chapter 7, chapter 13, or a non-bankruptcy alternative—and what to do first so you don’t accidentally create avoidable problems before filing.
+</p>
+
+<h3 className={classes.title}>Can filing bankruptcy stop a wage garnishment or collection lawsuit in Tucson?</h3>
+<p>
+  In many cases, filing bankruptcy triggers an “automatic stay” that pauses most collection activity, including many wage garnishments and pending lawsuits. Timing matters if you have a court date, a garnishment start date, or a repossession threat, so it helps to gather any lawsuit papers, garnishment documents, and recent pay stubs early. Some situations have exceptions, so a quick review is the best way to understand what applies to your specific case.
+</p>
+
+<h3 className={classes.title}>How do chapter 7 and chapter 13 differ for Tucson residents?</h3>
+<p>
+  The right chapter depends on your goals and your numbers—not a one-size-fits-all slogan. chapter 7 is often considered when someone wants relief from qualifying unsecured debt (like credit cards and medical bills) and the eligibility requirements are met. chapter 13 is a court-approved repayment plan (often 3–5 years) that can help people catch up on certain obligations and protect assets through a structured plan. The best fit depends on income, assets, debt type, and what you’re trying to protect.
+</p>
+
+<h3 className={classes.title}>What are common Tucson bankruptcy pitfalls to avoid before filing?</h3>
+<p>
+  Most cases get complicated due to timing and paper trails, not because someone is “doing bankruptcy wrong.” Common pitfalls include using credit right before filing (especially cash advances), moving money or titles around within the family, ignoring a lawsuit deadline, and withdrawing retirement money without understanding the tax and bankruptcy consequences. If bankruptcy is on the table, it’s usually smart to pause major financial moves and get guidance before making quick decisions.
+</p>
+
+<h3 className={classes.title}>What documents should I bring to a Tucson bankruptcy attorney consultation?</h3>
+<p>
+  You don’t need a perfect binder, but a few basics help you get clear answers faster: recent pay stubs or income proof, a simple list of creditors/collections, any lawsuit or garnishment paperwork, and housing and vehicle payment details (including whether you’re behind). If you have tax returns and bank statements, those can also help with planning and timing. If you’re facing a deadline, mention it—deadlines can change the best next step.
+</p>
 
           </GridItem>
         </GridContainer>

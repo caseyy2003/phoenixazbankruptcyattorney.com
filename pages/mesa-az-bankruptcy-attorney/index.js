@@ -9,28 +9,23 @@ import MesaHomePage from "../../content/MesaHomePage.js";
 import AzAreas from "/components/AzAreas/AzAreas.js";
 
 const HEADER_HEIGHT = 52;
-const LocalNavBar = dynamic(() => import("../../components/LocalNavBar/LocalNavBar.js"), {
-  ssr: true,
-  loading: () => <nav style={{ height: HEADER_HEIGHT }} />,
-});
 
-/* ---------- Canonicals & shared IDs ---------- */
+const SITE_URL = "https://www.phoenixazbankruptcyattorney.com";
+const PAGE_URL = "https://www.phoenixazbankruptcyattorney.com/mesa-az-bankruptcy-attorney";
 
-const SITE_URL = "https://www.usbankruptcyhelp.com";
-const PAGE_URL = "https://www.usbankruptcyhelp.com/bankruptcy-info-by-state/maryland";
-
-// hero image id used across schemas
 const PRIMARY_IMAGE_ID = `${PAGE_URL}#hero-image`;
 
-// hero assets
 const HERO_WEBP = "/img/mesa-az-superstition-mountains-saguaro-sunrise-hero-background.webp";
 const HERO_JPG = "/img/mesa-az-superstition-mountains-saguaro-sunrise-hero-background.jpg";
 
-// dates
-const PUBLISHED_ISO = "2025-12-12T00:00:00-07:00";
-const MODIFIED_ISO = "2025-12-12T00:00:00-07:00";
+const PUBLISHED_ISO = "2026-01-10T00:00:00-07:00";
+const MODIFIED_ISO = "2026-01-10T00:00:00-07:00";
 
-/* ---------- DROP-IN: Inline SVG Logo Component (lives in this file) ---------- */
+const MESA_HELP_HERO_WEBP =
+  "/img/mesa-bankruptcy-help-hero-superstition-mountains-downtown-mesa-arts-center.webp";
+const MESA_HELP_HERO_ID = `${PAGE_URL}#img-mesa-bankruptcy-help-arts-center`;
+const MESA_HELP_HERO_ALT =
+  "Hero banner for Mesa bankruptcy help showing downtown Mesa near the Mesa Arts Center with the Superstition Mountains at sunset, plus a gavel and legal documents in the foreground and the text “Mesa Bankruptcy Help”.";
 
 const YontzLawLogo = ({ width = 280 }) => (
   <svg
@@ -41,7 +36,6 @@ const YontzLawLogo = ({ width = 280 }) => (
     role="img"
     aria-label="Yontz Law, PLLC"
   >
-    {/* Badge */}
     <g transform="translate(80,120)">
       <circle r="76" stroke="#caa24a" strokeWidth="10" fill="none" />
       <circle r="66" stroke="rgba(255,255,255,0.25)" strokeWidth="2" fill="none" />
@@ -65,7 +59,6 @@ const YontzLawLogo = ({ width = 280 }) => (
       <circle cx="56" cy="-52" r="8" fill="#caa24a" />
     </g>
 
-    {/* Wordmark */}
     <g transform="translate(190,92)">
       <text
         x="0"
@@ -95,13 +88,11 @@ const YontzLawLogo = ({ width = 280 }) => (
         fontSize="22"
         fill="#e5e7eb"
       >
-        Phoenix Bankruptcy Lawyers
+        Arizona Bankruptcy Lawyers
       </text>
     </g>
   </svg>
 );
-
-/* ---------- DROP-IN: Hero CTA wrapper that includes logo + button ---------- */
 
 const HeroCtaWithLogo = () => (
   <div
@@ -118,14 +109,10 @@ const HeroCtaWithLogo = () => (
     </div>
 
     <Button color="primary" size="lg" href="/consultation-request" style={{ marginTop: 0 }}>
-      <strong>
-        Request a Free Bankruptcy Consult
-      </strong>
+      <strong>Request a Free Bankruptcy Consult</strong>
     </Button>
   </div>
 );
-
-/* ---------- Image graph (Maryland-specific) ---------- */
 
 const imageSchemas = {
   "@context": "https://schema.org",
@@ -133,47 +120,30 @@ const imageSchemas = {
     {
       "@type": "ImageObject",
       "@id": PRIMARY_IMAGE_ID,
-      "name": "Bankruptcy in Maryland — Hero",
+      "name": "Mesa, AZ Bankruptcy Attorney — Hero",
       "description":
-        "Wide hero background showing Arizona desert landscape with saguaro cacti, Phoenix skyline, and mountains at sunset.",
+        "Wide hero background showing Mesa, Arizona at sunrise with saguaro cacti in the foreground and the Superstition Mountains in the distance.",
       "inLanguage": "en-US",
       "contentUrl": `${SITE_URL}${HERO_JPG}`,
       "thumbnailUrl": `${SITE_URL}${HERO_JPG}`,
       "representativeOfPage": true,
       "license": `${SITE_URL}/terms-and-conditions`,
-      "creator": { "@type": "Organization", "name": "US Bankruptcy Help" },
+      "creator": { "@type": "Organization", "name": "Yontz Law, PLLC" },
     },
     {
       "@type": "ImageObject",
-      "@id": `${PAGE_URL}#img-maryland-beaver-teacher`,
-      "name": "Maryland Bankruptcy Beaver Teacher Illustration",
-      "description":
-        "Cartoon beaver teaching a class on “Bankruptcy in Maryland,” standing by a chalkboard with a Maryland state outline and the US Bankruptcy Help logo in the corner.",
-      "caption": "Playful beaver illustration teaching bankruptcy in Maryland, branded with the US Bankruptcy Help logo.",
+      "@id": MESA_HELP_HERO_ID,
+      "name": "Mesa Bankruptcy Help — Mesa Arts Center and Superstition Mountains",
+      "description": MESA_HELP_HERO_ALT,
+      "caption": "Mesa bankruptcy help hero banner near the Mesa Arts Center at sunset.",
       "inLanguage": "en-US",
-      "contentUrl": `${SITE_URL}/img/maryland-bankruptcy-beaver-teacher-us-bankruptcy-help.webp`,
-      "thumbnailUrl": `${SITE_URL}/img/maryland-bankruptcy-beaver-teacher-us-bankruptcy-help.webp`,
+      "contentUrl": `${SITE_URL}${MESA_HELP_HERO_WEBP}`,
+      "thumbnailUrl": `${SITE_URL}${MESA_HELP_HERO_WEBP}`,
       "license": `${SITE_URL}/terms-and-conditions`,
-      "creator": { "@type": "Organization", "name": "US Bankruptcy Help" },
-    },
-    {
-      "@type": "ImageObject",
-      "@id": `${PAGE_URL}#img-maryland-bankruptcy-basics`,
-      "name": "Maryland Bankruptcy Basics — Courts and Divisions",
-      "description":
-        "Infographic titled “Maryland Bankruptcy” showing a navy silhouette of the state of Maryland, the Maryland flag, bullet points about the exemption scheme, 4th Circuit and U.S. District Court for the District of Maryland, plus a note about two bankruptcy divisions and the US Bankruptcy Help logo at the bottom.",
-      "caption":
-        "Maryland bankruptcy basics infographic showing courts, divisions and Maryland map with US Bankruptcy Help branding.",
-      "inLanguage": "en-US",
-      "contentUrl": `${SITE_URL}/img/maryland-bankruptcy-basics-courts-divisions-us-bankruptcy-help.webp`,
-      "thumbnailUrl": `${SITE_URL}/img/maryland-bankruptcy-basics-courts-divisions-us-bankruptcy-help.webp`,
-      "license": `${SITE_URL}/terms-and-conditions`,
-      "creator": { "@type": "Organization", "name": "US Bankruptcy Help" },
+      "creator": { "@type": "Organization", "name": "Yontz Law, PLLC" },
     },
   ],
 };
-
-/* ---------- FAQ schema (MD) ---------- */
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -183,68 +153,57 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How do I file bankruptcy in Maryland?",
+      "name": "What does a Mesa AZ bankruptcy attorney review during a first consultation?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "To file bankruptcy in Maryland, you typically complete a pre-filing credit counseling course, gather detailed information about your income, expenses, assets, and debts, and prepare a bankruptcy petition and schedules. You or your attorney then file these documents with the US Bankruptcy Court for the District of Maryland. After filing, the court schedules a 341 meeting of creditors, and you must complete a post-filing debtor education course before the court can enter a discharge in most cases. The exact steps and paperwork differ depending on whether you file under chapter 7, chapter 13, or chapter 11.",
+          "A first consultation is usually a snapshot review designed to give you clear direction quickly. We focus on the pressure you’re facing (collections, lawsuits, garnishments, repossession risk, or housing concerns), your income pattern (steady vs. fluctuating), your assets, and your main goal—like stopping a garnishment, keeping a vehicle, or getting a fresh start from unsecured debt. From there, we explain which bankruptcy path (if any) fits best and what timing or paperwork decisions matter most.",
       },
     },
     {
       "@type": "Question",
-      "name": "How much does it cost to file bankruptcy in Maryland?",
+      "name": "Can bankruptcy stop wage garnishments and collection lawsuits in Mesa?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "The bankruptcy cost in Maryland includes court filing fees, attorney fees, and the cost of required credit counseling and debtor education courses. Court filing fees are set at the federal level and are generally a little over $330 for a chapter 7 case and just over $310 for a chapter 13 case, although these amounts can change. Attorney fees vary widely based on the chapter you file under and how complex your case is, with chapter 13 and chapter 11 cases usually costing more than simpler chapter 7 cases. Many Maryland bankruptcy attorneys offer payment options and will explain their fee structure during an initial consultation.",
+          "In many cases, filing bankruptcy triggers an automatic stay that can pause most collection activity, including many wage garnishments and pending lawsuits. Because deadlines and payroll timing can matter, it helps to share any garnishment paperwork, lawsuit documents, and your most recent pay stubs during your consultation request. Some situations have exceptions, so getting advice early is the best way to avoid surprises.",
       },
     },
     {
       "@type": "Question",
-      "name": "How many times can you file bankruptcy in Maryland?",
+      "name": "What’s the difference between chapter 7 and chapter 13 for Mesa residents?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "There is no lifetime limit on how many times you can file bankruptcy in Maryland, but federal law places waiting periods on how soon you can receive another discharge after a prior case. The timing rules depend on which chapter you filed before and which chapter you want to file now. For example, the waiting period between a prior chapter 7 discharge and a new chapter 7 case is different from the rules for filing a chapter 13 after a previous chapter 7. It is important to review the specific timing rules with a bankruptcy attorney to make sure you are eligible for a discharge before filing again.",
+          "Mesa residents usually compare chapter 7 and chapter 13 based on the problem they’re trying to solve. chapter 7 is often explored when someone wants relief from unsecured debt and the eligibility numbers line up. chapter 13 is often explored when someone needs time to catch up on certain obligations or protect assets through a court-approved payment plan. The best fit depends on income, assets, debt type, and whether you’re trying to protect a home or vehicle.",
       },
     },
     {
       "@type": "Question",
-      "name": "Where to file bankruptcy in Maryland?",
+      "name": "What should I avoid doing right before filing bankruptcy in the East Valley?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "If you live, work, or have most of your property in Maryland, your case is generally filed with the US Bankruptcy Court for the District of Maryland, not a state court. The court has multiple locations within the state, and the correct venue is usually based on your county of residence or where your primary business is located. Most attorneys file cases electronically on behalf of their clients, but individuals who file without an attorney must follow the local rules and procedures of the US Bankruptcy Court for the District of Maryland.",
+          "Many complications come from last-minute moves that look harmless but create extra questions later—such as using credit right before filing (especially cash advances), transferring property or vehicle titles for safekeeping, or repaying family members. If bankruptcy is on the table, a helpful rule of thumb is to pause major financial moves and get guidance first. A short review can help you understand what to stop, what’s safe, and what documentation you’ll need.",
       },
     },
     {
       "@type": "Question",
-      "name": "Can I file bankruptcy without my spouse in Maryland?",
+      "name": "What documents should I gather for a Mesa bankruptcy consultation request?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "Yes, it is possible to file bankruptcy without your spouse in Maryland. One spouse can file individually even if the couple is married. However, whether this makes sense depends on how your debts are structured, which debts are joint, how your assets are titled, and how Maryland law treats marital and jointly owned property. In some cases an individual filing is sufficient, while in others a joint filing may provide better protection or a cleaner outcome. Because the analysis is fact-specific, it is best to review your situation with a bankruptcy attorney before deciding whether only one spouse should file.",
-      },
-    },
-    {
-      "@type": "Question",
-      "name": "Can I get fired in Maryland for bankruptcy?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text":
-          "In most cases, you cannot be fired solely because you filed for bankruptcy. Federal law generally prohibits both private and government employers from terminating an employee or taking adverse employment action against them just because they sought relief under the Bankruptcy Code. However, a bankruptcy filing may still appear on certain background checks and can be a factor in some sensitive roles involving money, security clearances, or positions of trust. If you are concerned about how a bankruptcy filing might affect your job or professional license in Maryland, it is important to discuss your specific situation with an experienced attorney.",
+          "You don’t need perfect paperwork to start, but a few items can help you get clear answers faster: recent pay stubs or proof of income, a basic debt list (collections letters help), any lawsuit or garnishment paperwork, and your housing/vehicle payment details. If you have your most recent tax return, that can also help with planning and eligibility questions. If you’re missing something, you can still start—just share what you have and what deadlines you’re facing.",
       },
     },
   ],
 };
 
-/* ---------- Site-wide schemas (unchanged, but reused) ---------- */
-
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": `${SITE_URL}/#organization`,
-  "name": "US Bankruptcy Help",
+  "name": "Yontz Law, PLLC",
   "url": SITE_URL,
   "logo": {
     "@type": "ImageObject",
@@ -255,21 +214,13 @@ const orgSchema = {
   },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "4425 E Agave Rd. Suite 110",
+    "streetAddress": "4425 E Agave Rd Suite 106",
     "addressLocality": "Phoenix",
     "addressRegion": "AZ",
     "postalCode": "85044",
     "addressCountry": "US",
   },
-  "contactPoint": [
-    {
-      "@type": "ContactPoint",
-      "contactType": "customer support",
-      "email": "help@usbankruptcyhelp.com",
-      "availableLanguage": ["English"],
-      "areaServed": "US",
-    },
-  ],
+  "telephone": "+1-480-886-0339",
 };
 
 const websiteSchema = {
@@ -277,27 +228,19 @@ const websiteSchema = {
   "@type": "WebSite",
   "@id": `${SITE_URL}/#website`,
   "url": SITE_URL,
-  "name": "US Bankruptcy Help",
+  "name": "Arizona Bankruptcy Lawyers | Yontz Law, PLLC",
   "publisher": { "@id": `${SITE_URL}/#organization` },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": `${SITE_URL}/search?q={search_term_string}`,
-    "query-input": "required name=search_term_string",
-  },
 };
 
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": `${SITE_URL}/about-us#casey-yontz`,
+  "@id": `${SITE_URL}/about#casey-yontz`,
   "name": "Casey Yontz",
   "jobTitle": "Bankruptcy Attorney",
-  "description": "Attorney with 18+ years of bankruptcy experience.",
   "worksFor": { "@id": `${SITE_URL}/#organization` },
-  "url": `${SITE_URL}/about-us#casey-yontz`,
+  "url": `${SITE_URL}/about`,
 };
-
-/* ---------- Breadcrumbs & page/article schema ---------- */
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -305,8 +248,7 @@ const breadcrumbSchema = {
   "@id": `${PAGE_URL}#breadcrumb`,
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE_URL}/` },
-    { "@type": "ListItem", "position": 2, "name": "Bankruptcy Info by State", "item": `${SITE_URL}/bankruptcy-info-by-state/` },
-    { "@type": "ListItem", "position": 3, "name": "Maryland Bankruptcy Laws", "item": PAGE_URL },
+    { "@type": "ListItem", "position": 2, "name": "Mesa, AZ Bankruptcy Attorney", "item": PAGE_URL },
   ],
 };
 
@@ -315,9 +257,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `${PAGE_URL}#webpage`,
   "url": PAGE_URL,
-  "name": "Maryland Bankruptcy Laws: Essential Guide & Process",
+  "name": "Mesa Bankruptcy Attorney | Local Help in the East Valley",
   "description":
-    "Understand Maryland bankruptcy laws, court process, costs and protections with this clear guide for individuals and small businesses.",
+    "Mesa bankruptcy attorney help with chapter 7 and chapter 13. Stop garnishments, review options, and request a free consultation today.",
   "inLanguage": "en-US",
   "breadcrumb": { "@id": `${PAGE_URL}#breadcrumb` },
   "isPartOf": { "@id": `${SITE_URL}/#website` },
@@ -332,12 +274,12 @@ const articleSchema = {
   "@type": "Article",
   "@id": `${PAGE_URL}#article`,
   "mainEntityOfPage": { "@id": `${PAGE_URL}#webpage` },
-  "headline": "Maryland Bankruptcy Laws: Essential Guide & Process",
-  "name": "Maryland Bankruptcy Laws: Essential Guide & Process",
+  "headline": "Mesa Bankruptcy Attorney | Local Help in the East Valley",
+  "name": "Mesa Bankruptcy Attorney | Local Help in the East Valley",
   "description":
-    "Comprehensive overview of Maryland bankruptcy laws, including filing steps, court process, eligibility, costs, and life after bankruptcy.",
+    "Mesa bankruptcy attorney guidance on stopping collection pressure and choosing between chapter 7 and chapter 13.",
   "inLanguage": "en-US",
-  "author": { "@id": `${SITE_URL}/about-us#casey-yontz` },
+  "author": { "@id": `${SITE_URL}/about#casey-yontz` },
   "publisher": { "@id": `${SITE_URL}/#organization` },
   "isPartOf": { "@id": `${SITE_URL}/#website` },
   "image": [{ "@id": PRIMARY_IMAGE_ID }],
@@ -346,23 +288,20 @@ const articleSchema = {
   "isAccessibleForFree": true,
 };
 
-/* ---------- Page component ---------- */
-
-export default function MarylandBankruptcyLawsPage() {
+export default function MesaBankruptcy() {
   return (
     <PerfPageLayout
-      title="Maryland Bankruptcy Laws: Essential Guide & Process"
-      description="Wide hero background showing Mesa, Arizona at sunrise with saguaro cacti in the foreground and the Superstition Mountains in the distance."
+      title="Mesa AZ Bankruptcy Attorney | Yontz Law, PLLC"
+      description="Mesa bankruptcy attorney for chapter 7 and chapter 13 options. Get help stopping garnishments and request a free consultation."
       canonical={PAGE_URL}
       hero={{
         srcWebp: HERO_WEBP,
         srcJpg: HERO_JPG,
         width: 900,
         height: 600,
-        alt: 'Wide hero image showing the Maryland state flag in the background with the heading “Bankruptcy in Maryland” in bold navy text and the US Bankruptcy Help logo in an oval badge in the lower right corner.',
+        alt:
+          "Wide hero background showing Mesa, Arizona at sunrise with saguaro cacti in the foreground and the Superstition Mountains in the distance.",
         priority: true,
-
-        // DROP-IN CHANGE: logo + button inside hero.cta
         cta: <HeroCtaWithLogo />,
       }}
     >
@@ -373,17 +312,15 @@ export default function MarylandBankruptcyLawsPage() {
         preloadWidth={828}
       />
 
-      {/* JSON-LD blocks */}
-      <JsonLd id="md-bankruptcy-laws-image-graph" data={imageSchemas} />
-      <JsonLd id="md-bankruptcy-laws-org" data={orgSchema} />
-      <JsonLd id="md-bankruptcy-laws-website" data={websiteSchema} />
-      <JsonLd id="md-bankruptcy-laws-author" data={personSchema} />
-      <JsonLd id="md-bankruptcy-laws-breadcrumb" data={breadcrumbSchema} />
-      <JsonLd id="md-bankruptcy-laws-webpage" data={webPageSchema} />
-      <JsonLd id="md-bankruptcy-laws-article" data={articleSchema} />
-      <JsonLd id="md-bankruptcy-laws-faq" data={faqSchema} />
+      <JsonLd id="mesa-az-bankruptcy-image-graph" data={imageSchemas} />
+      <JsonLd id="mesa-az-bankruptcy-org" data={orgSchema} />
+      <JsonLd id="mesa-az-bankruptcy-website" data={websiteSchema} />
+      <JsonLd id="mesa-az-bankruptcy-author" data={personSchema} />
+      <JsonLd id="mesa-az-bankruptcy-breadcrumb" data={breadcrumbSchema} />
+      <JsonLd id="mesa-az-bankruptcy-webpage" data={webPageSchema} />
+      <JsonLd id="mesa-az-bankruptcy-article" data={articleSchema} />
+      <JsonLd id="mesa-az-bankruptcy-lawyer-faq" data={faqSchema} />
 
-      <LocalNavBar />
       <MesaHomePage />
       <AzAreas />
     </PerfPageLayout>

@@ -170,17 +170,30 @@ export default function PerfPageLayout({
     <br />
     480-886-0339
     <br />
-    4425 E Agave Rd. Suite 110, Phoenix, AZ 85044
+    4425 E Agave Rd. STE 106, Phoenix, AZ 85044
   </div>
   <div style={{ marginTop: "0.5rem", fontSize: "0.85rem", color: "#777" }}>
-    The content on this site is informational only and not legal advice. 
-    Consult with a qualified bankruptcy attorney for legal guidance.
+    The content on this site is informational only and not legal advice. Always consult with a qualified Arizona bankruptcy attorney directly for legal guidance
+    Absent a written fee agreement, no attorney-client relationship is created.
   </div>
   <div style={{ marginTop: "0.5rem" }}>
-    <a href="/about-us" style={{ margin: "0 10px", color: "#555", textDecoration: "none" }}>About Us</a> | 
-    <a href="/privacy-policy" style={{ margin: "0 10px", color: "#555", textDecoration: "none" }}>Privacy Policy</a> | 
-<a href="/terms-and-conditions" style={{ margin: "0 10px", color: "#555", textDecoration: "none" }}>Terms & Conditions</a>
-  </div>
+  <a href="/about-us" style={{ margin: "0 10px", color: "#555", textDecoration: "none" }}>
+    About Us
+  </a>
+  {" | "}
+  <a href="/privacy-policy" style={{ margin: "0 10px", color: "#555", textDecoration: "none" }}>
+    Privacy Policy
+  </a>
+  {" | "}
+  <a href="/editorial-policy" style={{ margin: "0 10px", color: "#555", textDecoration: "none" }}>
+    Editorial Policy
+  </a>
+  {" | "}
+  <a href="/terms-and-conditions" style={{ margin: "0 10px", color: "#555", textDecoration: "none" }}>
+    Terms & Conditions
+  </a>
+</div>
+
 </div>
 
         }

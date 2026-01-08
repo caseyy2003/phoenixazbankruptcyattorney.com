@@ -70,16 +70,7 @@ const cities = [
   { city: "Phoenix", path: "/" },
   { city: "Mesa", path: "/mesa-az-bankruptcy-attorney" },
   { city: "Tucson", path: "/tucson-az-bankruptcy-attorney" },
-  { city: "Gilbert", path: "/gilbert-az-bankruptcy-attorney" },
-  { city: "Chandler", path: "/chandler-az-bankruptcy-attorney" },
-  { city: "Scottsdale", path: "/scottsdale-az-bankruptcy-attorney" },
-  { city: "Tempe", path: "/tempe-az-bankruptcy-attorney" },
-  { city: "Glendale", path: "/glendale-az-bankruptcy-attorney" },
-  { city: "Surprise", path: "/surprise-az-bankruptcy-attorney" },
-  { city: "Peoria", path: "/peoria-az-bankruptcy-attorney" },
   { city: "Prescott", path: "/prescott-az-bankruptcy-lawyer" },
-  { city: "Flagstaff", path: "/flagstaff-az-bankruptcy-attorney" },
-  { city: "Prescott", path: "/prescott-az-bankruptcy-attorney" },
 ];
 
 export default function AzAreas() {
@@ -89,10 +80,10 @@ export default function AzAreas() {
     <div className={classes.wrapper}>
       <GridContainer justifyContent="center" className={classes.gridTight} spacing={0}>
         <GridItem xs={12} sm={10} md={10} className={classes.gridTight}>
-          <h2 className={`${classes.title} ${classes.titleTight}`}>Cities We Serve Across Arizona</h2>
+          <h2 className={`${classes.title} ${classes.titleTight}`}>We Serve All of Arizona</h2>
 
           <p className={classes.para}>
-  We work with individuals and families across Arizona. Choose a city below to view local bankruptcy guidance, common
+  We work with individuals and families across Arizona. No matter where you live, feel free to schedule a consultation. Phone or virtual appointments are available. Choose a city below to view local bankruptcy guidance, common
   concerns we see in that area, and next-step resources.
 </p>
 
