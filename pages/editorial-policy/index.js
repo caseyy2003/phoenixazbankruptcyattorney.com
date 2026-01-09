@@ -4,16 +4,13 @@ import React from "react";
 import PerfPageLayout from "/components/PerfPageLayout";
 import Button from "/components/CustomButtons/Button.js";
 import LcpImagePreload from "/components/LcpImagePreload";
-import JsonLd from "/components/JsonLd";
+// import JsonLd from "/components/JsonLd";
 import EditorialPolicy from "../../content/EditorialPolicy.js";
 import AzAreas from "/components/AzAreas/AzAreas.js";
 
 const HEADER_HEIGHT = 52;
 
-const SITE_URL = "https://www.phoenixazbankruptcyattorney.com";
 const PAGE_URL = "https://www.phoenixazbankruptcyattorney.com/editorial-policy";
-
-const PRIMARY_IMAGE_ID = `${PAGE_URL}#hero-image`;
 
 const HERO_WEBP = "/img/bankruptcy-technical-topic.webp";
 const HERO_JPG = "/img/bankruptcy-technical-topic.jpg";
@@ -108,12 +105,10 @@ const HeroCtaWithLogo = () => (
   </div>
 );
 
-
-
-export default function BankruptcyClearCivilLawsuitDebt() {
+export default function EditorialPolicyPage() {
   return (
     <PerfPageLayout
-      title="Editorial Policy "
+      title="Editorial Policy | Yontz Law, PLLC"
       description="Editorial policy for content published by Yontz Law, PLLC."
       canonical={PAGE_URL}
       hero={{
@@ -121,8 +116,7 @@ export default function BankruptcyClearCivilLawsuitDebt() {
         srcJpg: HERO_JPG,
         width: 900,
         height: 600,
-        alt:
-          "Wide hero image introducing an Arizona guide on bankruptcy and lawsuit debt, branded for Arizona Bankruptcy Lawyers at Yontz Law, PLLC.",
+        alt: "Wide hero image for the Yontz Law, PLLC Editorial Policy page.",
         priority: true,
         cta: <HeroCtaWithLogo />,
       }}

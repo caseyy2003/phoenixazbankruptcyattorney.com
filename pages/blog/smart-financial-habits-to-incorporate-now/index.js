@@ -1,24 +1,25 @@
 /* eslint-disable */
 import React from "react";
-import dynamic from "next/dynamic";
+//import dynamic from "next/dynamic";
 import PerfPageLayout from "/components/PerfPageLayout";
 import Button from "/components/CustomButtons/Button.js";
 import LcpImagePreload from "/components/LcpImagePreload";
 import JsonLd from "/components/JsonLd";
-import Chapter7Az from "../../content/Chapter7Az.js";
+import SmartFinancialHabitsBlog from "../../../content/blog/SmartFinancialHabits.js";
 import AzAreas from "/components/AzAreas/AzAreas.js";
 
 const HEADER_HEIGHT = 52;
 
 const SITE_URL = "https://www.phoenixazbankruptcyattorney.com";
-const PAGE_URL = "https://www.phoenixazbankruptcyattorney.com/chapter-7-bankruptcy-arizona";
+const PAGE_URL =
+  "https://www.phoenixazbankruptcyattorney.com/blog/smart-financial-habits-to-incorporate-now";
 
 const PRIMARY_IMAGE_ID = `${PAGE_URL}#hero-image`;
 
 const HERO_WEBP = "/img/bankruptcy-technical-topic.webp";
 const HERO_JPG = "/img/bankruptcy-technical-topic.jpg";
 
-const PUBLISHED_ISO = "2026-01-10T00:00:00-07:00";
+const PUBLISHED_ISO = "2025-04-023T00:00:00-07:00";
 const MODIFIED_ISO = "2026-01-10T00:00:00-07:00";
 
 const YontzLawLogo = ({ width = 280 }) => (
@@ -114,69 +115,15 @@ const imageSchemas = {
     {
       "@type": "ImageObject",
       "@id": PRIMARY_IMAGE_ID,
-      "name": "Chapter 7 Bankruptcy in Arizona — Hero",
+      "name": "Smart Financial Habits to Incorporate Now — Hero",
       "description":
-        "Wide hero image for Arizona Bankruptcy Lawyers, branded for Yontz Law, PLLC in Phoenix, Arizona.",
+        "Wide hero image for an article on smart financial habits, published by Yontz Law, PLLC.",
       "inLanguage": "en-US",
       "contentUrl": `${SITE_URL}${HERO_JPG}`,
       "thumbnailUrl": `${SITE_URL}${HERO_JPG}`,
       "representativeOfPage": true,
       "license": `${SITE_URL}/terms-and-conditions`,
       "creator": { "@type": "Organization", "name": "Yontz Law, PLLC" },
-    },
-  ],
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": `${PAGE_URL}#faq`,
-  "inLanguage": "en-US",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What debts can chapter 7 bankruptcy discharge in Arizona?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text":
-          "chapter 7 commonly discharges many unsecured debts, such as credit card balances, medical bills, personal loans, and many collection accounts. Some categories often have special rules or may not be discharged in a typical case—so it’s important to identify exactly what debts you have (including any lawsuits, judgments, support obligations, or recent tax issues) before assuming everything will be wiped out. A review of your creditor list and any court paperwork helps set accurate expectations.",
-      },
-    },
-    {
-      "@type": "Question",
-      "name": "Will I lose my house or car if I file chapter 7 bankruptcy in Arizona?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text":
-          "Not necessarily. In most consumer chapter 7 cases, people keep their exempt property, and many cases are no-asset cases. What you can keep usually depends on Arizona exemptions and how much equity you have in the home or vehicle. Payment status can matter too—being current versus behind can change the strategy. If you’re worried about a home or car, the key is to evaluate equity, exemptions, and timing before you file.",
-      },
-    },
-    {
-      "@type": "Question",
-      "name": "How do I qualify for chapter 7 bankruptcy in Arizona?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text":
-          "Most people qualify in one of two ways: their household’s average gross income over the last six full calendar months is below Arizona’s median for their household size, or they’re above the median but still pass the means test after allowed deductions. Because the current monthly income calculation uses a six-month lookback, recent changes in overtime, job hours, or self-employment income can affect the result. If you’re close to the line, a careful means test review can prevent mistakes.",
-      },
-    },
-    {
-      "@type": "Question",
-      "name": "How long does a chapter 7 bankruptcy case usually take in Arizona?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text":
-          "Many chapter 7 cases follow a predictable timeline: complete the required pre-filing credit counseling course, file the petition and schedules, attend the 341 meeting with the trustee, complete the post-filing debtor education course, and then receive a discharge in eligible cases. While timelines vary, many cases reach discharge a few months after filing if there are no unusual issues or objections. The fastest cases are usually the ones with complete, accurate paperwork and good documentation.",
-      },
-    },
-    {
-      "@type": "Question",
-      "name": "What should I avoid doing before filing chapter 7 bankruptcy in Arizona?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text":
-          "The most common problems come from last-minute decisions that create extra questions later—like using credit right before filing (especially cash advances), transferring property to family for safekeeping, repaying relatives right before filing, or withdrawing retirement funds without understanding the tax and bankruptcy consequences. If bankruptcy is on the table, it’s usually smart to pause major financial moves and get advice on what to do (and not do) before you file.",
-      },
     },
   ],
 };
@@ -231,7 +178,8 @@ const breadcrumbSchema = {
   "@id": `${PAGE_URL}#breadcrumb`,
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE_URL}/` },
-    { "@type": "ListItem", "position": 2, "name": "Chapter 7 Bankruptcy in Arizona", "item": PAGE_URL },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${SITE_URL}/blog/` },
+    { "@type": "ListItem", "position": 3, "name": "Smart Financial Habits to Incorporate Now", "item": PAGE_URL },
   ],
 };
 
@@ -240,9 +188,9 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `${PAGE_URL}#webpage`,
   "url": PAGE_URL,
-  "name": "Chapter 7 Bankruptcy in Arizona | Yontz Law, PLLC",
+  "name": "Smart Financial Habits to Incorporate Now | Yontz Law, PLLC",
   "description":
-    "Chapter 7 bankruptcy in Arizona explained: eligibility, process, debts, and what you can protect. Request a free consultation with Yontz Law, PLLC.",
+    "Practical, everyday financial habits you can start now—budgeting, saving, spending intentionally, and avoiding common money traps.",
   "inLanguage": "en-US",
   "breadcrumb": { "@id": `${PAGE_URL}#breadcrumb` },
   "isPartOf": { "@id": `${SITE_URL}/#website` },
@@ -257,10 +205,10 @@ const articleSchema = {
   "@type": "Article",
   "@id": `${PAGE_URL}#article`,
   "mainEntityOfPage": { "@id": `${PAGE_URL}#webpage` },
-  "headline": "Chapter 7 Bankruptcy in Arizona | Yontz Law, PLLC",
-  "name": "Chapter 7 Bankruptcy in Arizona | Yontz Law, PLLC",
+  "headline": "Smart Financial Habits to Incorporate Now",
+  "name": "Smart Financial Habits to Incorporate Now",
   "description":
-    "A practical guide to chapter 7 bankruptcy in Arizona, including qualification, timelines, and what happens to your property.",
+    "Practical, everyday financial habits you can start now—budgeting, saving, spending intentionally, and avoiding common money traps.",
   "inLanguage": "en-US",
   "author": { "@id": `${SITE_URL}/about#casey-yontz` },
   "publisher": { "@id": `${SITE_URL}/#organization` },
@@ -271,11 +219,11 @@ const articleSchema = {
   "isAccessibleForFree": true,
 };
 
-export default function Chapter7BkAz() {
+export default function SmartFinHabits() {
   return (
     <PerfPageLayout
-      title="Chapter 7 Bankruptcy in Arizona | Yontz Law, PLLC"
-      description="Chapter 7 bankruptcy in Arizona: eligibility, process, debts, and exemptions. Request a free consultation with Yontz Law, PLLC."
+      title="Smart Financial Habits to Incorporate Now | Yontz Law, PLLC"
+      description="Practical financial habits you can start now—budgeting, saving, spending intentionally, and avoiding money traps."
       canonical={PAGE_URL}
       hero={{
         srcWebp: HERO_WEBP,
@@ -283,7 +231,7 @@ export default function Chapter7BkAz() {
         width: 900,
         height: 600,
         alt:
-          "Wide hero image introducing Chapter 7 bankruptcy in Arizona, branded for Arizona Bankruptcy Lawyers at Yontz Law, PLLC.",
+          "Wide hero image for an article about smart financial habits to incorporate now, branded for Arizona Bankruptcy Lawyers at Yontz Law, PLLC.",
         priority: true,
         cta: <HeroCtaWithLogo />,
       }}
@@ -295,16 +243,15 @@ export default function Chapter7BkAz() {
         preloadWidth={828}
       />
 
-      <JsonLd id="chapter-7-bankruptcy-arizona-image-graph" data={imageSchemas} />
-      <JsonLd id="chapter-7-bankruptcy-arizona-org" data={orgSchema} />
-      <JsonLd id="chapter-7-bankruptcy-arizona-website" data={websiteSchema} />
-      <JsonLd id="chapter-7-bankruptcy-arizona-author" data={personSchema} />
-      <JsonLd id="chapter-7-bankruptcy-arizona-breadcrumb" data={breadcrumbSchema} />
-      <JsonLd id="chapter-7-bankruptcy-arizona-webpage" data={webPageSchema} />
-      <JsonLd id="chapter-7-bankruptcy-arizona-article" data={articleSchema} />
-      <JsonLd id="chapter-7-bankruptcy-arizona-faq" data={faqSchema} />
+      <JsonLd id="smart-financial-habits-image-graph" data={imageSchemas} />
+      <JsonLd id="smart-financial-habits-org" data={orgSchema} />
+      <JsonLd id="smart-financial-habits-website" data={websiteSchema} />
+      <JsonLd id="smart-financial-habits-author" data={personSchema} />
+      <JsonLd id="smart-financial-habits-breadcrumb" data={breadcrumbSchema} />
+      <JsonLd id="smart-financial-habits-webpage" data={webPageSchema} />
+      <JsonLd id="smart-financial-habits-article" data={articleSchema} />
 
-      <Chapter7Az />
+      <SmartFinancialHabitsBlog />
       <AzAreas />
     </PerfPageLayout>
   );

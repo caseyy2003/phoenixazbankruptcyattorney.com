@@ -272,7 +272,7 @@ export default function PrescottHomePage() {
       padding: "14px 16px",
     }}
   >
-    <p style={{ margin: "0 0 6px", fontWeight: 800 }}>chapter 7</p>
+    <p style={{ margin: "0 0 6px", fontWeight: 800 }}>Chapter 7</p>
     <p style={{ margin: 0 }}>
       Often explored when the priority is relief from unsecured debt and the numbers fit. It tends to be the simpler path, but
       planning and timing still matter.
@@ -295,7 +295,7 @@ export default function PrescottHomePage() {
       padding: "14px 16px",
     }}
   >
-    <p style={{ margin: "0 0 6px", fontWeight: 800 }}>chapter 13</p>
+    <p style={{ margin: "0 0 6px", fontWeight: 800 }}>Chapter 13</p>
     <p style={{ margin: 0 }}>
       Often explored when you need time and structure—like catching up on certain payments or protecting important assets with a
       plan.

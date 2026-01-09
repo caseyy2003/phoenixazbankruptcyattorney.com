@@ -19,6 +19,8 @@ import {
   StyledEngineProvider,
 } from "@mui/material/styles";
 import { ThemeProvider as StylesThemeProvider } from "@mui/styles";
+// pages/_app.js
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 import "/styles/scss/nextjs-material-kit-pro.scss";
 import "/styles/css/react-demo.css";

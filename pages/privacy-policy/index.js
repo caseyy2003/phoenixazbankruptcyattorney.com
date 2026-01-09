@@ -10,10 +10,7 @@ import AzAreas from "/components/AzAreas/AzAreas.js";
 
 const HEADER_HEIGHT = 52;
 
-const SITE_URL = "https://www.phoenixazbankruptcyattorney.com";
-const PAGE_URL = "https://www.phoenixazbankruptcyattorney.com/editorial-policy";
-
-const PRIMARY_IMAGE_ID = `${PAGE_URL}#hero-image`;
+const PAGE_URL = "https://www.phoenixazbankruptcyattorney.com/privacy-policy";
 
 const HERO_WEBP = "/img/bankruptcy-technical-topic.webp";
 const HERO_JPG = "/img/bankruptcy-technical-topic.jpg";
@@ -108,21 +105,18 @@ const HeroCtaWithLogo = () => (
   </div>
 );
 
-
-
-export default function BankruptcyClearCivilLawsuitDebt() {
+export default function PrivacyPolicyPage() {
   return (
     <PerfPageLayout
-      title="Privacy Policy "
-      description="Privacy policy for content published by Yontz Law, PLLC."
+      title="Privacy Policy | Yontz Law, PLLC"
+      description="Privacy policy for the Yontz Law, PLLC website."
       canonical={PAGE_URL}
       hero={{
         srcWebp: HERO_WEBP,
         srcJpg: HERO_JPG,
         width: 900,
         height: 600,
-        alt:
-          "Wide hero image introducing an Arizona guide on bankruptcy and lawsuit debt, branded for Arizona Bankruptcy Lawyers at Yontz Law, PLLC.",
+        alt: "Wide hero image for the Yontz Law, PLLC Privacy Policy page.",
         priority: true,
         cta: <HeroCtaWithLogo />,
       }}

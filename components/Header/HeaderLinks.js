@@ -147,7 +147,43 @@ export default function HeaderLinks(props) {
           ]}
         />
       </ListItem>
-
+{/* Blog */}
+<ListItem className={classes.listItem}>
+        <CustomDropdown
+          noLiPadding
+          navDropdown
+          hoverColor={dropdownHoverColor}
+          buttonText="Blog"
+          buttonProps={{
+            className: classes.navLink,
+            color: "transparent",
+          }}
+          buttonIcon={MenuBook}
+          dropdownList={[
+            <Link
+              href="/blog/u-s-deficit-responsibility"
+              key="basics"
+              className={classes.dropdownLink}
+            >
+              Who Is Responsible for the U.S. Deficit? 
+            </Link>,
+            <Link
+            href="/blog/history-of-us-tariffs"
+            key="basics"
+            className={classes.dropdownLink}
+          >
+            A Brief History of Tariffs
+          </Link>,
+          <Link
+          href="/blog/smart-financial-habits-to-incorporate-now"
+          key="basics"
+          className={classes.dropdownLink}
+        >
+          Smart Financial Habits to Incorporate Now
+        </Link>,
+          ]}
+          />
+        </ListItem>  
       {/* Contact */}
       <ListItem className={classes.listItem}>
         <Link href="/contact-us" className={classes.navLink}>
