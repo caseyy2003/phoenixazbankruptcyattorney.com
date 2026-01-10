@@ -312,7 +312,7 @@ export default function PrescottHomePage() {
 </div>
 
 <p>
-  If protecting property is a big concern, exemptions can be a key part of the conversation. For the deep details and current
+  If protecting property is a bieg concern, exemptions can be a key part of the conversation. For the deep details and current
   limits, start here:{" "}
   <Link
     href="/arizona-bankruptcy-exemptions"

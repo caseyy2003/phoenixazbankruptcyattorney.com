@@ -2,21 +2,20 @@
 import React from "react";
 import PerfPageLayout from "/components/PerfPageLayout";
 import Button from "/components/CustomButtons/Button.js";
-import LcpImagePreload from "/components/LcpImagePreload";
 import JsonLd from "/components/JsonLd";
 
 import HomePage from "../content/HomePage.js";
 import AzAreas from "/components/AzAreas/AzAreas.js";
 
-const HEADER_HEIGHT = 52;
+
 
 const SITE_URL = "https://www.phoenixazbankruptcyattorney.com";
 const PAGE_URL = "https://www.phoenixazbankruptcyattorney.com/";
 
 const PRIMARY_IMAGE_ID = `${PAGE_URL}#hero-image`;
 
-const HERO_WEBP = "/img/bankruptcy-technical-topic.webp";
-const HERO_JPG = "/img/bankruptcy-technical-topic.jpg";
+const HERO_WEBP = "/img/phoenix-arizona-desert-skyline-hero-background.webp";
+const HERO_JPG = "/img/phoenix-arizona-desert-skyline-hero-background.jpg";
 
 const PUBLISHED_ISO = "2017-05-22T00:00:00-07:00";
 const MODIFIED_ISO = "2026-01-10T00:00:00-07:00";
@@ -300,18 +299,15 @@ export default function PhoenixHome() {
         srcJpg: HERO_JPG,
         width: 900,
         height: 600,
-        alt:
-          "Wide hero image for Arizona Bankruptcy Lawyers branded for Yontz Law, PLLC in Phoenix, Arizona.",
+        alt: "Wide hero image for Arizona Bankruptcy Lawyers branded for Yontz Law, PLLC in Phoenix, Arizona.",
         priority: true,
+        sizes: "(max-width: 768px) 100vw, 1200px",
+        quality: 60,
         cta: <HeroCtaWithLogo />,
       }}
+      
     >
-      <LcpImagePreload
-        srcWebp={HERO_WEBP}
-        srcJpg={HERO_JPG}
-        sizes="(max-width: 768px) 100vw, 1000px"
-        preloadWidth={828}
-      />
+   
 
       <JsonLd id="phoenix-home-image-graph" data={imageSchemas} />
       <JsonLd id="phoenix-home-org" data={orgSchema} />
