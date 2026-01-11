@@ -8,6 +8,7 @@ import Button from "/components/CustomButtons/Button.js";
 import Link from "next/link";
 import sectionTextStyle from "/styles/jss/nextjs-material-kit-pro/pages/blogPostSections/sectionTextStyle.js";
 import NextImage from "next/image";
+import OfficeMapEmbed from "/components/office-map-imbed-phoenix/OfficeMapEmbed";
 import PageTopicSelector from "/components/page-topic-selector/PageTopicSelector.js";
 //import AzAreas from "/components/AzAreas/AzAreas.js";
 const LiteYouTubeEmbed = dynamic(
@@ -671,16 +672,8 @@ export default function HomePage() {
   but in-person meetings are available when needed.
 </p>
 
+<OfficeMapEmbed containerClassName={classes.iframeContainer} />
 
-<div className={classes.iframeContainer}>
-  <iframe
-    title="Yontz Law, PLLC office location in Phoenix, Arizona"
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-    style={{ width: "100%", height: 380, border: 0, borderRadius: 8 }}
-    src="https://www.google.com/maps?q=4425%20E%20Agave%20Rd.%20Suite%20110%2C%20Phoenix%2C%20AZ%2085044&output=embed"
-  />
-</div>
 
 <h2 className={classes.title}>What to Have Ready for a Phoenix Bankruptcy Consultation</h2>
 

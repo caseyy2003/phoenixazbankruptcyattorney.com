@@ -19,9 +19,9 @@ import {
   StyledEngineProvider,
 } from "@mui/material/styles";
 import { ThemeProvider as StylesThemeProvider } from "@mui/styles";
-// pages/_app.js
-import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
+// Global CSS
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import "/styles/scss/nextjs-material-kit-pro.scss";
 import "/styles/css/react-demo.css";
 import "animate.css/animate.min.css";
@@ -68,12 +68,13 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <React.Fragment>
       <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE" />
-        <title>NextJS Material Kit by Creative Tim</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        {/* Removed Google Maps JS API: it was render-blocking and not needed for an iframe embed map */}
+        {/* <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE" /> */}
+
+        {/* Let each page control its own title via PerfPageLayout */}
+        <title>Yontz Law, PLLC</title>
       </Head>
 
       <StyledEngineProvider injectFirst>

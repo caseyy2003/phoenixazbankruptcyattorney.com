@@ -149,15 +149,17 @@ export default function PerfPageLayout({
                 }}
               />
             ) : (
-              <Image
-                src={heroSrc}
-                alt={hero.alt}
-                fill
-                priority={resolvedPriority}
-                sizes={resolvedSizes}
-                quality={resolvedQuality}
-                className={classes.heroImg}
-              />
+<Image
+  src={heroSrc}
+  alt={hero.alt}
+  fill
+  priority={resolvedPriority}
+  fetchPriority={resolvedPriority ? "high" : "auto"}
+  sizes={resolvedSizes}
+  quality={resolvedQuality}
+  className={classes.heroImg}
+/>
+
             )}
           </>
         )}
