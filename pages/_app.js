@@ -1,16 +1,4 @@
-/*!
-=========================================================
-* NextJS Material Kit PRO v1.3.1 based on Material Kit PRO - v2.0.2 (Bootstrap 4.0.0 Final Edition) and Material Kit PRO React v1.8.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/ct-nextjs-material-kit-pro
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 import React, { useEffect } from "react";
 import Head from "next/head";
 import {
@@ -49,17 +37,7 @@ export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
     const comment = document.createComment(`
 
-=========================================================
-* NextJS Material Kit PRO v1.3.1 based on Material Kit PRO - v2.0.2 (Bootstrap 4.0.0 Final Edition) and Material Kit PRO React v1.8.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/nextjs-material-kit-pro
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 `);
     document.insertBefore(comment, document.documentElement);
