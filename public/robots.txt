@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.phoenixazbankruptcyattorney.com
+
+# Sitemaps
+Sitemap: https://www.phoenixazbankruptcyattorney.com/sitemap.xml

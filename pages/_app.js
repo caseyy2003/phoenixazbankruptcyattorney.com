@@ -48,8 +48,7 @@ export default function MyApp({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        {/* Removed Google Maps JS API: it was render-blocking and not needed for an iframe embed map */}
-        {/* <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE" /> */}
+
 
         {/* Let each page control its own title via PerfPageLayout */}
         <title>Yontz Law, PLLC</title>
