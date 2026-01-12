@@ -7,7 +7,7 @@ module.exports = {
   priority: 0.7,
 
   exclude: [
-    "/contact",     // ✅ add this
+    "/contact",    
     "/404",
     "/500",
     "/api/*",
