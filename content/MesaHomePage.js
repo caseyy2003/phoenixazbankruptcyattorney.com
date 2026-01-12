@@ -156,8 +156,8 @@ export default function MesaHomePage() {
       , Attorney (18+ years bankruptcy experience)
     </div>
     <div>
-      <time dateTime="2025-12-12" itemProp="dateModified">
-        Last updated: December 12, 2025
+      <time dateTime="2025-01-10" itemProp="dateModified">
+        Last updated: January 10, 2026
       </time>
     </div>
     <div style={{ marginTop: "0.5rem" }}>

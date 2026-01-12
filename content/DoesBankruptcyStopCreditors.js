@@ -152,7 +152,7 @@ export default function DoesBankruptcyStopCreditors() {
       , Attorney (18+ years bankruptcy experience)
     </div>
     <div>
-      <time dateTime="2025-12-12" itemProp="dateModified">
+      <time dateTime="2026-01-10" itemProp="dateModified">
         Last updated: December 12, 2025
       </time>
     </div>
