@@ -21,7 +21,12 @@ const nextConfig = {
       {
         source: "/contact",
         destination: "/contact-us",
-        permanent: true, // 301
+        permanent: true, // Vercel will serve 308 (treated like 301)
+      },
+      {
+        source: "/bankruptcy-lawyer-mesa-az",
+        destination: "/mesa-az-bankruptcy-attorney",
+        permanent: true, // Vercel will serve 308 (treated like 301)
       },
     ];
   },
