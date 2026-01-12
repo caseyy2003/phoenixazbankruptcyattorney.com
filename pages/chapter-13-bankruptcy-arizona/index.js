@@ -268,7 +268,7 @@ export default function Chapter13BankruptcyArizona() {
       <JsonLd id="chapter-13-arizona-webpage" data={webPageSchema} />
       <JsonLd id="chapter-13-arizona-article" data={articleSchema} />
 
-      {/* Only include FAQ schema if the FAQs are visibly present on this page. */}
+   
       <Chapter13Az />
       <AzAreas />
     </PerfPageLayout>

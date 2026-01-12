@@ -152,47 +152,47 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Does Arizona use federal bankruptcy exemptions?",
+      "name": "How long does a chapter 13 plan last?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "Arizona generally opts out of the federal bankruptcy exemptions, so most Arizona residents use Arizona’s state exemptions when they file. There are timing rules and special situations, so the best approach is to confirm which exemption set applies based on where you have lived during the lookback period.",
+          "Plans are typically three to five years, and the required length often depends on income compared to the applicable median.",
       },
     },
     {
       "@type": "Question",
-      "name": "Can bankruptcy exemptions help me keep my home or car in Arizona?",
+      "name": "Can chapter 13 stop foreclosure in Arizona?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "Exemptions are designed to protect certain property up to specific limits. Whether you can keep a home or car depends on your equity, the applicable Arizona exemptions, and your payment status. A quick review of equity and liens usually clarifies what is protected and what strategy makes sense.",
+          "chapter 13 can stop foreclosure proceedings and may allow you to cure delinquent mortgage payments over time, as long as you keep up with the payments that come due during the plan.",
       },
     },
     {
       "@type": "Question",
-      "name": "What property is commonly protected by Arizona bankruptcy exemptions?",
+      "name": "Does a garnishment stop during a chapter 13 Arizona?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "Many exemptions focus on essential assets—like a portion of home equity, vehicle equity up to a limit, household goods, certain personal property, and some benefits. The exact protection depends on the specific asset type and the current exemption amounts.",
+          "In many cases, yes. Once a chapter 13 case is filed, the automatic stay generally stops most collection activity, including wage garnishments and bank garnishments. Exceptions exist and timing matters, so notify your attorney promptly if a garnishment is already in process. Some obligations, such as certain support-related collections, can follow different rules.",
       },
     },
     {
       "@type": "Question",
-      "name": "Do exemptions work the same in chapter 7 and chapter 13?",
+      "name": "Do I need a minimum amount of debt to file?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "Exemptions matter in both chapters, but they can affect the case in different ways. In chapter 7, exemptions help determine what property is protected from liquidation. In chapter 13, exemptions often affect plan structure and what creditors must receive. The right approach depends on your goals and your overall financial picture.",
+          "There’s no minimum debt requirement, but chapter 13 is usually most helpful when you need a court-backed structure to catch up on arrears, manage multiple debts, or protect assets while you repay over time.",
       },
     },
     {
       "@type": "Question",
-      "name": "What if I recently moved to Arizona?",
+      "name": "Where can I read the official basics?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "Federal law includes residency lookback rules that can determine which state’s exemptions apply if you have not lived in Arizona long enough. If you moved recently, timing can be important—so it’s smart to review your move dates before filing.",
+          "The U.S. Courts publish an overview of chapter 13 basics on their website (search: “U.S. Courts Chapter 13 Bankruptcy Basics”).",
       },
     },
   ],
@@ -287,6 +287,8 @@ const articleSchema = {
   "dateModified": MODIFIED_ISO,
   "isAccessibleForFree": true,
 };
+
+
 
 export default function Chp13AZ() {
   return (
