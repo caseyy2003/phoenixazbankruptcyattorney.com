@@ -86,7 +86,7 @@ const YontzLawLogo = ({ width = 280 }) => (
         fontSize="22"
         fill="#e5e7eb"
       >
-        Arizona Bankruptcy Lawyers
+        Phoenix Bankruptcy Lawyers
       </text>
     </g>
   </svg>
@@ -151,51 +151,52 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How do I know if bankruptcy is the right option in Phoenix, AZ?",
+      "name": "How Do I Know If Bankruptcy Is the Right Option in Phoenix, AZ?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "Bankruptcy can be a strong option when debt payments, lawsuits, garnishments, or repossession threats are no longer manageable—but it isn’t the right fit for everyone. The best way to tell is to look at your goals (protecting a paycheck, keeping a car or home, stopping collection pressure), your income, your assets, and the types of debts you have. A Phoenix bankruptcy consultation usually starts by reviewing a clear snapshot of your situation so you can compare bankruptcy to alternatives with realistic expectations.",
+          "Bankruptcy can make sense when debt payments, lawsuits, wage garnishments, or repossession threats are no longer manageable. The quickest way to decide is to look at your goals (protecting income, keeping a car or home, stopping collection pressure), your monthly budget, and the types of debts you have. In a Phoenix bankruptcy consultation, we usually start with a clear snapshot of income, debts, and assets so you can compare bankruptcy to realistic alternatives and choose the best next step.",
       },
     },
     {
       "@type": "Question",
-      "name": "Will filing bankruptcy stop creditor calls, lawsuits, and wage garnishments in Arizona?",
+      "name": "Can Bankruptcy Stop Wage Garnishment or a Lawsuit in Phoenix?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "In most cases, filing triggers an automatic stay that can pause many collection actions, including ongoing lawsuits and wage garnishments. Some situations have exceptions or require quick attention (for example, certain family law matters or repeat filings), and creditors may still need proper notice. If you’re dealing with active garnishments or a pending lawsuit in Phoenix, timing matters—so it’s smart to get advice before deadlines or pay periods pass.",
+          "In many cases, yes. Filing typically triggers the automatic stay, which generally pauses most collection activity, including wage garnishments and many lawsuits. Timing matters in Phoenix—especially if a garnishment is already hitting your paycheck or a court deadline is approaching—so it’s smart to get advice before another pay period or hearing date passes. Some situations have exceptions, and creditors may need proper notice.",
       },
     },
     {
       "@type": "Question",
-      "name": "Can I keep my home or car if I file bankruptcy in Phoenix?",
+      "name": "Can I Keep My Car or Home If I File Bankruptcy in Phoenix?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "Many people who file bankruptcy in Phoenix are trying to protect housing and reliable transportation. Whether you can keep a home or car depends on factors like Arizona bankruptcy exemptions, how much equity you have, whether you’re behind on payments, and which bankruptcy chapter you file. A consultation typically focuses on your current payment status, payoff amounts, and the protect-versus-catch-up strategy that best fits your goals.",
+          "Often, yes—especially when there’s a clear plan. Whether you can keep your home or car depends on your equity, your payment status, and which chapter you file. Arizona’s exemption rules also play a big role. A consultation usually focuses on your liens, payoff amounts, and whether the right strategy is to protect the asset, catch up on arrears, or restructure payments.",
       },
     },
     {
       "@type": "Question",
-      "name": "What documents should I gather for a Phoenix bankruptcy consultation?",
+      "name": "How Fast Can a Phoenix Bankruptcy Case Be Filed If I Have a Garnishment or Lawsuit?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "You don’t need perfect paperwork, but a few items can make the conversation much more productive: recent pay stubs or income proof, a list of creditors or collection letters, any lawsuit or garnishment documents, and basic housing/vehicle payment details. If you have your most recent tax return, that can also help with planning. The goal is a reliable snapshot—so you can get clear answers without lots of back-and-forth.",
+          "It depends on how quickly accurate information can be gathered, but many filings can move quickly once the essentials are collected. If you’re dealing with a wage garnishment, a bank garnishment, a pending lawsuit, or a trustee sale date, the priority is to gather a reliable snapshot (income, debts, and key documents) so you don’t lose time to avoidable delays. If time is critical, say so right away so the next steps can be prioritized.",
       },
     },
     {
       "@type": "Question",
-      "name": "How long does the bankruptcy process usually take in Phoenix, Arizona?",
+      "name": "What Should I Gather for a Phoenix Bankruptcy Consultation?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "Timing varies by chapter and by how quickly documents are gathered, but many cases follow a predictable flow: pre-filing credit counseling, filing the petition, attending the 341 meeting with the trustee (often by phone or video), completing the post-filing debtor education course, and then receiving a discharge in eligible cases. Your exact timeline depends on your case complexity, the chapter you file under, and any issues that need extra review.",
+          "You don’t need perfect paperwork. The most helpful items are recent pay stubs (or other income proof), a list of creditors or collection letters, any lawsuit or garnishment documents, and basic housing/vehicle payment details. If you have your most recent tax return, that can help with planning. The goal is a dependable snapshot—so you can get clear answers without a lot of back-and-forth.",
       },
     },
   ],
 };
+
 
 const orgSchema = {
   "@context": "https://schema.org",

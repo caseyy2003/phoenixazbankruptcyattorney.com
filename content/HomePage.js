@@ -132,16 +132,17 @@ export default function HomePage() {
     margin: "0.5rem 0 1.25rem",
     color: "#555",
   }}
-  aria-label="Attorney oversight and page update information"
+  aria-label="Attorney review and page update information"
 >
   <NextImage
     src="/img/casey-yontz-headshot.webp"
-    alt="Portrait of attorney Casey Yontz, bankruptcy lawyer"
+    alt="Attorney Casey Yontz headshot"
     width={64}
     height={64}
     style={{ borderRadius: "50%" }}
     priority={false}
   />
+
   <div>
     <div>
       <strong>Reviewed by:</strong>{" "}
@@ -153,24 +154,17 @@ export default function HomePage() {
       >
         Casey Yontz
       </a>
-      , Attorney (18+ years bankruptcy experience)
+      , Bankruptcy Attorney (18+ years experience)
     </div>
+
     <div>
       <time dateTime="2026-01-10" itemProp="dateModified">
         Last updated: January 10, 2026
       </time>
     </div>
-    <div style={{ marginTop: "0.5rem" }}>
-      <a
-        href="/about-us"
-        rel="author"
-        style={{ color: "#0656d3", textDecoration: "underline" }}
-      >
-        About the Author
-      </a>
-    </div>
   </div>
 </div>
+
 
 <p>
   If you’re searching for <strong>bankruptcy lawyers Phoenix AZ</strong>, you’re
@@ -331,23 +325,20 @@ export default function HomePage() {
 <h2 className={classes.title}>Bankruptcy Lawyers in Phoenix, AZ With 18+ Years of Experience</h2>
 
 <p>
-  When someone is overwhelmed, the most helpful thing isn’t hype—it’s steady,
-  experienced guidance and clear explanations. Attorney Casey Yontz has practiced
-  bankruptcy law for over <strong>18 years</strong> and has helped{" "}
-  <strong>thousands</strong> of individuals navigate real-world financial
-  problems in Arizona.
+  When you’re overwhelmed, the most helpful thing isn’t hype—it’s steady guidance and clear
+  explanations. Attorney Casey Yontz has practiced bankruptcy law for <strong>18+ years</strong> and
+  has helped <strong>thousands</strong> of Arizona clients work through real-world financial
+  problems.
 </p>
 
 <p>
-  That experience matters because bankruptcy is rarely “just paperwork.” Small
-  decisions—especially about timing, what to do (and not do) before filing, and
-  how to document your situation—can make the process smoother and help you avoid
-  preventable complications. Our job is to explain your options in plain English
-  and help you choose a path you can actually live with.
+  That experience matters because bankruptcy is rarely “just paperwork.” Timing, documentation, and
+  pre-filing decisions can change outcomes and cause delays if handled the wrong way. Our job is to
+  explain your options in plain English and help you choose a plan you can actually follow.
 </p>
 
 <p>
-  If you’d like to learn more about Attorney Yontz’s background and approach, see{" "}
+  Learn more about Attorney Yontz’s background here:{" "}
   <Link
     href="/about-us#casey-yontz"
     rel="author"
@@ -357,6 +348,7 @@ export default function HomePage() {
   </Link>
   .
 </p>
+
 
 <h2 className={classes.title}>Bankruptcy Paths Phoenix Residents Typically Compare</h2>
 
@@ -452,16 +444,15 @@ export default function HomePage() {
 <h2 className={classes.title}>Phoenix-Specific Mistakes That Can Complicate a Bankruptcy Case</h2>
 
 <p>
-  Most bankruptcy complications don’t come from “doing bankruptcy wrong”—they come
-  from timing and paper trails. Phoenix-area filers often run into the same few
-  issues because they’re trying to solve problems quickly (keep the lights on,
-  protect transportation, calm family stress) without realizing certain moves can
-  create extra questions later.
+  Most bankruptcy complications don’t come from “doing bankruptcy wrong”—they come from timing,
+  paper trails, and well-meaning decisions made under pressure. Phoenix-area filers often run into
+  the same few issues because they’re trying to solve problems fast (protect a paycheck, keep a car,
+  stop collection stress) without realizing certain moves can create extra questions later.
 </p>
 
 <p>
-  The goal here isn’t to scare you—it’s to give you a simple “pause list” so you
-  can avoid preventable headaches:
+  The goal here isn’t to scare you—it’s to give you a simple pause list so you can avoid preventable
+  headaches.
 </p>
 
 <ul
@@ -473,65 +464,88 @@ export default function HomePage() {
 >
   <li style={{ marginBottom: 12 }}>
     <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-    <strong>Using credit right before filing:</strong> especially cash advances
-    or unusually large charges.
+    <strong>Waiting too long when a wage garnishment is active:</strong> letting multiple pay periods
+    pass without getting advice.
     <div style={{ marginTop: 6, color: "#555" }}>
       <small>
-        <strong>Why it matters:</strong> Recent credit activity can trigger extra
-        questions and, in some situations, disputes. If bankruptcy is on the
-        table, it’s usually smart to pause non-essential credit use and ask what
-       ’s appropriate for necessities.
+        <strong>Why it matters:</strong> Timing can affect how much is taken and what steps are needed
+        to stop it. If a garnishment is hitting your paycheck, it’s worth getting guidance before the
+        next pay date.
       </small>
     </div>
   </li>
 
   <li style={{ marginBottom: 12 }}>
     <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-    <strong>Moving money between family members:</strong> repaying a relative,
-    “borrowing” from a family account, or transferring a vehicle title “for
-    safekeeping.”
+    <strong>Using credit right before filing:</strong> especially cash advances or unusually large
+    charges.
     <div style={{ marginTop: 6, color: "#555" }}>
       <small>
-        <strong>Why it matters:</strong> Family transactions can be reviewed more
-        closely than ordinary payments. Even well-intentioned transfers can slow
-        down an otherwise straightforward case.
+        <strong>Why it matters:</strong> Recent credit activity can trigger extra questions and, in
+        some situations, disputes. If bankruptcy is on the table, it’s usually smart to pause
+        non-essential credit use and ask what’s appropriate for necessities.
       </small>
     </div>
   </li>
 
   <li style={{ marginBottom: 12 }}>
     <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-    <strong>Tax refunds and similar lump-sum payments:</strong> refunds can
-    affect planning and timing.
+    <strong>Moving money or titles between family members:</strong> repaying a relative, “borrowing”
+    from a family account, or transferring a vehicle title “for safekeeping.”
     <div style={{ marginTop: 6, color: "#555" }}>
       <small>
-        <strong>Why it matters:</strong> A refund is often money you’re counting
-        on—but it can also be something the trustee asks about. A quick review
-        helps you plan without surprises.
+        <strong>Why it matters:</strong> Family transactions are often reviewed more closely than
+        ordinary payments. Even well-intentioned transfers can slow down an otherwise straightforward
+        case.
+      </small>
+    </div>
+  </li>
+
+  <li style={{ marginBottom: 12 }}>
+    <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+    <strong>Ignoring a lawsuit or default deadline:</strong> assuming bankruptcy can fix any timing
+    issue later.
+    <div style={{ marginTop: 6, color: "#555" }}>
+      <small>
+        <strong>Why it matters:</strong> A judgment can lead to garnishment or bank levies. Getting
+        advice early helps you choose the right strategy and avoid avoidable escalation.
+      </small>
+    </div>
+  </li>
+
+  <li style={{ marginBottom: 12 }}>
+    <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+    <strong>Tax refunds and other lump-sum deposits:</strong> refunds, bonuses, or back pay that hit
+    the account right before filing.
+    <div style={{ marginTop: 6, color: "#555" }}>
+      <small>
+        <strong>Why it matters:</strong> A lump-sum deposit is often money you’re counting on—but it
+        can also create trustee questions. Planning around timing and documentation can help you
+        avoid surprises.
       </small>
     </div>
   </li>
 
   <li style={{ marginBottom: 0 }}>
     <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-    <strong>Retirement accounts vs. bank accounts:</strong> people sometimes cash
-    out retirement funds or move money without realizing how differently those
-    accounts can be treated.
+    <strong>Cashing out retirement to pay debts:</strong> or moving retirement funds into a regular
+    bank account without advice.
     <div style={{ marginTop: 6, color: "#555" }}>
       <small>
-        <strong>Why it matters:</strong> Cashing out retirement can create taxes,
-        penalties, and weaker protection. It’s usually worth getting guidance
-        before moving funds.
+        <strong>Why it matters:</strong> Retirement funds often have stronger protection than cash.
+        Cashing out can create taxes, penalties, and weaker protection. It’s usually worth getting
+        guidance before moving funds.
       </small>
     </div>
   </li>
 </ul>
 
 <p>
-  If any of these sound familiar, don’t panic—most situations are manageable.
-  The key is getting clarity before you file so you can choose a strategy you
-  feel good about and avoid the common “I wish I’d asked sooner” moments.
+  If any of these sound familiar, don’t panic—most situations are manageable. The key is getting
+  clarity before you file so you can choose a strategy you feel good about and avoid the common “I
+  wish I’d asked sooner” moments.
 </p>
+
 
 <h2 className={classes.title}>What Clients Say</h2>
 
@@ -639,7 +653,7 @@ export default function HomePage() {
         what steps actually move you forward.
       </small>
     </p>
-    <p style={{ margin: "8px 0 0", fontWeight: 700 }}>— Melanie</p>
+    <p style={{ margin: "8px 0 0", fontWeight: 700 }}>— Sarah</p>
   </li>
 </ul>
 
@@ -668,8 +682,7 @@ export default function HomePage() {
 <h2 className={classes.title}>Find Our Phoenix Office</h2>
 
 <p>
-  Our office is located at 4425 E Agave Rd. Suite 106, Phoenix, AZ 85044. Most clients prefer a virtual consultation,
-  but in-person meetings are available when needed.
+  Our office is located at 4425 E Agave Rd. Suite 106, Phoenix, AZ 85044. Virtual consultations are available, and in-person meetings are available when helpful.
 </p>
 
 <OfficeMapEmbed containerClassName={classes.iframeContainer} />
@@ -746,35 +759,38 @@ export default function HomePage() {
 
 <h2 className={classes.title}>Phoenix Bankruptcy FAQs</h2>
 
-<h3 className={classes.title}>How do I know if bankruptcy is the right option in Phoenix, AZ?</h3>
+<h3 className={classes.title}>How Do I Know If Bankruptcy Is the Right Option in Phoenix, AZ?</h3>
 <p>
-  Bankruptcy can be a strong option when debt payments, lawsuits, garnishments, or repossession threats are no longer manageable—but it isn’t the right fit for everyone. The best way to tell is to look at your goals (protecting a paycheck, keeping a car or home, stopping collection pressure), your income, your assets, and the types of debts you have. A Phoenix bankruptcy consultation usually starts by reviewing a clear snapshot of your situation so you can compare bankruptcy to alternatives with realistic expectations.
+  Bankruptcy can make sense when debt payments, lawsuits, wage garnishments, or repossession threats are no longer manageable. The quickest way to decide is to look at your goals (protecting income, keeping a car or home, stopping collection pressure), your monthly budget, and the types of debts you have. In a Phoenix bankruptcy consultation, we usually start with a clear snapshot of income, debts, and assets so you can compare bankruptcy to realistic alternatives and choose the best next step.
 </p>
 
-<h3 className={classes.title}>Will filing bankruptcy stop creditor calls, lawsuits, and wage garnishments in Arizona?</h3>
+<h3 className={classes.title}>Can Bankruptcy Stop Wage Garnishment or a Lawsuit in Phoenix?</h3>
 <p>
-  In most cases, filing triggers an “automatic stay” that can pause many collection actions, including ongoing lawsuits and wage garnishments. Some situations have exceptions or require quick attention (for example, certain family law matters or repeat filings), and creditors may still need proper notice. If you’re dealing with active garnishments or a pending lawsuit in Phoenix, timing matters—so it’s smart to get advice before deadlines or pay periods pass.
+  In many cases, yes. Filing typically triggers the <strong>automatic stay</strong>, which generally pauses most collection activity, including wage garnishments and many lawsuits. Timing matters in Phoenix—especially if a garnishment is already hitting your paycheck or a court deadline is approaching—so it’s smart to get advice before another pay period or hearing date passes. Some situations have exceptions, and creditors may need proper notice.
 </p>
 
-<h3 className={classes.title}>Can I keep my home or car if I file bankruptcy in Phoenix?</h3>
+<h3 className={classes.title}>Can I Keep My Car or Home If I File Bankruptcy in Phoenix?</h3>
 <p>
-  Many people who file bankruptcy in Phoenix are trying to protect housing and reliable transportation. Whether you can keep a home or car depends on factors like <Link
+  Often, yes—especially when there’s a clear plan. Whether you can keep your home or car depends on your equity, your payment status, and which chapter you file. Arizona’s exemption rules also play a big role. You can review them here:{" "}
+  <Link
     href="/arizona-bankruptcy-exemptions"
     style={{ color: "#0656d3", textDecoration: "underline" }}
   >
     Arizona bankruptcy exemptions
-  </Link>, how much equity you have, whether you’re behind on payments, and which bankruptcy chapter you file. A consultation typically focuses on your current payment status, payoff amounts, and the “protect vs. catch up” strategy that best fits your goals.
+  </Link>
+  . A consultation usually focuses on your liens, payoff amounts, and whether the right strategy is to protect the asset, catch up on arrears, or restructure payments.
 </p>
 
-<h3 className={classes.title}>What documents should I gather for a Phoenix bankruptcy consultation?</h3>
+<h3 className={classes.title}>How Fast Can a Phoenix Bankruptcy Case Be Filed If I Have a Garnishment or Lawsuit?</h3>
 <p>
-  You don’t need perfect paperwork, but a few items can make the conversation much more productive: recent pay stubs or income proof, a list of creditors or collection letters, any lawsuit or garnishment documents, and basic housing/vehicle payment details. If you have your most recent tax return, that can also help with planning. The goal is a reliable snapshot—so you can get clear answers without lots of back-and-forth.
+  It depends on how quickly we can get accurate information, but many filings can move quickly once the essentials are collected. If you’re dealing with a wage garnishment, a bank garnishment, a pending lawsuit, or a trustee sale date, the priority is to gather a reliable snapshot (income, debts, and key documents) so you don’t lose time to avoidable delays. If time is critical, tell us right away so we can focus on the right steps in the right order.
 </p>
 
-<h3 className={classes.title}>How long does the bankruptcy process usually take in Phoenix, Arizona?</h3>
+<h3 className={classes.title}>What Should I Gather for a Phoenix Bankruptcy Consultation?</h3>
 <p>
-  Timing varies by chapter and by how quickly documents are gathered, but many cases follow a predictable flow: pre-filing credit counseling, filing the petition, attending the 341 meeting with the trustee (often by phone or video), completing the post-filing debtor education course, and then receiving a discharge in eligible cases. Your exact timeline depends on your case complexity, the chapter you file under, and any issues that need extra review.
+  You don’t need perfect paperwork. The most helpful items are recent pay stubs (or other income proof), a list of creditors or collection letters, any lawsuit or garnishment documents, and basic housing/vehicle payment details. If you have your most recent tax return, that can help with planning. The goal is a dependable snapshot—so you can get clear answers without a lot of back-and-forth.
 </p>
+
 
 
 </GridItem>
