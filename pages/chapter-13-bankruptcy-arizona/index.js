@@ -11,7 +11,8 @@ import AzAreas from "/components/AzAreas/AzAreas.js";
 const HEADER_HEIGHT = 52;
 
 const SITE_URL = "https://www.phoenixazbankruptcyattorney.com";
-const PAGE_URL = "https://www.phoenixazbankruptcyattorney.com/arizona-bankruptcy-exemptions";
+const PAGE_URL =
+  "https://www.phoenixazbankruptcyattorney.com/chapter-13-bankruptcy-arizona";
 
 const PRIMARY_IMAGE_ID = `${PAGE_URL}#hero-image`;
 
@@ -21,10 +22,10 @@ const HERO_JPG = "/img/bankruptcy-technical-topic.jpg";
 const PUBLISHED_ISO = "2026-01-10T00:00:00-07:00";
 const MODIFIED_ISO = "2026-01-10T00:00:00-07:00";
 
-const OPT_OUT_WEBP = "/img/arizona-opt-out-federal-bankruptcy-exemptions-arizona-state-flag.webp";
-const OPT_OUT_ID = `${PAGE_URL}#img-arizona-opt-out-federal-exemptions`;
-const OPT_OUT_ALT =
-  "Bold headline text reading “Arizona opts out of federal bankruptcy exemptions” over the Arizona state flag background, illustrating that Arizona residents generally use state bankruptcy exemptions instead of the federal exemption list.";
+const PAGE_TITLE = "Chapter 13 Bankruptcy in Arizona | Yontz Law, PLLC";
+const PAGE_DESCRIPTION =
+  "Arizona chapter 13 guide: eligibility, plan payments, debt treatment, timeline, and what to expect. Request a free consult with Yontz Law, PLLC.";
+
 
 const YontzLawLogo = ({ width = 280 }) => (
   <svg
@@ -37,7 +38,12 @@ const YontzLawLogo = ({ width = 280 }) => (
   >
     <g transform="translate(80,120)">
       <circle r="76" stroke="#caa24a" strokeWidth="10" fill="none" />
-      <circle r="66" stroke="rgba(255,255,255,0.25)" strokeWidth="2" fill="none" />
+      <circle
+        r="66"
+        stroke="rgba(255,255,255,0.25)"
+        strokeWidth="2"
+        fill="none"
+      />
       <circle
         r="54"
         fill="rgba(255,255,255,0.08)"
@@ -107,7 +113,12 @@ const HeroCtaWithLogo = () => (
       <YontzLawLogo width={700} />
     </div>
 
-    <Button color="primary" size="lg" href="/consultation-request" style={{ marginTop: 0 }}>
+    <Button
+      color="primary"
+      size="lg"
+      href="/consultation-request"
+      style={{ marginTop: 0 }}
+    >
       <strong>Request a Free Bankruptcy Consult</strong>
     </Button>
   </div>
@@ -119,81 +130,15 @@ const imageSchemas = {
     {
       "@type": "ImageObject",
       "@id": PRIMARY_IMAGE_ID,
-      "name": "Arizona Bankruptcy Exemptions — Hero",
+      "name": "Chapter 13 Bankruptcy in Arizona — Hero",
       "description":
-        "Wide hero image for Arizona Bankruptcy Lawyers, branded for Yontz Law, PLLC in Phoenix, Arizona.",
+        "Wide hero image for Yontz Law, PLLC’s Chapter 13 Bankruptcy in Arizona guide.",
       "inLanguage": "en-US",
       "contentUrl": `${SITE_URL}${HERO_JPG}`,
       "thumbnailUrl": `${SITE_URL}${HERO_JPG}`,
       "representativeOfPage": true,
       "license": `${SITE_URL}/terms-and-conditions`,
       "creator": { "@type": "Organization", "name": "Yontz Law, PLLC" },
-    },
-    {
-      "@type": "ImageObject",
-      "@id": OPT_OUT_ID,
-      "name": "Arizona Opt-Out of Federal Bankruptcy Exemptions",
-      "description": OPT_OUT_ALT,
-      "caption": "Arizona opts out of the federal bankruptcy exemption list.",
-      "inLanguage": "en-US",
-      "contentUrl": `${SITE_URL}${OPT_OUT_WEBP}`,
-      "thumbnailUrl": `${SITE_URL}${OPT_OUT_WEBP}`,
-      "license": `${SITE_URL}/terms-and-conditions`,
-      "creator": { "@type": "Organization", "name": "Yontz Law, PLLC" },
-    },
-  ],
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": `${PAGE_URL}#faq`,
-  "inLanguage": "en-US",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Does Arizona use federal bankruptcy exemptions?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text":
-          "Arizona generally opts out of the federal bankruptcy exemptions, so most Arizona residents use Arizona’s state exemptions when they file. There are timing rules and special situations, so the best approach is to confirm which exemption set applies based on where you have lived during the lookback period.",
-      },
-    },
-    {
-      "@type": "Question",
-      "name": "Can bankruptcy exemptions help me keep my home or car in Arizona?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text":
-          "Exemptions are designed to protect certain property up to specific limits. Whether you can keep a home or car depends on your equity, the applicable Arizona exemptions, and your payment status. A quick review of equity and liens usually clarifies what is protected and what strategy makes sense.",
-      },
-    },
-    {
-      "@type": "Question",
-      "name": "What property is commonly protected by Arizona bankruptcy exemptions?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text":
-          "Many exemptions focus on essential assets—like a portion of home equity, vehicle equity up to a limit, household goods, certain personal property, and some benefits. The exact protection depends on the specific asset type and the current exemption amounts.",
-      },
-    },
-    {
-      "@type": "Question",
-      "name": "Do exemptions work the same in chapter 7 and chapter 13?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text":
-          "Exemptions matter in both chapters, but they can affect the case in different ways. In chapter 7, exemptions help determine what property is protected from liquidation. In chapter 13, exemptions often affect plan structure and what creditors must receive. The right approach depends on your goals and your overall financial picture.",
-      },
-    },
-    {
-      "@type": "Question",
-      "name": "What if I recently moved to Arizona?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text":
-          "Federal law includes residency lookback rules that can determine which state’s exemptions apply if you have not lived in Arizona long enough. If you moved recently, timing can be important—so it’s smart to review your move dates before filing.",
-      },
     },
   ],
 };
@@ -248,7 +193,12 @@ const breadcrumbSchema = {
   "@id": `${PAGE_URL}#breadcrumb`,
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE_URL}/` },
-    { "@type": "ListItem", "position": 2, "name": "Arizona Bankruptcy Exemptions", "item": PAGE_URL },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Chapter 13 Bankruptcy in Arizona",
+      "item": PAGE_URL,
+    },
   ],
 };
 
@@ -257,9 +207,8 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": `${PAGE_URL}#webpage`,
   "url": PAGE_URL,
-  "name": "Arizona Bankruptcy Exemptions | Yontz Law, PLLC",
-  "description":
-    "Arizona bankruptcy exemptions explained, including opt-out rules and how exemptions can protect property. Request a free consultation with Yontz Law, PLLC.",
+  "name": PAGE_TITLE,
+  "description": PAGE_DESCRIPTION,
   "inLanguage": "en-US",
   "breadcrumb": { "@id": `${PAGE_URL}#breadcrumb` },
   "isPartOf": { "@id": `${SITE_URL}/#website` },
@@ -274,10 +223,9 @@ const articleSchema = {
   "@type": "Article",
   "@id": `${PAGE_URL}#article`,
   "mainEntityOfPage": { "@id": `${PAGE_URL}#webpage` },
-  "headline": "Arizona Bankruptcy Exemptions | Yontz Law, PLLC",
-  "name": "Arizona Bankruptcy Exemptions | Yontz Law, PLLC",
-  "description":
-    "A practical guide to Arizona bankruptcy exemptions, including the opt-out rule and how exemptions can protect assets in chapter 7 and chapter 13.",
+  "headline": PAGE_TITLE,
+  "name": PAGE_TITLE,
+  "description": PAGE_DESCRIPTION,
   "inLanguage": "en-US",
   "author": { "@id": `${SITE_URL}/about#casey-yontz` },
   "publisher": { "@id": `${SITE_URL}/#organization` },
@@ -288,11 +236,11 @@ const articleSchema = {
   "isAccessibleForFree": true,
 };
 
-export default function Chp13AZ() {
+export default function Chapter13BankruptcyArizona() {
   return (
     <PerfPageLayout
-      title="Arizona Bankruptcy Exemptions | Yontz Law, PLLC"
-      description="Arizona bankruptcy exemptions explained, including opt-out rules and how exemptions protect property. Request a free consultation."
+      title={PAGE_TITLE}
+      description={PAGE_DESCRIPTION}
       canonical={PAGE_URL}
       hero={{
         srcWebp: HERO_WEBP,
@@ -300,7 +248,7 @@ export default function Chp13AZ() {
         width: 900,
         height: 600,
         alt:
-          "Wide hero image introducing Arizona bankruptcy exemptions, branded for Arizona Bankruptcy Lawyers at Yontz Law, PLLC.",
+          "Wide hero image for a Chapter 13 bankruptcy guide in Arizona, branded for Yontz Law, PLLC in Phoenix.",
         priority: true,
         cta: <HeroCtaWithLogo />,
       }}
@@ -312,15 +260,15 @@ export default function Chp13AZ() {
         preloadWidth={828}
       />
 
-      <JsonLd id="arizona-bankruptcy-exemptions-image-graph" data={imageSchemas} />
-      <JsonLd id="arizona-bankruptcy-exemptions-org" data={orgSchema} />
-      <JsonLd id="arizona-bankruptcy-exemptions-website" data={websiteSchema} />
-      <JsonLd id="arizona-bankruptcy-exemptions-author" data={personSchema} />
-      <JsonLd id="arizona-bankruptcy-exemptions-breadcrumb" data={breadcrumbSchema} />
-      <JsonLd id="arizona-bankruptcy-exemptions-webpage" data={webPageSchema} />
-      <JsonLd id="arizona-bankruptcy-exemptions-article" data={articleSchema} />
-      <JsonLd id="arizona-bankruptcy-exemptions-faq" data={faqSchema} />
+      <JsonLd id="chapter-13-arizona-image-graph" data={imageSchemas} />
+      <JsonLd id="chapter-13-arizona-org" data={orgSchema} />
+      <JsonLd id="chapter-13-arizona-website" data={websiteSchema} />
+      <JsonLd id="chapter-13-arizona-author" data={personSchema} />
+      <JsonLd id="chapter-13-arizona-breadcrumb" data={breadcrumbSchema} />
+      <JsonLd id="chapter-13-arizona-webpage" data={webPageSchema} />
+      <JsonLd id="chapter-13-arizona-article" data={articleSchema} />
 
+      {/* Only include FAQ schema if the FAQs are visibly present on this page. */}
       <Chapter13Az />
       <AzAreas />
     </PerfPageLayout>
