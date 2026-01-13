@@ -178,7 +178,7 @@ export default function ArizonaBankrutpcyExemptions() {
 <h3 className={classes.title}>Authorization to Share Your Consultation Request</h3>
 
 <p>
-  If we do not take your case, you agree that we may, at our discretion, <strong>share your Consultation Request</strong> (including the information you provide and
+  If we choose not to contact you, you agree that we may, at our discretion, <strong>share your Consultation Request</strong> (including the information you provide and
   your contact details) with one or more <strong>independent, qualified bankruptcy attorneys</strong> or law firms in our professional network so they may contact you.
   Reasons we may do this include (without limitation) our current workload, conflicts, geography, case complexity, or a belief that another attorney is better suited
   to assist you.

@@ -9,7 +9,7 @@ import styles from "/styles/jss/nextjs-material-kit-pro/components/buttonStyle.j
 
 const useStyles = makeStyles(styles);
 
-const DEFAULT_JOTFORM_URL = "https://form.jotform.com/251694692620160";
+const DEFAULT_JOTFORM_URL = "https://form.jotform.com/260117031306037";
 
 const RegularButton = React.forwardRef(function RegularButton(props, ref) {
   const {
