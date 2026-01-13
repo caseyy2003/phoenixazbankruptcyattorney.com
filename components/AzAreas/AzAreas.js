@@ -69,6 +69,7 @@ const useStyles = makeStyles((theme) => ({
 const cities = [
   { city: "Phoenix", path: "/" },
   { city: "Mesa", path: "/mesa-az-bankruptcy-attorney" },
+  { city: "Gilbert", path: "/gilbert-az-bankruptcy-attorney" },
   { city: "Tucson", path: "/tucson-az-bankruptcy-attorney" },
   { city: "Prescott", path: "/prescott-az-bankruptcy-lawyer" },
 ];

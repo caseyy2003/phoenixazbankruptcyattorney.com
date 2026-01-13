@@ -69,6 +69,13 @@ export default function HeaderLinks(props) {
               Bankruptcy Attorneys Serving Mesa AZ
             </Link>,
             <Link
+            href="/gilbert-az-bankruptcy-attorney"
+            key="Tucson"
+            className={classes.dropdownLink}
+          >
+            Bankruptcy Attorneys Serving Gilbert AZ
+          </Link>,
+            <Link
               href="/prescott-az-bankruptcy-lawyer"
               key="Prescott"
               className={classes.dropdownLink}
