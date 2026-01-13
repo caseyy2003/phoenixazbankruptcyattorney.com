@@ -126,7 +126,7 @@ export default function ArizonaBankrutpcyExemptions() {
   <GridItem xs={12} md={4}>
     <div style={{ width: "100%", maxWidth: 320, margin: "0 auto 16px" }}>
       <NextImage
-        src="/img/casey-yontz-headshot.webp"
+        src="/img/casey.jpg"
         alt="Casey Yontz, Arizona bankruptcy attorney and founder of USBankruptcyHelp.com"
         width={640}
         height={640}
