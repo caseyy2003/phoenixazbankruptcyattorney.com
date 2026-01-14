@@ -240,7 +240,7 @@ const websiteSchema = {
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": `${SITE_URL}/about#casey-yontz`,
+  "@id": `${SITE_URL}/about-us#casey-yontz`,
   name: "Casey Yontz",
   jobTitle: "Bankruptcy Attorney",
   worksFor: { "@id": `${SITE_URL}/#organization` },
@@ -290,7 +290,7 @@ const articleSchema = {
   description: META_DESCRIPTION,
 
   inLanguage: "en-US",
-  author: { "@id": `${SITE_URL}/about#casey-yontz` },
+  author: { "@id": `${SITE_URL}/about-us#casey-yontz` },
   publisher: { "@id": `${SITE_URL}/#organization` },
   isPartOf: { "@id": `${SITE_URL}/#website` },
   image: [{ "@id": PRIMARY_IMAGE_ID }],

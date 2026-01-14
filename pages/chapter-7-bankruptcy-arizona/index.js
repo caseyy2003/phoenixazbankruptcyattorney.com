@@ -1,6 +1,5 @@
 /* eslint-disable */
 import React from "react";
-import dynamic from "next/dynamic";
 import PerfPageLayout from "/components/PerfPageLayout";
 import Button from "/components/CustomButtons/Button.js";
 import LcpImagePreload from "/components/LcpImagePreload";
@@ -8,7 +7,6 @@ import JsonLd from "/components/JsonLd";
 import Chapter7Az from "../../content/Chapter7Az.js";
 import AzAreas from "/components/AzAreas/AzAreas.js";
 
-const HEADER_HEIGHT = 52;
 
 const SITE_URL = "https://www.phoenixazbankruptcyattorney.com";
 const PAGE_URL = "https://www.phoenixazbankruptcyattorney.com/chapter-7-bankruptcy-arizona";
@@ -17,7 +15,10 @@ const PRIMARY_IMAGE_ID = `${PAGE_URL}#hero-image`;
 
 const HERO_WEBP = "/img/bankruptcy-technical-topic.webp";
 const HERO_JPG = "/img/bankruptcy-technical-topic.jpg";
+const DISCHARGE_INFOGRAPHIC_WEBP =
+  "/img/arizona-chapter-7-dischargeable-vs-not-dischargeable-debts.webp";
 
+const DISCHARGE_INFOGRAPHIC_ID = `${PAGE_URL}#dischargeable-vs-not-dischargeable-debts`;
 const PUBLISHED_ISO = "2026-01-10T00:00:00-07:00";
 const MODIFIED_ISO = "2026-01-10T00:00:00-07:00";
 
@@ -124,6 +125,18 @@ const imageSchemas = {
       "license": `${SITE_URL}/terms-and-conditions`,
       "creator": { "@type": "Organization", "name": "Yontz Law, PLLC" },
     },
+    {
+      "@type": "ImageObject",
+      "@id": DISCHARGE_INFOGRAPHIC_ID,
+      "name": "Arizona Chapter 7 Dischargeable vs Not Dischargeable Debts",
+      "description":
+        "Infographic comparing debts usually dischargeable in chapter 7 bankruptcy versus debts generally not dischargeable, illustrated with an Arizona outline and a legal disclaimer.",
+      "inLanguage": "en-US",
+      "contentUrl": `${SITE_URL}${DISCHARGE_INFOGRAPHIC_WEBP}`,
+      "thumbnailUrl": `${SITE_URL}${DISCHARGE_INFOGRAPHIC_WEBP}`,
+      "license": `${SITE_URL}/terms-and-conditions`,
+      "creator": { "@type": "Organization", "name": "Yontz Law, PLLC" },
+    },
   ],
 };
 
@@ -135,33 +148,37 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
+      "@id": `${PAGE_URL}#faq-dischargeable-debts`,
       "name": "What debts can chapter 7 bankruptcy discharge in Arizona?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "chapter 7 commonly discharges many unsecured debts, such as credit card balances, medical bills, personal loans, and many collection accounts. Some categories often have special rules or may not be discharged in a typical case—so it’s important to identify exactly what debts you have (including any lawsuits, judgments, support obligations, or recent tax issues) before assuming everything will be wiped out. A review of your creditor list and any court paperwork helps set accurate expectations.",
+          "Chapter 7 commonly discharges many unsecured debts, such as credit card balances, medical bills, personal loans, and many collection accounts. Some categories often have special rules or may not be discharged in a typical case—so it’s important to identify exactly what debts you have (including any lawsuits, judgments, support obligations, or recent tax issues) before assuming everything will be wiped out. A review of your creditor list and any court paperwork helps set accurate expectations.",
       },
     },
     {
       "@type": "Question",
+      "@id": `${PAGE_URL}#faq-house-or-car`,
       "name": "Will I lose my house or car if I file chapter 7 bankruptcy in Arizona?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "Not necessarily. In most consumer chapter 7 cases, people keep their exempt property, and many cases are no-asset cases. What you can keep usually depends on Arizona exemptions and how much equity you have in the home or vehicle. Payment status can matter too—being current versus behind can change the strategy. If you’re worried about a home or car, the key is to evaluate equity, exemptions, and timing before you file.",
+          "Not necessarily. In most consumer chapter 7 cases, people keep their exempt property, and many cases are “no-asset” cases. What you can keep usually depends on Arizona exemptions and how much equity you have in the home or vehicle. Payment status can matter too—being current versus behind can change the strategy. If you’re worried about a home or car, the key is to evaluate equity, exemptions, and timing before you file.",
       },
     },
     {
       "@type": "Question",
+      "@id": `${PAGE_URL}#faq-qualify`,
       "name": "How do I qualify for chapter 7 bankruptcy in Arizona?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "Most people qualify in one of two ways: their household’s average gross income over the last six full calendar months is below Arizona’s median for their household size, or they’re above the median but still pass the means test after allowed deductions. Because the current monthly income calculation uses a six-month lookback, recent changes in overtime, job hours, or self-employment income can affect the result. If you’re close to the line, a careful means test review can prevent mistakes.",
+          "Most people qualify in one of two ways: their household’s average gross income over the last six full calendar months is below Arizona’s median for their household size, or they’re above the median but still pass the means test after allowed deductions. Because the “current monthly income” calculation uses a six-month lookback, recent changes in overtime, job hours, or self-employment income can affect the result. If you’re close to the line, a careful means test review can prevent mistakes.",
       },
     },
     {
       "@type": "Question",
+      "@id": `${PAGE_URL}#faq-timeline`,
       "name": "How long does a chapter 7 bankruptcy case usually take in Arizona?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -171,15 +188,17 @@ const faqSchema = {
     },
     {
       "@type": "Question",
+      "@id": `${PAGE_URL}#faq-what-to-avoid`,
       "name": "What should I avoid doing before filing chapter 7 bankruptcy in Arizona?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text":
-          "The most common problems come from last-minute decisions that create extra questions later—like using credit right before filing (especially cash advances), transferring property to family for safekeeping, repaying relatives right before filing, or withdrawing retirement funds without understanding the tax and bankruptcy consequences. If bankruptcy is on the table, it’s usually smart to pause major financial moves and get advice on what to do (and not do) before you file.",
+          "The most common problems come from last-minute decisions that create extra questions later—like using credit right before filing (especially cash advances), transferring property to family “for safekeeping,” repaying relatives right before filing, or withdrawing retirement funds without understanding the tax and bankruptcy consequences. If bankruptcy is on the table, it’s usually smart to pause major financial moves and get advice on what to do (and not do) before you file.",
       },
     },
   ],
 };
+
 
 const orgSchema = {
   "@context": "https://schema.org",
@@ -214,16 +233,18 @@ const websiteSchema = {
   "publisher": { "@id": `${SITE_URL}/#organization` },
 };
 
+
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": `${SITE_URL}/about#casey-yontz`,
+  "@id": `${SITE_URL}/about-us#casey-yontz`,
   "name": "Casey Yontz",
   "jobTitle": "Bankruptcy Attorney",
   "description": "Attorney with 18+ years of bankruptcy experience.",
   "worksFor": { "@id": `${SITE_URL}/#organization` },
-  "url": `${SITE_URL}/about#casey-yontz`,
+  "url": `${SITE_URL}/about-us#casey-yontz`,
 };
+
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -252,6 +273,7 @@ const webPageSchema = {
   "dateModified": MODIFIED_ISO,
 };
 
+
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -262,14 +284,16 @@ const articleSchema = {
   "description":
     "A practical guide to chapter 7 bankruptcy in Arizona, including qualification, timelines, and what happens to your property.",
   "inLanguage": "en-US",
-  "author": { "@id": `${SITE_URL}/about#casey-yontz` },
+  "author": { "@id": `${SITE_URL}/about-us#casey-yontz` },
   "publisher": { "@id": `${SITE_URL}/#organization` },
   "isPartOf": { "@id": `${SITE_URL}/#website` },
-  "image": [{ "@id": PRIMARY_IMAGE_ID }],
+  "image": [{ "@id": PRIMARY_IMAGE_ID }, { "@id": DISCHARGE_INFOGRAPHIC_ID }],
   "datePublished": PUBLISHED_ISO,
   "dateModified": MODIFIED_ISO,
   "isAccessibleForFree": true,
 };
+
+
 
 export default function Chapter7BkAz() {
   return (

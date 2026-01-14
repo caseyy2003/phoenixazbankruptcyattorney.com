@@ -8,7 +8,6 @@ import JsonLd from "/components/JsonLd";
 import DoesBankruptcyStopCreditors from "../../content/DoesBankruptcyStopCreditors.js";
 import AzAreas from "/components/AzAreas/AzAreas.js";
 
-const HEADER_HEIGHT = 52;
 
 const SITE_URL = "https://www.phoenixazbankruptcyattorney.com";
 const PAGE_URL = "https://www.phoenixazbankruptcyattorney.com/does-bankruptcy-stop-creditors";
@@ -234,7 +233,7 @@ const websiteSchema = {
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": `${SITE_URL}/about#casey-yontz`,
+  "@id": `${SITE_URL}/about-us#casey-yontz`,
   "name": "Casey Yontz",
   "jobTitle": "Bankruptcy Attorney",
   "description": "Attorney with 18+ years of bankruptcy experience.",
@@ -279,7 +278,7 @@ const articleSchema = {
   "description":
     "An Arizona-focused overview of how bankruptcy’s automatic stay affects creditor collections, lawsuits, garnishments, foreclosure, and repossession timelines.",
   "inLanguage": "en-US",
-  "author": { "@id": `${SITE_URL}/about#casey-yontz` },
+  "author": { "@id": `${SITE_URL}/about-us#casey-yontz` },
   "publisher": { "@id": `${SITE_URL}/#organization` },
   "isPartOf": { "@id": `${SITE_URL}/#website` },
   "image": [{ "@id": PRIMARY_IMAGE_ID }, { "@id": ARTICLE_IMAGE_ID }],

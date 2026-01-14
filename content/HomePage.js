@@ -739,7 +739,7 @@ export default function HomePage() {
     width={800}
     height={533}
     sizes="(max-width: 768px) 92vw, (max-width: 1200px) 700px, 900px"
-    quality={70}
+    quality={75}
     style={{ width: "100%", height: "auto" }}
   />
 </div>
