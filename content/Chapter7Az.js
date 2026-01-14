@@ -1,7 +1,6 @@
 /* eslint-disable */
 import React from "react";
 import makeStyles from "@mui/styles/makeStyles";
-import dynamic from "next/dynamic";
 import GridContainer from "/components/Grid/GridContainer.js";
 import GridItem from "/components/Grid/GridItem.js";
 import Button from "/components/CustomButtons/Button.js";
@@ -148,8 +147,8 @@ export default function Chapter7Az() {
       , Attorney (18+ years bankruptcy experience)
     </div>
     <div>
-      <time dateTime="2026-01-10" itemProp="dateModified">
-        Last updated: January 10, 2026
+      <time dateTime="2026-01-13" itemProp="dateModified">
+        Last updated: January 13, 2026
       </time>
     </div>
     <div style={{ marginTop: "0.5rem" }}>

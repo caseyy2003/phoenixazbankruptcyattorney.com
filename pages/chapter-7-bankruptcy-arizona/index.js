@@ -20,7 +20,7 @@ const DISCHARGE_INFOGRAPHIC_WEBP =
 
 const DISCHARGE_INFOGRAPHIC_ID = `${PAGE_URL}#dischargeable-vs-not-dischargeable-debts`;
 const PUBLISHED_ISO = "2026-01-10T00:00:00-07:00";
-const MODIFIED_ISO = "2026-01-10T00:00:00-07:00";
+const MODIFIED_ISO = "2026-01-13T00:00:00-07:00";
 
 const YontzLawLogo = ({ width = 280 }) => (
   <svg
