@@ -178,15 +178,7 @@ export default function ArizonaBankrutpcyExemptions() {
       <strong>Hours:</strong> Open 9 AM · Closes 5 PM
     </p>
 
-    <p style={{ margin: 0 }}>
-      <strong>Appointments:</strong>{" "}
-      <a
-        href="/consultation-request"
-        style={{ color: "#0656d3", textDecoration: "underline" }}
-      >
-        phoenixazbankruptcyattorney.com
-      </a>
-    </p>
+    
   </div>
 
 
