@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from "react";
-import dynamic from "next/dynamic";
+//import dynamic from "next/dynamic";
 import PerfPageLayout from "/components/PerfPageLayout";
 import Button from "/components/CustomButtons/Button.js";
 import LcpImagePreload from "/components/LcpImagePreload";
@@ -290,7 +290,7 @@ const articleSchema = {
   "isAccessibleForFree": true,
 };
 
-export default function TucsonBankruptcy() {
+export default function PrescottBankruptcy() {
   return (
     <PerfPageLayout
       title="Prescott, AZ Bankruptcy Lawyer | Yontz Law, PLLC"
