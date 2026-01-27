@@ -110,6 +110,13 @@ export default function HeaderLinks(props) {
           buttonIcon={MenuBook}
           dropdownList={[
             <Link
+              href="/arizona-bankruptcy-laws"
+              key="basics"
+              className={classes.dropdownLink}
+            >
+              Arizona Bankruptcy Laws Guide
+            </Link>,
+            <Link
               href="/chapter-7-bankruptcy-arizona"
               key="basics"
               className={classes.dropdownLink}
