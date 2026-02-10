@@ -17,6 +17,8 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
+          <meta name="google-site-verification" content="Lcwfnw8es5EfsLh7NzQjjxF2SHJ5gkpsAhlREQQVZH0" />
+          <meta name="trustpilot-one-time-domain-verification-id" content="37ee6017-488e-4b7f-9526-a3fb1e851051"/>
           <meta name="theme-color" content="#000000" />
           <link rel="shortcut icon" href="/img/favicon.png" />
           <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png" />
