@@ -258,8 +258,7 @@ export default function MesaHomePage() {
 <h2 className={classes.title}>Choosing a Bankruptcy Attorney in Mesa</h2>
 
 <p>
-  When you’re searching for a <strong>bankruptcy attorney mesa az</strong> residents
-  can trust, it helps to think beyond “who can file the paperwork.” A strong
+  When you’re searching for a <strong>bankruptcy attorney in Mesa</strong> residents can trust, it helps to think beyond “who can file the paperwork.” A strong
   bankruptcy lawyer should help you make good decisions <em>before</em> you file—
   because timing, documentation, and strategy can affect what you keep, what you
   pay, and how smooth the process feels.
@@ -313,9 +312,7 @@ export default function MesaHomePage() {
 <h2 className={classes.title}>Common Debt Pressures We See in Mesa</h2>
 
 <p>
-  People searching for <strong>bankruptcy lawyers mesa</strong> usually aren’t
-  doing it “just because.” Something changed—income dropped, expenses spiked, a
-  lawsuit showed up, or a garnishment hit at the worst possible time. Below are
+People searching for <strong>bankruptcy lawyers in Mesa</strong> usually aren’t doing it “just because.” Something changed—income dropped, expenses spiked, a lawsuit showed up, or a garnishment hit at the worst possible time. Below are
   some of the most common debt pressures we hear about in Mesa and the East
   Valley, along with the first practical steps that often help.
 </p>
@@ -414,7 +411,55 @@ export default function MesaHomePage() {
   property to family, draining retirement accounts, or running up new credit.
   A short consultation can often clarify what’s safe and what to pause.
 </p>
+<div
+  style={{
+    margin: "1.25rem 0 1.5rem",
+    padding: "14px 16px",
+    border: "1px solid #e6e6e6",
+    borderRadius: 12,
+    background: "#fafafa",
+    color: "#555",
+    lineHeight: 1.6,
+  }}
+>
+  <h2 className={classes.title} style={{ marginTop: 0 }}>
+    Related Arizona Bankruptcy Topics
+  </h2>
 
+  <p style={{ marginTop: 0 }}>
+  Many Mesa and East Valley residents exploring bankruptcy also want to understand whether bankruptcy can stop a garnishment, how Arizona exemptions may protect property, and whether chapter 7 or chapter 13 better fits their goals.
+  </p>
+
+  <ul style={{ listStyleType: "none", padding: 0, color: "#333" }}>
+    <li style={{ marginBottom: 10 }}>
+      <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+      <Link href="/stop-wage-garnishment-arizona" prefetch={false} style={{ color: "#0656d3", textDecoration: "underline" }}>
+        Stop wage garnishment in Arizona
+      </Link>
+    </li>
+
+    <li style={{ marginBottom: 10 }}>
+      <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+      <Link href="/arizona-bankruptcy-exemptions" prefetch={false} style={{ color: "#0656d3", textDecoration: "underline" }}>
+        Arizona bankruptcy exemptions
+      </Link>
+    </li>
+
+    <li style={{ marginBottom: 10 }}>
+      <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+      <Link href="/chapter-7-bankruptcy-arizona" prefetch={false} style={{ color: "#0656d3", textDecoration: "underline" }}>
+        Arizona chapter 7 guide
+      </Link>
+    </li>
+
+    <li style={{ marginBottom: 0 }}>
+      <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+      <Link href="/chapter-13-bankruptcy-arizona" prefetch={false} style={{ color: "#0656d3", textDecoration: "underline" }}>
+        Arizona chapter 13 guide
+      </Link>
+    </li>
+  </ul>
+</div>
 
 <h2 className={classes.title}>Mesa Economy Snapshot</h2>
 
@@ -808,7 +853,41 @@ export default function MesaHomePage() {
     still start with a clear plan for what to gather next.
   </small>
 </p>
+<div
+  style={{
+    margin: "1rem 0 1.5rem",
+    padding: "14px 16px",
+    border: "1px solid rgba(0,0,0,0.08)",
+    borderRadius: 12,
+    background: "#f8f9fb",
+    color: "#555",
+    lineHeight: 1.6,
+  }}
+>
+  <h3 className={classes.title} style={{ marginTop: 0 }}>
+    Nearby Bankruptcy Help Pages
+  </h3>
 
+  <p style={{ marginTop: 0 }}>
+  If you live elsewhere in the East Valley or nearby, you may also find these Arizona pages helpful:
+</p>
+
+  <ul style={{ listStyleType: "none", padding: 0, color: "#333" }}>
+    <li style={{ marginBottom: 10 }}>
+      <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+      <Link href="/" prefetch={false} style={{ color: "#0656d3", textDecoration: "underline" }}>
+        Phoenix bankruptcy attorney
+      </Link>
+    </li>
+    <li style={{ marginBottom: 10 }}>
+      <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+      <Link href="/gilbert-az-bankruptcy-attorney" prefetch={false} style={{ color: "#0656d3", textDecoration: "underline" }}>
+        Gilbert bankruptcy attorney
+      </Link>
+    </li>
+
+  </ul>
+</div>
 <h2 className={classes.title}>What to Have Ready for Your Consultation Request</h2>
 
 <p>
@@ -887,6 +966,9 @@ export default function MesaHomePage() {
     Request a Free Consultation
   </Button>
 </div>
+<p>
+  People researching bankruptcy in Mesa also often compare how <Link href="/chapter-7-bankruptcy-arizona" prefetch={false} style={{ color: "#0656d3", textDecoration: "underline" }}>chapter 7 works in Arizona</Link>, whether <Link href="/chapter-13-bankruptcy-arizona" prefetch={false} style={{ color: "#0656d3", textDecoration: "underline" }}>chapter 13 may help protect a car or home</Link>, and how <Link href="/arizona-bankruptcy-exemptions" prefetch={false} style={{ color: "#0656d3", textDecoration: "underline" }}>Arizona exemption laws</Link> may affect what property can be protected.
+</p>
 <h2 className={classes.title}>Mesa Bankruptcy FAQs</h2>
 
 <h3 className={classes.title}>What does a Mesa AZ bankruptcy attorney review during a first consultation?</h3>
@@ -913,8 +995,6 @@ export default function MesaHomePage() {
 <p>
   You don’t need perfect paperwork to start, but a few items can help you get clear answers faster: recent pay stubs or proof of income, a basic debt list (collections letters help), any lawsuit or garnishment paperwork, and your housing/vehicle payment details. If you have your most recent tax return, that can also help with planning and eligibility questions. If you’re missing something, you can still start—just share what you have and what deadlines you’re facing.
 </p>
-
-
 
 </GridItem>
         </GridContainer>
