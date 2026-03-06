@@ -427,34 +427,50 @@ People searching for <strong>bankruptcy lawyers in Mesa</strong> usually aren’
   </h2>
 
   <p style={{ marginTop: 0 }}>
-  Many Mesa and East Valley residents exploring bankruptcy also want to understand whether bankruptcy can stop a garnishment, how Arizona exemptions may protect property, and whether chapter 7 or chapter 13 better fits their goals.
+    Many Mesa and East Valley residents exploring bankruptcy also want to understand what bankruptcy may stop, how Arizona exemptions may protect property, and whether chapter 7 or chapter 13 better fits their goals.
   </p>
 
   <ul style={{ listStyleType: "none", padding: 0, color: "#333" }}>
     <li style={{ marginBottom: 10 }}>
       <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-      <Link href="/stop-wage-garnishment-arizona" prefetch={false} style={{ color: "#0656d3", textDecoration: "underline" }}>
-        Stop wage garnishment in Arizona
+      <Link
+        href="/does-bankruptcy-stop-creditors"
+        prefetch={false}
+        style={{ color: "#0656d3", textDecoration: "underline" }}
+      >
+        What bankruptcy can stop: garnishments, foreclosure, repossession, and collections
       </Link>
     </li>
 
     <li style={{ marginBottom: 10 }}>
       <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-      <Link href="/arizona-bankruptcy-exemptions" prefetch={false} style={{ color: "#0656d3", textDecoration: "underline" }}>
+      <Link
+        href="/arizona-bankruptcy-exemptions"
+        prefetch={false}
+        style={{ color: "#0656d3", textDecoration: "underline" }}
+      >
         Arizona bankruptcy exemptions
       </Link>
     </li>
 
     <li style={{ marginBottom: 10 }}>
       <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-      <Link href="/chapter-7-bankruptcy-arizona" prefetch={false} style={{ color: "#0656d3", textDecoration: "underline" }}>
+      <Link
+        href="/chapter-7-bankruptcy-arizona"
+        prefetch={false}
+        style={{ color: "#0656d3", textDecoration: "underline" }}
+      >
         Arizona chapter 7 guide
       </Link>
     </li>
 
     <li style={{ marginBottom: 0 }}>
       <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-      <Link href="/chapter-13-bankruptcy-arizona" prefetch={false} style={{ color: "#0656d3", textDecoration: "underline" }}>
+      <Link
+        href="/chapter-13-bankruptcy-arizona"
+        prefetch={false}
+        style={{ color: "#0656d3", textDecoration: "underline" }}
+      >
         Arizona chapter 13 guide
       </Link>
     </li>

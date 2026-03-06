@@ -1,7 +1,6 @@
 /* eslint-disable */
 import React from "react";
 import makeStyles from "@mui/styles/makeStyles";
-import dynamic from "next/dynamic";
 import GridContainer from "/components/Grid/GridContainer.js";
 import GridItem from "/components/Grid/GridItem.js";
 import Button from "/components/CustomButtons/Button.js";
@@ -11,13 +10,7 @@ import NextImage from "next/image";
 import OfficeMapEmbed from "/components/office-map-imbed-phoenix/OfficeMapEmbed";
 import PageTopicSelector from "/components/page-topic-selector/PageTopicSelector.js";
 //import AzAreas from "/components/AzAreas/AzAreas.js";
-const LiteYouTubeEmbed = dynamic(
-  () =>
-    import('react-lite-youtube-embed').then(
-      (mod) => mod.LiteYouTubeEmbed ?? mod.default
-    ),
-  { ssr: false }
-);
+
 
 const useStyles = makeStyles((theme) => ({
   ...sectionTextStyle,
@@ -158,16 +151,21 @@ export default function HomePage() {
     </div>
 
     <div>
-      <time dateTime="2026-01-10" itemProp="dateModified">
-        Last updated: January 10, 2026
+      <time dateTime="2026-03-05" itemProp="dateModified">
+        Last updated: March 5, 2026
       </time>
+    </div>
+
+    <div style={{ marginTop: "0.35rem" }}>
+      <small>
+        This page is reviewed for accuracy and updated as needed to reflect Arizona-focused bankruptcy guidance.
+      </small>
     </div>
   </div>
 </div>
 
-
 <p>
-  If you’re searching for <strong>bankruptcy lawyers Phoenix AZ</strong>, you’re
+If you’re searching for <strong>bankruptcy lawyers in Phoenix</strong>, you’re
   probably dealing with more than a budgeting problem. Wage garnishments,
   lawsuits, repossession threats, or nonstop creditor calls can turn everyday
   life into a constant fire drill—especially when you’re trying to protect your
@@ -218,7 +216,7 @@ export default function HomePage() {
 </ul>
 <div style={{ textAlign: "center", margin: "2rem 0" }}>
   <Button color="primary" size="lg" href="/consultation-request">
-    Request a Free Consultation
+  Start With a Free Consultation
   </Button>
 </div>
 <h2 className={classes.title}>Why Phoenix Residents Reach Out About Bankruptcy</h2>
@@ -322,7 +320,7 @@ export default function HomePage() {
   </ul>
 </div>
 
-<h2 className={classes.title}>Bankruptcy Lawyers in Phoenix, AZ With 18+ Years of Experience</h2>
+<h2 className={classes.title}>Phoenix Bankruptcy Guidance Backed by 18+ Years of Experience</h2>
 
 <p>
   When you’re overwhelmed, the most helpful thing isn’t hype—it’s steady guidance and clear
@@ -349,7 +347,71 @@ export default function HomePage() {
   .
 </p>
 
+<div
+  style={{
+    margin: "1.25rem 0 1.5rem",
+    padding: "14px 16px",
+    border: "1px solid #e6e6e6",
+    borderRadius: 12,
+    background: "#fafafa",
+    color: "#555",
+    lineHeight: 1.6,
+  }}
+>
+  <h2 className={classes.title} style={{ marginTop: 0 }}>
+    Related Arizona Bankruptcy Topics
+  </h2>
 
+  <p style={{ marginTop: 0 }}>
+    Phoenix residents researching bankruptcy often also want to understand what bankruptcy may stop, how Arizona exemptions work, and whether chapter 7 or chapter 13 may fit their goals.
+  </p>
+
+  <ul style={{ listStyleType: "none", padding: 0, color: "#333" }}>
+    <li style={{ marginBottom: 10 }}>
+      <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+      <Link
+        href="/does-bankruptcy-stop-creditors"
+        prefetch={false}
+        style={{ color: "#0656d3", textDecoration: "underline" }}
+      >
+        What bankruptcy can stop: garnishments, foreclosure, repossession, and collections
+      </Link>
+    </li>
+
+    <li style={{ marginBottom: 10 }}>
+      <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+      <Link
+        href="/arizona-bankruptcy-exemptions"
+        prefetch={false}
+        style={{ color: "#0656d3", textDecoration: "underline" }}
+      >
+        Arizona bankruptcy exemptions
+      </Link>
+    </li>
+
+    <li style={{ marginBottom: 10 }}>
+      <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+      <Link
+        href="/chapter-7-bankruptcy-arizona"
+        prefetch={false}
+        style={{ color: "#0656d3", textDecoration: "underline" }}
+      >
+        Arizona chapter 7 guide
+      </Link>
+    </li>
+
+    <li style={{ marginBottom: 0 }}>
+      <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+      <Link
+        href="/chapter-13-bankruptcy-arizona"
+        prefetch={false}
+        style={{ color: "#0656d3", textDecoration: "underline" }}
+      >
+        Arizona chapter 13 guide
+      </Link>
+    </li>
+  </ul>
+</div>
 <h2 className={classes.title}>Bankruptcy Paths Phoenix Residents Typically Compare</h2>
 
 <p>
@@ -677,7 +739,32 @@ export default function HomePage() {
   is helpful for your situation, we can discuss what makes sense based on your
   schedule and comfort level.
 </p>
+<h2 className={classes.title}>Bankruptcy Help in Phoenix and Nearby Arizona Cities</h2>
 
+<p>
+  If you live outside Phoenix, you may also want to start with one of our nearby Arizona city pages.
+</p>
+
+<ul style={{ listStyleType: "none", padding: 0, color: "#333" }}>
+  <li style={{ marginBottom: 10 }}>
+    <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+    <Link href="/mesa-az-bankruptcy-attorney" prefetch={false} style={{ color: "#0656d3", textDecoration: "underline" }}>
+      Mesa bankruptcy attorney
+    </Link>
+  </li>
+  <li style={{ marginBottom: 10 }}>
+    <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+    <Link href="/gilbert-az-bankruptcy-attorney" prefetch={false} style={{ color: "#0656d3", textDecoration: "underline" }}>
+      Gilbert bankruptcy attorney
+    </Link>
+  </li>
+  <li style={{ marginBottom: 0 }}>
+    <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+    <Link href="/prescott-az-bankruptcy-lawyer" prefetch={false} style={{ color: "#0656d3", textDecoration: "underline" }}>
+      Prescott bankruptcy lawyer
+    </Link>
+  </li>
+</ul>
 
 <h2 className={classes.title}>Find Our Phoenix Office</h2>
 
@@ -688,7 +775,7 @@ export default function HomePage() {
 <OfficeMapEmbed containerClassName={classes.iframeContainer} />
 
 
-<h2 className={classes.title}>What to Have Ready for a Phoenix Bankruptcy Consultation</h2>
+<h2 className={classes.title}>What to Have Ready Before Reaching Out</h2>
 
 <p>
   You don’t need a perfect folder of paperwork to get started. The goal is simply
@@ -745,7 +832,7 @@ export default function HomePage() {
 </div>
 
 <p>
-  If you’re overwhelmed and searching for <strong>bankruptcy attorney phoenix az</strong>,
+If you’re overwhelmed and searching for a <strong>bankruptcy attorney in Phoenix</strong>,
   the simplest next step is to submit a short consultation request. We serve
   clients across Arizona and will follow up with next steps based on the details
   you share.
@@ -756,7 +843,40 @@ export default function HomePage() {
     Request a Free Consultation
   </Button>
 </div>
-
+<p>
+  People researching bankruptcy in Phoenix also often compare what{" "}
+  <Link
+    href="/does-bankruptcy-stop-creditors"
+    prefetch={false}
+    style={{ color: "#0656d3", textDecoration: "underline" }}
+  >
+    bankruptcy may stop
+  </Link>
+  , how{" "}
+  <Link
+    href="/chapter-7-bankruptcy-arizona"
+    prefetch={false}
+    style={{ color: "#0656d3", textDecoration: "underline" }}
+  >
+    chapter 7 works in Arizona
+  </Link>
+  , whether{" "}
+  <Link
+    href="/chapter-13-bankruptcy-arizona"
+    prefetch={false}
+    style={{ color: "#0656d3", textDecoration: "underline" }}
+  >
+    chapter 13 may help protect a home or vehicle
+  </Link>
+  , and how{" "}
+  <Link
+    href="/arizona-bankruptcy-exemptions"
+    prefetch={false}
+    style={{ color: "#0656d3", textDecoration: "underline" }}
+  >
+    Arizona exemption laws
+  </Link> may affect what property can be protected.
+</p>
 <h2 className={classes.title}>Phoenix Bankruptcy FAQs</h2>
 
 <h3 className={classes.title}>How Do I Know If Bankruptcy Is the Right Option in Phoenix, AZ?</h3>

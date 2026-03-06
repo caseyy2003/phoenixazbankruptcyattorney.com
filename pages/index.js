@@ -18,7 +18,7 @@ const HERO_WEBP = "/img/phoenix-arizona-desert-skyline-hero-background.webp";
 const HERO_JPG = "/img/phoenix-arizona-desert-skyline-hero-background.jpg";
 
 const PUBLISHED_ISO = "2017-05-22T00:00:00-07:00";
-const MODIFIED_ISO = "2026-01-10T00:00:00-07:00";
+const MODIFIED_ISO = "2026-03-05T00:00:00-07:00";
 
 const DOC_CHECKLIST_WEBP = "/img/phoenix-bankruptcy-lawyer-consultation-document-checklist.webp";
 const DOC_CHECKLIST_ID = `${PAGE_URL}#img-phoenix-consultation-document-checklist`;
@@ -239,7 +239,7 @@ const personSchema = {
   "name": "Casey Yontz",
   "jobTitle": "Bankruptcy Attorney",
   "worksFor": { "@id": `${SITE_URL}#organization` },
-  "url": `${SITE_URL}/about`,
+  "url": `${SITE_URL}/about-us`,
   "inLanguage": "en-US",
 };
 
