@@ -299,7 +299,7 @@ export default function Chapter7BkAz() {
   return (
     <PerfPageLayout
       title="Chapter 7 Bankruptcy in Arizona | Yontz Law, PLLC"
-      description="Chapter 7 bankruptcy in Arizona: eligibility, process, debts, and exemptions. Request a free consultation with Yontz Law, PLLC."
+      description="Learn how chapter 7 bankruptcy works in Arizona, who may qualify, what debts it can erase, and what property you may be able to protect."
       canonical={PAGE_URL}
       hero={{
         srcWebp: HERO_WEBP,
