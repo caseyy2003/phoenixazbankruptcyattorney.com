@@ -690,7 +690,14 @@ export default function Chapter7Az() {
 <h2 className={classes.title}>Do You Qualify? The Chapter 7 Means Test in Arizona</h2>
 
 <p>
-  The means test is the eligibility screen most people think of when they search{" "}
+  The <Link
+      href="https://www.usbankruptcyhelp.com/means-test"
+      target="_blank"
+      rel="noopener noreferrer dofollow"
+      style={{ color: "#0656d3", textDecoration: "underline" }}
+    >
+      chapter 7 means test
+    </Link> is the eligibility screen most people think of when they search{" "}
   <strong>chapter 7 bankruptcy Arizona</strong>. Here’s the practical way to approach
   it so you can get a reliable “likely yes / maybe / likely no” answer before you
   go too far down the road.
