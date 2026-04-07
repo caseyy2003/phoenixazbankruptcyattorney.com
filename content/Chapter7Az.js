@@ -148,7 +148,7 @@ export default function Chapter7Az() {
     </div>
     <div>
       <time dateTime="2026-01-13" itemProp="dateModified">
-        Last updated: January 13, 2026
+        Last updated: April 7, 2026
       </time>
     </div>
     <div style={{ marginTop: "0.5rem" }}>
@@ -817,19 +817,19 @@ export default function Chapter7Az() {
     <tbody>
       <tr>
         <td className={classes.td}>1</td>
-        <td className={classes.td}>$72,039</td>
+        <td className={classes.td}>$73,935</td>
       </tr>
       <tr>
         <td className={classes.td}>2</td>
-        <td className={classes.td}>$86,745</td>
+        <td className={classes.td}>$89,027</td>
       </tr>
       <tr>
         <td className={classes.td}>3</td>
-        <td className={classes.td}>$102,274</td>
+        <td className={classes.td}>$104,965</td>
       </tr>
       <tr>
         <td className={classes.td}>4</td>
-        <td className={classes.td}>$118,067</td>
+        <td className={classes.td}>$121,174</td>
       </tr>
       <tr>
         <td className={classes.td} colSpan={2}>
