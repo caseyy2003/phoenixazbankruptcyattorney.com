@@ -112,8 +112,7 @@ export default function Chapter7Az() {
           <GridItem xs={12} sm={10} md={10}>
 
 
-          <h1 className={classes.title}>Chapter 7 Bankruptcy in Arizona: How It Works, Who Qualifies, and What You Can
-  Keep</h1>
+          <h1 className={classes.title}>Chapter 7 Bankruptcy in Arizona</h1>
           <div
   style={{
     display: "flex",

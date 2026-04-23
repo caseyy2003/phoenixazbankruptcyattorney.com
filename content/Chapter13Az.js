@@ -120,7 +120,7 @@ export default function Chapter13Az() {
           <GridItem xs={12} sm={10} md={10}>
 
 
-  <h1 className={classes.title}>Understanding Chapter 13 Bankruptcy in Arizona</h1>
+  <h1 className={classes.title}>Chapter 13 Bankruptcy in Arizona</h1>
   <div
   style={{
     display: "flex",

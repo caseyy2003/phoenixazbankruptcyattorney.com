@@ -22,9 +22,9 @@ const HERO_JPG = "/img/bankruptcy-technical-topic.jpg";
 const PUBLISHED_ISO = "2026-01-10T00:00:00-07:00";
 const MODIFIED_ISO = "2026-01-10T00:00:00-07:00";
 
-const PAGE_TITLE = "Chapter 13 Bankruptcy in Arizona | Yontz Law, PLLC";
+const PAGE_TITLE = "Chapter 13 Bankruptcy | Yontz Law, PLLC";
 const PAGE_DESCRIPTION =
-  "Arizona chapter 13 guide: eligibility, plan payments, debt treatment, timeline, and what to expect. Request a free consult with Yontz Law, PLLC.";
+  "Our Arizona bankruptcy lawyers can help you better understand chapter 13 bankruptcy and find out whether chapter 13 may be right for you.";
 
 
 const YontzLawLogo = ({ width = 280 }) => (
