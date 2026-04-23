@@ -8,8 +8,7 @@ import Link from "next/link";
 import sectionTextStyle from "/styles/jss/nextjs-material-kit-pro/pages/blogPostSections/sectionTextStyle.js";
 import NextImage from "next/image";
 import PageTopicSelector from "/components/page-topic-selector/PageTopicSelector.js";
-//import AzAreas from "/components/AzAreas/AzAreas.js";
-
+import MeansTestCalculator from "components/means-test/Chapter7MeansTestCalculator";
 
 const useStyles = makeStyles((theme) => ({
   ...sectionTextStyle,
@@ -147,8 +146,8 @@ export default function Chapter7Az() {
       , Attorney (18+ years bankruptcy experience)
     </div>
     <div>
-      <time dateTime="2026-01-13" itemProp="dateModified">
-        Last updated: April 7, 2026
+      <time dateTime="2026-04-23" itemProp="dateModified">
+        Last updated: April 23, 2026
       </time>
     </div>
     <div style={{ marginTop: "0.5rem" }}>
@@ -180,7 +179,7 @@ export default function Chapter7Az() {
   <Link
   href="https://www.law.cornell.edu/uscode/text/11/chapter-7"
   target="_blank"
-  rel="noopener noreferrer nofollow"
+  rel="noopener noreferrer"
   style={{
     display: "inline-block",
     padding: "6px 10px",
@@ -198,7 +197,7 @@ export default function Chapter7Az() {
     <Link
       href="https://www.azleg.gov/ars/33/01101.htm"
       target="_blank"
-      rel="noopener noreferrer nofollow"
+      rel="noopener noreferrer"
       style={{
         display: "inline-block",
         padding: "6px 10px",
@@ -216,7 +215,7 @@ export default function Chapter7Az() {
     <Link
       href="https://www.azleg.gov/ars/33/01125.htm"
       target="_blank"
-      rel="noopener noreferrer nofollow"
+      rel="noopener noreferrer"
       style={{
         display: "inline-block",
         padding: "6px 10px",
@@ -252,7 +251,7 @@ export default function Chapter7Az() {
     <Link
       href="https://www.justice.gov/ust/eo/bapcpa/20251101/bci_data/median_income_table.htm"
       target="_blank"
-      rel="noopener noreferrer nofollow"
+      rel="noopener noreferrer"
       style={{
         display: "inline-block",
         padding: "6px 10px",
@@ -270,7 +269,7 @@ export default function Chapter7Az() {
     <Link
       href="https://www.azb.uscourts.gov/filing-fees"
       target="_blank"
-      rel="noopener noreferrer nofollow"
+      rel="noopener noreferrer"
       style={{
         display: "inline-block",
         padding: "6px 10px",
@@ -693,7 +692,7 @@ export default function Chapter7Az() {
   The <Link
       href="https://www.usbankruptcyhelp.com/means-test"
       target="_blank"
-      rel="noopener noreferrer dofollow"
+      rel="noopener noreferrer"
       style={{ color: "#0656d3", textDecoration: "underline" }}
     >
       chapter 7 means test
@@ -761,12 +760,41 @@ export default function Chapter7Az() {
   Being above the median doesn’t automatically mean you can’t file. It usually means you have
   more math to do before you know whether <strong>chapter 7</strong> is available to you.
 </p>
+<div
+  style={{
+    margin: "1rem 0 1.25rem",
+    padding: "16px",
+    border: "1px solid #e6e6e6",
+    borderRadius: 12,
+    background: "#fafafa",
+  }}
+>
+  <h3 className={classes.title} style={{ marginTop: 0, marginBottom: 12 }}>
+    Try Our Chapter 7 Means Test Calculator
+  </h3>
 
-<h3 className={classes.title}>Step 1: Compare Your 6-Month Average to Arizona’s Median Income</h3>
+  <p style={{ margin: "0 0 10px" }}>
+    If you want to estimate whether you may qualify for chapter 7 bankruptcy, use our{" "}
+    <Link
+      href="/chapter-7-means-test-calculator"
+      style={{ color: "#0656d3", textDecoration: "underline" }}
+    >
+      chapter 7 means test calculator
+    </Link>
+    . It walks you through income, household size, deductions, and estimated disposable income so you can get a clearer starting point.
+  </p>
+
+  <p style={{ margin: 0 }}>
+    The calculator is educational only and is not a final determination of eligibility, but it can help you understand whether the means test may be an issue in your Arizona chapter 7 case.
+  </p>
+</div>
+
+<MeansTestCalculator />
+
+<h3 className={classes.title}>Understanding Your Means Test Calculator Result</h3>
 
 <p>
-  Start by calculating your <strong>average gross income</strong> over the last six full calendar months.
-  If that average is below the median for your household size, you typically qualify under the first “gate.”
+  The calculator above is designed to give you a practical starting point. It looks at the same basic issues that matter in a chapter 7 means test: household size, income, allowed deductions, and estimated disposable income. Your result is not a final legal determination, but it can help you see whether chapter 7 may be available or whether the numbers need a closer review.
 </p>
 
 <div
@@ -779,21 +807,64 @@ export default function Chapter7Az() {
   }}
 >
   <h3 className={classes.title} style={{ marginTop: 0, marginBottom: 12 }}>
-    Quick Self-Check: Are You Using the Right 6 Months?
+    What the Calculator Is Really Checking
   </h3>
 
   <ul style={{ listStyleType: "none", padding: 0, color: "#333" }}>
     <li style={{ marginBottom: 10 }}>
       <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-      Use the <strong>last 6 full calendar months</strong> before you file (not “the last 6 paychecks”).
+      <strong>Your household size:</strong> this affects the Arizona median income number used in the first part of the test.
     </li>
     <li style={{ marginBottom: 10 }}>
       <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-      Include <strong>overtime, bonuses, commissions, and side income</strong> that appeared in that period.
+      <strong>Your average income:</strong> the means test generally looks at the last 6 full calendar months before filing, not just your current paycheck.
+    </li>
+    <li style={{ marginBottom: 10 }}>
+      <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+      <strong>Allowed deductions:</strong> some deductions are based on actual expenses, while others use standard amounts from the bankruptcy forms.
     </li>
     <li style={{ marginBottom: 0 }}>
       <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-      If income recently dropped, the six-month average can still be high—so timing and documentation matter.
+      <strong>Estimated disposable income:</strong> this helps show whether the means test may create a problem for chapter 7 eligibility.
+    </li>
+  </ul>
+</div>
+
+<h3 className={classes.title}>Step 1: Compare Your Income to Arizona’s Median Income</h3>
+
+<p>
+  The first part of the means test compares your household income to Arizona’s median income for your household size. If your average gross income is below the median, you usually pass this first screen. That does not mean every issue is resolved, but it is often a strong sign that chapter 7 may be available.
+</p>
+
+<p>
+  The key is using the right income period. The means test generally uses the last 6 full calendar months before filing. For example, if you file in July, you usually look at January through June—not the last 6 paychecks and not the current month.
+</p>
+
+<div
+  style={{
+    margin: "1rem 0 1.25rem",
+    padding: "14px 16px",
+    border: "1px solid #e6e6e6",
+    borderRadius: 12,
+    background: "#fafafa",
+  }}
+>
+  <h3 className={classes.title} style={{ marginTop: 0, marginBottom: 12 }}>
+    Common Income Mistakes to Avoid
+  </h3>
+
+  <ul style={{ listStyleType: "none", padding: 0, color: "#333" }}>
+    <li style={{ marginBottom: 10 }}>
+      <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+      Do not use only your current paycheck if your income has recently changed.
+    </li>
+    <li style={{ marginBottom: 10 }}>
+      <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+      Do not forget overtime, bonuses, commissions, side work, or business income received during the lookback period.
+    </li>
+    <li style={{ marginBottom: 0 }}>
+      <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
+      Do not assume a recent income drop automatically fixes the means test. Timing and documentation can matter.
     </li>
   </ul>
 </div>
@@ -801,9 +872,7 @@ export default function Chapter7Az() {
 <h3 className={classes.title}>Arizona Chapter 7 Income Limits</h3>
 
 <p>
-  The table below shows Arizona’s median income levels for common household sizes. If your household’s
-  average gross income over the last six full months is below the median for your household size, you
-  typically qualify under the first “gate” of the analysis.
+  The table below shows Arizona’s current median income figures for common household sizes. These numbers are useful because they are the first comparison point in the chapter 7 means test. If your household income is above the number listed, you may still qualify, but you usually need to complete the deduction portion of the test.
 </p>
 
 <div className={classes.tableWrap} role="region" aria-label="Arizona chapter 7 median income limits table">
@@ -843,8 +912,7 @@ export default function Chapter7Az() {
 <p style={{ marginTop: 8, color: "#555" }}>
   <small>
     These figures reflect <em>chapter 7 bankruptcy Arizona income limits</em> effective for cases filed on or after{" "}
-    <strong>April 1, 2026</strong>, based on the U.S. Trustee Program’s median income table (updated periodically).
-    Always verify the most recent table here:{" "}
+    <strong>April 1, 2026</strong>, based on the U.S. Trustee Program’s median income table. These numbers are updated periodically, so always verify the most recent table here:{" "}
     <Link
       href="https://www.justice.gov/ust/eo/bapcpa/20251101/bci_data/median_income_table.htm"
       target="_blank"
@@ -857,13 +925,14 @@ export default function Chapter7Az() {
   </small>
 </p>
 
-<h3 className={classes.title}>Step 2: If You’re Above Median, Run the Full Means Test (Deductions Matter)</h3>
+<h3 className={classes.title}>Step 2: If You Are Above Median, Deductions Matter</h3>
 
 <p>
-  If your income is above the Arizona median, you typically complete the chapter 7 means test calculation.
-  The question becomes whether, after allowed deductions, the numbers show enough “disposable income” to repay
-  a meaningful amount of debt. If the calculation shows you don’t, you may still qualify to{" "}
-  <strong>file bankruptcy chapter 7 Arizona</strong>.
+  Being above Arizona’s median income does not automatically mean you fail the means test. It usually means the second part of the analysis becomes more important. This is where allowed deductions are applied to estimate whether you have enough disposable income to repay a meaningful amount of unsecured debt.
+</p>
+
+<p>
+  This is also where the calculator can be especially helpful. It gives you an organized way to enter deductions and see how the result changes. Still, the means test can be sensitive to details, especially if you have irregular income, support obligations, secured debt payments, taxes, or unusual expenses.
 </p>
 
 <div
@@ -876,54 +945,31 @@ export default function Chapter7Az() {
   }}
 >
   <h3 className={classes.title} style={{ marginTop: 0, marginBottom: 12 }}>
-    Above Median? Here Are the 4 Mistakes That Cause Bad Results
+    Why Your Calculator Result May Need Review
   </h3>
 
   <ul style={{ listStyleType: "none", padding: 0, color: "#333" }}>
     <li style={{ marginBottom: 10 }}>
       <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-      <strong>Using today’s income instead of the six-month average:</strong> the means test can look “worse” than your
-      current situation if overtime or a bonus was in the lookback window.
+      Some expense categories use standard amounts, not necessarily what you actually spend.
     </li>
     <li style={{ marginBottom: 10 }}>
       <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-      <strong>Assuming deductions equal your real spending:</strong> many categories use standardized amounts and rules
-      from the bankruptcy forms.
+      Household size can be more complicated than simply counting everyone under one roof.
     </li>
     <li style={{ marginBottom: 10 }}>
       <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-      <strong>Miscounting household size:</strong> being off by one person can change the median threshold and the
-      calculation.
+      Self-employment income, bonuses, commissions, and overtime can change the result.
     </li>
     <li style={{ marginBottom: 0 }}>
       <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-      <strong>Not documenting unusual expenses or income changes:</strong> if your income dropped, or you have a special
-      situation, the paperwork and timing matter.
+      A recent income drop may help, but timing and documentation can affect how the means test is completed.
     </li>
   </ul>
 </div>
 
-<ul style={{ listStyleType: "none", padding: 0, color: "#333" }}>
-  <li style={{ marginBottom: 10 }}>
-    <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-    <strong>Your “current monthly income” uses a lookback:</strong> it’s based on the last six full months, not just what
-    you’re earning today.
-  </li>
-  <li style={{ marginBottom: 10 }}>
-    <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-    <strong>Allowed deductions aren’t always your exact spending:</strong> many categories use standardized amounts and
-    rules from the bankruptcy forms.
-  </li>
-  <li style={{ marginBottom: 0 }}>
-    <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-    <strong>Timing can matter:</strong> if your income recently dropped (job change, reduced overtime, medical leave), a
-    careful review of the six-month average and documentation can be important.
-  </li>
-</ul>
-
 <p>
-  For an official overview of how the U.S. Trustee Program approaches means testing (including the data sources and forms
-  involved), see:{" "}
+  For an official overview of how the U.S. Trustee Program approaches means testing, including the data sources and forms involved, see{" "}
   <Link
     href="https://www.justice.gov/ust/means-testing"
     target="_blank"
@@ -1122,7 +1168,7 @@ export default function Chapter7Az() {
   }}
 >
   <h3 className={classes.title} style={{ marginTop: 0, marginBottom: 12 }}>
-    A People-First Way to Think About Tradeoffs
+   How to Think About Tradeoffs
   </h3>
 
   <p style={{ margin: 0 }}>
@@ -1282,7 +1328,7 @@ export default function Chapter7Az() {
 <h2 className={classes.title}>Bottom Line: Is Chapter 7 Bankruptcy in Arizona Right for You?</h2>
 
 <p>
-  Chapter 7 can be a strong option when unsecured debt has become unmanageable and you need a clean reset—especially if
+  Chapter 7 can be a strong option when unsecured debt has become unmanageable and you need a clean reset, especially if
   your budget is tight and a long repayment plan isn’t realistic. But the “right” answer usually comes down to a few
   specific facts, not a generic rule.
 </p>
@@ -1409,7 +1455,7 @@ export default function Chapter7Az() {
 
 <h3 className={classes.title}>What debts can chapter 7 bankruptcy discharge in Arizona?</h3>
 <p>
-  chapter 7 commonly discharges many unsecured debts, such as credit card balances, medical bills, personal loans, and many collection accounts. Some categories often have special rules or may not be discharged in a typical case—so it’s important to identify exactly what debts you have (including any lawsuits, judgments, support obligations, or recent tax issues) before assuming everything will be wiped out. A review of your creditor list and any court paperwork helps set accurate expectations.
+  Chapter 7 commonly discharges many unsecured debts, such as credit card balances, medical bills, personal loans, and many collection accounts. Some categories often have special rules or may not be discharged in a typical case—so it’s important to identify exactly what debts you have (including any lawsuits, judgments, support obligations, or recent tax issues) before assuming everything will be wiped out. A review of your creditor list and any court paperwork helps set accurate expectations.
 </p>
 
 <h3 className={classes.title}>Will I lose my house or car if I file chapter 7 bankruptcy in Arizona?</h3>
