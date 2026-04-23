@@ -153,11 +153,18 @@ export default function HeaderLinks(props) {
             </Link>,
             <Link
             href="/bankruptcy-and-lawsuit-debt"
-            key="Chapter 13 Cramdown"
+            key="Bankruptcy and Lawsuit Debt"
             className={classes.dropdownLink}
           >
             Does Bankruptcy Clear Civil Lawsuit Debt?
           </Link>,
+          <Link
+           href="/chapter-7-means-test-calculator"
+           key="Chapter 7 Means Test Calculator"
+           className={classes.dropdownLink}
+          >
+           Chapter 7 Means Test Calculator
+        </Link>,
           ]}
         />
       </ListItem>
