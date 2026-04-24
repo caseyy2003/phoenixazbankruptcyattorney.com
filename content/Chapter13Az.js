@@ -154,8 +154,8 @@ export default function Chapter13Az() {
       , Attorney (18+ years bankruptcy experience)
     </div>
     <div>
-      <time dateTime="2025-01-10" itemProp="dateModified">
-        Last updated: January 10, 2026
+      <time dateTime="2025-04-24" itemProp="dateModified">
+        Last updated: April 24, 2026
       </time>
     </div>
     <div style={{ marginTop: "0.5rem" }}>
