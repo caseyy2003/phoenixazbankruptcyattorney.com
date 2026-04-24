@@ -9,6 +9,7 @@ import Link from "next/link";
 import sectionTextStyle from "/styles/jss/nextjs-material-kit-pro/pages/blogPostSections/sectionTextStyle.js";
 import NextImage from "next/image";
 import PageTopicSelector from "/components/page-topic-selector/PageTopicSelector.js";
+import Chapter13PlanPaymentEstimator from 'components/chapter13/Chapter13PlanPaymentEstimator';
 //import AzAreas from "/components/AzAreas/AzAreas.js";
 const LiteYouTubeEmbed = dynamic(
   () =>
@@ -243,15 +244,10 @@ export default function Chapter13Az() {
 </ul>
 </div>
 
-<h2 className={classes.title}>What Is Chapter 13 Bankruptcy?</h2>
+<h2 className={classes.title}>What Is a Chapter 13 Bankruptcy Payment Plan?</h2>
 
 <p>
-  Chapter 13 is a type of bankruptcy that lets people with <strong>regular income</strong>{" "}
-  reorganize debt through a <strong>court-approved repayment plan</strong>. In plain
-  terms: instead of trying to juggle five different creditors and past-due notices,
-  you propose one structured plan that tells the court (and your creditors) how you’ll
-  handle your debts over time—usually while working to keep important property like
-  a home or car.
+  A chapter 13 bankruptcy payment plan is a 3 to 5 year plan that filers propose to the bankruptcy court to repay their debts. The plan is designed to be a realistic, structured way to catch up on important bills, protect assets, and create a clear monthly payment structure. The exact details of the plan depend on your income, expenses, debts, and goals—but the core idea is that you make one monthly payment to a chapter 13 trustee, who then distributes the funds to creditors according to the plan’s terms.
 </p>
 
 <p>
@@ -263,15 +259,19 @@ export default function Chapter13Az() {
   part, and if you successfully complete the plan, some remaining eligible balances
   can be discharged.
 </p>
+<h2 className={classes.title}>How Much Will I Have to Pay in My Chapter 13 Payment Plan?</h2>
 
 <p>
   Your monthly plan payment is typically based on what you can realistically afford
-  after reasonable living expenses—sometimes described as “disposable income.”
-  This is one reason it can be helpful to speak with an{" "}
-  <strong>Arizona chapter 13 bankruptcy attorney</strong>: building a plan is less
-  about “perfect math” and more about creating a payment structure you can actually
-  sustain for three to five years.
+  after reasonable living expenses—sometimes described as “disposable income.” We've created a free <Link
+    href="/chapter-13-plan-payment-calculator"
+    prefetch={false}
+    style={{ color: "#0656d3", textDecoration: "underline" }}
+  >
+    chapter 13 plan payment calculator
+  </Link> to help you estimate what your payment might look like based on your goals, income, expenses, and debts. Please feel free to use the calculator below as a starting point for understanding how your financial situation could translate into a chapter 13 plan payment.
 </p>
+<Chapter13PlanPaymentEstimator />
 
 <h2 className={classes.title}>When Chapter 13 Is a Good Fit in Arizona</h2>
 
