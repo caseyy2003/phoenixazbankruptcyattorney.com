@@ -165,6 +165,13 @@ export default function HeaderLinks(props) {
           >
            Chapter 7 Means Test Calculator
         </Link>,
+        <Link
+        href="/chapter-13-plan-payment-calculator"
+        key="Chapter 13 Plan Payment Calculator"
+        className={classes.dropdownLink}
+       >
+        Chapter 13 Plan Payment Calculator
+     </Link>,
           ]}
         />
       </ListItem>

@@ -133,8 +133,7 @@ const orgSchema = {
     "@type": "ImageObject",
     "url": `${SITE_URL}/logo.svg`,
     "contentUrl": `${SITE_URL}/logo.svg`,
-    "width": 512,
-    "height": 512,
+
   },
   "address": {
     "@type": "PostalAddress",
@@ -228,7 +227,7 @@ export default function MeansTestCalculatorPage() {
         srcJpg: HERO_JPG,
         width: 900,
         height: 600,
-        alt: "Wide hero image introducing Chapter 7 bankruptcy in Arizona, branded for Arizona Bankruptcy Lawyers at Yontz Law, PLLC.",
+        alt: "Wide hero image introducing the Chapter 7 means test calculator, branded for Arizona Bankruptcy Lawyers at Yontz Law, PLLC.",
         priority: true,
         cta: <HeroCtaWithLogo />,
       }}

@@ -210,8 +210,7 @@ const orgSchema = {
     "@type": "ImageObject",
     "url": `${SITE_URL}/logo.svg`,
     "contentUrl": `${SITE_URL}/logo.svg`,
-    "width": 512,
-    "height": 512,
+
   },
   "address": {
     "@type": "PostalAddress",
