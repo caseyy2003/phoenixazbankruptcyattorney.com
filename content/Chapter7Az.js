@@ -913,7 +913,7 @@ export default function Chapter7Az() {
     These figures reflect <em>chapter 7 bankruptcy Arizona income limits</em> effective for cases filed on or after{" "}
     <strong>April 1, 2026</strong>, based on the U.S. Trustee Program’s median income table. These numbers are updated periodically, so always verify the most recent table here:{" "}
     <Link
-      href="https://www.justice.gov/ust/eo/bapcpa/20251101/bci_data/median_income_table.htm"
+      href="https://www.justice.gov/ust/eo/bapcpa/20260401/bci_data/median_income_table.htm"
       target="_blank"
       rel="noopener noreferrer nofollow"
       style={{ color: "#0656d3", textDecoration: "underline" }}
