@@ -154,7 +154,7 @@ export default function ArizonaBankrutpcyExemptions() {
     </div>
     <div>
       <time dateTime="2025-01-10" itemProp="dateModified">
-        Last updated: January 10, 2026
+        Last updated: April 29, 2026
       </time>
     </div>
     <div style={{ marginTop: "0.5rem" }}>
@@ -208,7 +208,7 @@ Quick reference only. Exemption amounts and rules can change, and outcomes depen
   <li style={{ marginBottom: 10 }}>
     <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
     <strong>Homestead (primary residence):</strong> Arizona protects significant home equity (commonly referenced up to{" "}
-    <strong>$425,000</strong>){" "}
+    <strong>$437,600</strong>){" "}
     (<a href="https://www.azleg.gov/ars/33/01101.htm" target="_blank" rel="nofollow noopener">A.R.S. § 33-1101</a>). Federal law can cap certain newly acquired equity in some cases (the “1,215-day rule”){" "}
     (<a href="https://www.law.cornell.edu/uscode/text/11/522#p" target="_blank" rel="nofollow noopener">11 U.S.C. § 522(p)</a>).
   </li>
@@ -216,7 +216,7 @@ Quick reference only. Exemption amounts and rules can change, and outcomes depen
   <li style={{ marginBottom: 10 }}>
     <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
     <strong>Vehicle:</strong> Arizona commonly protects vehicle equity (often referenced up to{" "}
-    <strong>$16,000</strong>, and higher if the debtor or a dependent is physically disabled){" "}
+    <strong>$16,500</strong>, and higher if the debtor or a dependent is physically disabled){" "}
     (<a href="https://www.azleg.gov/ars/33/01125.htm" target="_blank" rel="nofollow noopener">A.R.S. § 33-1125(8)</a>).
   </li>
 
@@ -398,7 +398,7 @@ For most people, qualification is about <strong>domicile and timing</strong>, no
           className={classes.td}
           style={{ verticalAlign: "top", whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" }}
         >
-          Up to <strong>$425,200</strong> equity (current adjusted amount; adjusted annually)
+          Up to <strong>$437,600</strong> equity (current adjusted amount; adjusted annually)
         </td>
 
         <td
@@ -433,7 +433,7 @@ For most people, qualification is about <strong>domicile and timing</strong>, no
     </a>
   </em>
 </p>
-
+<p>You may see different figures reported for the Arizona homestead exemption. The amount listed above starts with the statutory $400,000 base amount and applies Arizona’s CPI adjustment formula. Under that rule, the exemption is adjusted using the August-over-August change in the BLS CPI-U for the U.S. city average, all items, and then rounded up to the nearest $100.</p>
 
 <h3 className={classes.title}>Motor Vehicle</h3>
 <p style={{ marginTop: 0, color: "#555" }}>
@@ -473,9 +473,9 @@ For most people, qualification is about <strong>domicile and timing</strong>, no
           className={classes.td}
           style={{ verticalAlign: "top", whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" }}
         >
-          <strong>Individual filers:</strong> Up to <strong>$16,000</strong> in equity
+          <strong>Individual filers:</strong> Up to <strong>$16,500</strong> in equity
           <br />
-          <strong>Filers with disabilities:</strong> Up to <strong>$26,700</strong> in equity if the debtor or a dependent has a
+          <strong>Filers with disabilities:</strong> Up to <strong>$27,500</strong> in equity if the debtor or a dependent has a
           physical disability and the vehicle is <strong>specially equipped</strong>
         </td>
 
@@ -698,7 +698,7 @@ For most people, qualification is about <strong>domicile and timing</strong>, no
           Cash held in a single account at any one financial institution
         </td>
         <td className={classes.td} style={{ verticalAlign: "top", whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" }}>
-          Up to <strong>$5,200</strong> in one account (current adjusted amount; adjusted annually)
+          Up to <strong>$5,600</strong> in one account (current adjusted amount; adjusted annually)
         </td>
         <td className={classes.td} style={{ verticalAlign: "top", whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" }}>
           A.R.S. § 33-1126(A)(9)

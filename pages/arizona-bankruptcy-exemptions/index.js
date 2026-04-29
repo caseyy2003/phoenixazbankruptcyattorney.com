@@ -19,7 +19,7 @@ const HERO_WEBP = "/img/bankruptcy-technical-topic.webp";
 const HERO_JPG = "/img/bankruptcy-technical-topic.jpg";
 
 const PUBLISHED_ISO = "2026-01-10T00:00:00-07:00";
-const MODIFIED_ISO = "2026-01-10T00:00:00-07:00";
+const MODIFIED_ISO = "2026-04-29T00:00:00-07:00";
 
 const OPT_OUT_WEBP = "/img/arizona-opt-out-federal-bankruptcy-exemptions-arizona-state-flag.webp";
 const OPT_OUT_ID = `${PAGE_URL}#img-arizona-opt-out-federal-exemptions`;
