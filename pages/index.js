@@ -218,7 +218,7 @@ export default function PhoenixHome() {
         priority: true,
         sizes: "(max-width: 768px) 100vw, 1200px",
         quality: 60,
-        useBg: true,
+        useBg: false,
         cta: <HomepageHero />,
       }}
       
