@@ -18,6 +18,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     width: "100%",
     textAlign: "left",
+    "@media (min-width: 960px) and (max-height: 700px)": {
+      gridTemplateColumns: "minmax(0, 1fr) 250px",
+      columnGap: theme.spacing(3),
+    },
     [theme.breakpoints.down("sm")]: {
       gridTemplateColumns: "76px minmax(0, 1fr)",
       gridTemplateAreas: `
@@ -38,6 +42,11 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 700,
     lineHeight: 1.08,
     textShadow: "0 2px 18px rgba(0, 0, 0, 0.35)",
+    "@media (min-width: 960px) and (max-height: 700px)": {
+      marginBottom: 8,
+      fontSize: "2.85rem",
+      lineHeight: 1.04,
+    },
     [theme.breakpoints.down("sm")]: {
       marginBottom: 2,
       fontSize: "clamp(2rem, 10vw, 2.65rem)",
@@ -46,6 +55,9 @@ const useStyles = makeStyles((theme) => ({
   attorney: {
     gridArea: "attorney",
     margin: "0 0 14px",
+    "@media (min-width: 960px) and (max-height: 700px)": {
+      marginBottom: 8,
+    },
     [theme.breakpoints.down("sm")]: {
       alignSelf: "center",
       margin: 0,
@@ -57,6 +69,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.15rem",
     fontWeight: 700,
     lineHeight: 1.3,
+    "@media (min-width: 960px) and (max-height: 700px)": {
+      fontSize: "1.05rem",
+    },
   },
   experience: {
     display: "block",
@@ -65,6 +80,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "0.95rem",
     fontWeight: 600,
     lineHeight: 1.35,
+    "@media (min-width: 960px) and (max-height: 700px)": {
+      fontSize: "0.9rem",
+    },
   },
   summary: {
     gridArea: "summary",
@@ -73,6 +91,11 @@ const useStyles = makeStyles((theme) => ({
     color: "#f5f7fa",
     fontSize: "1.05rem",
     lineHeight: 1.65,
+    "@media (min-width: 960px) and (max-height: 700px)": {
+      marginBottom: 10,
+      fontSize: "0.98rem",
+      lineHeight: 1.45,
+    },
     [theme.breakpoints.down("sm")]: {
       margin: "2px 0 4px",
       fontSize: "0.98rem",
@@ -84,6 +107,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     gap: theme.spacing(2),
+    "@media (min-width: 960px) and (max-height: 700px)": {
+      gap: theme.spacing(1.5),
+    },
     [theme.breakpoints.down("sm")]: {
       alignItems: "stretch",
       flexDirection: "column",
@@ -129,6 +155,9 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 18,
     background: "#171717",
     boxShadow: "0 18px 45px rgba(0, 0, 0, 0.35)",
+    "@media (min-width: 960px) and (max-height: 700px)": {
+      width: 250,
+    },
     [theme.breakpoints.down("sm")]: {
       justifySelf: "start",
       width: 76,
@@ -184,7 +213,7 @@ export default function HomepageHero() {
           width={512}
           height={512}
           priority
-          sizes="(max-width: 959px) 76px, 300px"
+          sizes="(max-width: 959px) 76px, (max-height: 700px) 250px, 300px"
           className={classes.portraitImage}
         />
       </div>
