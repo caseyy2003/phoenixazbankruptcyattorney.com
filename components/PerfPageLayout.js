@@ -62,6 +62,7 @@ export default function PerfPageLayout({
   title,
   description,
   canonical,
+  contentOverlap = true,
   hero = {
     srcWebp: "",
     srcJpg: "",
@@ -174,7 +175,11 @@ export default function PerfPageLayout({
       </section>
 
       {/* Main body */}
-      <div className={classNames(classes.main, classes.mainRaised, classes.contentLift)}>
+      <div
+        className={classNames(classes.main, classes.mainRaised, {
+          [classes.contentLift]: contentOverlap,
+        })}
+      >
         <div className={classes.container}>{children}</div>
       </div>
 

@@ -115,7 +115,6 @@ export default function HomePage() {
           
 
 
-<h1 className={classes.title}>Bankruptcy Lawyers in Phoenix, AZ</h1>
 
 <div
   style={{
