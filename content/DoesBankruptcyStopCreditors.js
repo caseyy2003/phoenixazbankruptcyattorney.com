@@ -265,7 +265,12 @@ export default function DoesBankruptcyStopCreditors() {
 <h3 className={classes.title}>Wage Garnishments</h3>
 
 <p>
-  Wage garnishment is especially stressful because it hits your paycheck
+<Link
+    href="/how-to-stop-wage-garnishment-in-arizona"
+    style={{ color: "#0656d3", textDecoration: "underline" }}
+  >
+    Wage garnishment
+  </Link> is especially stressful because it hits your paycheck
   directly. Bankruptcy can stop many garnishments going forward. If money has
   already been taken from your check or bank account, the timing and details
   matter, so it’s important to review your situation quickly.
