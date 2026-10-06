@@ -499,7 +499,10 @@ export default function ArizonaBkLaws() {
 </h3>
 
 <p>
-  In many cases, filing bankruptcy triggers an “automatic stay” that generally pauses most collection actions, including many lawsuits and garnishments. There are exceptions, and timing can matter if a creditor is already taking active enforcement steps. If you’re facing an urgent garnishment or court date, getting advice quickly is important.
+  In many cases, filing bankruptcy triggers an “automatic stay” that generally pauses most collection actions, including many lawsuits and <Link href="/how-to-stop-wage-garnishment-in-arizona" 
+   style={{ color: "#0656d3", textDecoration: "underline" }}className={classes.link}>
+    wage garnishments
+  </Link>. There are exceptions, and timing can matter if a creditor is already taking active enforcement steps. If you’re facing an urgent garnishment or court date, getting advice quickly is important.
 </p>
 
 <h3 className={classes.title}>

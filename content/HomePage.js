@@ -1007,8 +1007,12 @@ export default function HomePage() {
                   </h3>
 
                   <p className={classes.bodyCopy}>
-                    Bankruptcy&apos;s automatic stay can stop many wage
-                    garnishments after a case is filed, although exceptions
+                    The automatic stay can stop <Link
+                      href="/how-to-stop-wage-garnishment-in-arizona"
+                      className={classes.link}
+                    >
+                      wage garnishment
+                    </Link> after a case is filed, although exceptions
                     apply. Timing can matter when money is already being
                     withheld. Learn more about{" "}
                     <Link

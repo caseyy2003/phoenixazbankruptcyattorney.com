@@ -172,6 +172,13 @@ export default function HeaderLinks(props) {
        >
         Chapter 13 Plan Payment Calculator
      </Link>,
+     <Link
+     href="/how-to-stop-wage-garnishment-in-arizona"
+     key="How to Stop Wage garnishment in Arizona"
+     className={classes.dropdownLink}
+    >
+     How to Stop Wage Garnishment in Arizona
+  </Link>,
           ]}
         />
       </ListItem>

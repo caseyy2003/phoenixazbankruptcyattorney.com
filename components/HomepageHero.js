@@ -103,27 +103,50 @@ const useStyles = makeStyles((theme) => ({
   },
 
   phone: {
-    display: "inline-flex",
-    minHeight: 44,
-    alignItems: "center",
-    color: "#fff",
-    fontSize: "0.98rem",
-    fontWeight: 600,
+    color: "#182b3c",
+    fontWeight: 700,
     textDecoration: "underline",
-    textUnderlineOffset: 3,
-
-    "&:hover, &:focus-visible": {
-      color: "#f2cf7b",
+    textDecorationThickness: "1px",
+    textUnderlineOffset: 4,
+  
+    "&:hover": {
+      color: "#003a70",
+      textDecorationThickness: "2px",
     },
-
+  
     "&:focus-visible": {
-      outline: "3px solid #f2cf7b",
-      outlineOffset: 3,
+      outline: "3px solid #a97921",
+      outlineOffset: 4,
+      borderRadius: 1,
     },
-
-    [theme.breakpoints.down("sm")]: {
-      justifyContent: "center",
+  },
+  attorneyInsight: {
+    margin: "28px 0",
+    padding: "24px 28px",
+    borderLeft: "4px solid #a97921",
+    background: "#f8f7f3",
+    color: "#34434d",
+  
+    [theme.breakpoints.down("xs")]: {
+      padding: "20px 22px",
     },
+  },
+  
+  attorneyInsightLabel: {
+    margin: "0 0 10px",
+    color: "#856016",
+    fontSize: ".75rem",
+    fontWeight: 700,
+    letterSpacing: ".1em",
+    textTransform: "uppercase",
+  },
+  
+  attorneyInsightText: {
+    margin: 0,
+    color: "#2f3f49",
+    fontFamily: '"Roboto Slab", "Times New Roman", serif',
+    fontSize: "1.05rem",
+    lineHeight: 1.7,
   },
 
   summary: {

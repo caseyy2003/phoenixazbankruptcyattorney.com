@@ -472,7 +472,13 @@ export default function Chapter13Az() {
   <li style={{ marginBottom: 10 }}>
     <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>2.</span>
     <strong>The automatic stay starts:</strong> Most collection activity must stop once
-    the case is filed (calls, lawsuits, garnishments, foreclosure actions). Some obligations
+    the case is filed (calls, lawsuits, <Link
+    href="/how-to-stop-wage-garnishment-in-arizona"
+    prefetch={false}
+    style={{ color: "#0656d3", textDecoration: "underline" }}
+  >
+    garnishments 
+  </Link>, foreclosure actions). Some obligations
     can continue under the law, so it’s important to understand what the stay does—and
     doesn’t—cover in your situation.
   </li>

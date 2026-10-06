@@ -364,7 +364,12 @@ export default function Chapter7Az() {
       <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
       <strong>Stops most collection activity quickly:</strong> In most cases,
       filing triggers the “automatic stay,” which typically pauses collection
-      calls, lawsuits, garnishments, and many other collection actions while
+      calls, lawsuits, <Link
+    href="/how-to-stop-wage-garnishment-in-arizona"
+    style={{ color: "#0656d3", textDecoration: "underline" }}
+  >
+    garnishments
+  </Link>, and many other collection actions while
       your case is pending.
     </li>
     <li style={{ marginBottom: 10 }}>
