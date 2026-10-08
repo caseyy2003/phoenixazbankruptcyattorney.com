@@ -4,6 +4,7 @@ import React from "react";
 
 import LcpImagePreload from "components/LcpImagePreload";
 import JsonLd from "components/JsonLd";
+
 import PerfPageLayout from "components/PerfPageLayout";
 import Button from "components/CustomButtons/Button.js";
 
@@ -12,7 +13,7 @@ import AzAreas from "/components/AzAreas/AzAreas.js";
 
 const SITE_URL = "https://www.phoenixazbankruptcyattorney.com";
 const PAGE_URL =
-  "https://www.phoenixazbankruptcyattorney.com/how-to-stop-wage-garnishment-arizona";
+  "https://www.phoenixazbankruptcyattorney.com/how-to-stop-wage-garnishment-in-arizona";
 
 const PUBLISHED_ISO = "2026-10-05T00:00:00-07:00";
 const MODIFIED_ISO = "2026-10-05T00:00:00-07:00";
