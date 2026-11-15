@@ -7,6 +7,142 @@ import Button from "/components/CustomButtons/Button.js";
 import sectionTextStyle from "/styles/jss/nextjs-material-kit-pro/pages/blogPostSections/sectionTextStyle.js";
 import NextImage from "next/image";
 
+const additionalMedia = [
+  {
+    "outlet": "Realtor.com",
+    "title": "Nearly Half of Gen Z Admit Skipping Rent or Mortgages Just To Fund Holiday Spending",
+    "description": "Commentary on holiday spending, missed housing payments, credit card debt, and buy now, pay later borrowing.",
+    "links": [
+      {
+        "label": "Read on Realtor.com",
+        "url": "https://www.realtor.com/advice/finance/gen-z-skipping-rent-mortgages-to-fund-holiday-spending/"
+      },
+      {
+        "label": "Read republication on Yahoo Finance",
+        "url": "https://finance.yahoo.com/small-business/articles/nearly-half-gen-z-admit-222832492.html"
+      },
+      {
+        "label": "Related coverage on Daily Real Estate News",
+        "url": "https://mydailyrealestatenews.com/how-skipping-mortgage-payments-for-holiday-spending-became-a-costly-trap-for-gen-z/"
+      }
+    ]
+  },
+  {
+    "outlet": "The U.S. Sun",
+    "title": "Facing Foreclosure? How a No-Fee ‘Housing Counselor’ Can Help Save Your Home — but You Must Act Fast",
+    "description": "Commentary on seeking help when facing foreclosure.",
+    "links": [
+      {
+        "label": "Read on The U.S. Sun",
+        "url": "https://www.the-sun.com/money/17133941/foreclosure-hud-approved-housing-counselor-save-home/"
+      },
+      {
+        "label": "Related coverage on Capital Digest",
+        "url": "https://capitaldigest.com/homeowners-facing-foreclosure-can-get-free-help-from-hud-certified-counselors/"
+      }
+    ]
+  },
+  {
+    "outlet": "The U.S. Sun",
+    "title": "Foreclosures Jump 42% — Here's How To Protect Your Home if You Miss a Payment",
+    "description": "Commentary on missed mortgage payments and Chapter 13 bankruptcy.",
+    "links": [
+      {
+        "label": "Read on The U.S. Sun",
+        "url": "https://www.the-sun.com/money/17107484/foreclosure-rates-spike-expert-advice-missed-mortgage-payments/"
+      }
+    ]
+  },
+  {
+    "outlet": "Moneywise",
+    "title": "“The Original Debt Can Be Relatively Small,” Lawyers Warn After HOA Takes $449,328 Home Over $977",
+    "description": "Commentary on Arizona HOA foreclosure, payment plans, and homeowner protections.",
+    "links": [
+      {
+        "label": "Read on Moneywise",
+        "url": "https://moneywise.com/news/real-estate-news/hoa-foreclosure-home-unpaid-assessments-debt"
+      },
+      {
+        "label": "Read republication on AOL",
+        "url": "https://www.aol.com/articles/original-debt-relatively-small-lawyers-132000000.html"
+      }
+    ]
+  },
+  {
+    "outlet": "Debt.org",
+    "title": "What Happens After Filing for Bankruptcy?",
+    "description": "Commentary on Chapter 7 and Chapter 13, discharge, debtor education, credit, and legal representation.",
+    "links": [
+      {
+        "label": "Read on Debt.org",
+        "url": "https://www.debt.org/bankruptcy/what-happens-after-filing/"
+      }
+    ]
+  },
+  {
+    "outlet": "CuraDebt",
+    "title": "Debt Settlement Program: How It Works, Fees And Who It May Fit",
+    "description": "Featured as a bankruptcy attorney and founder of USBankruptcyHelp.com.",
+    "links": [
+      {
+        "label": "Read on CuraDebt",
+        "url": "https://www.curadebt.com/debt-settlement-program/"
+      }
+    ]
+  },
+  {
+    "outlet": "Better",
+    "title": "How Recent Bankruptcies Affect Mortgage Approval",
+    "description": "Commentary on mortgage eligibility after bankruptcy, underwriting, rebuilding credit, and active Chapter 13 cases.",
+    "links": [
+      {
+        "label": "Read on Better",
+        "url": "https://better.com/content/recent-bankruptcies-mortgage-approval"
+      }
+    ]
+  },
+  {
+    "outlet": "MoneyLion",
+    "title": "4 Things Most Americans Don't Know About Student Loans",
+    "description": "Quoted on student loan discharge in bankruptcy, differences between federal and private student loan protections, and the consequences of federal student loan default. The article was also syndicated by AOL.",
+    "links": [
+      {
+        "label": "Read on MoneyLion",
+        "url": "https://www.moneylion.com/trending/money/things-most-americans-dont-know-about-student-loans"
+      },
+      {
+        "label": "Read on AOL",
+        "url": "https://www.aol.com/articles/4-things-most-americans-dont-153008000.html"
+      }
+    ]
+  },
+  {
+    "outlet": "Yahoo Finance",
+    "title": "A Bankruptcy Attorney Explains Exactly When Creditors Can — and Can't — Garnish Your 401(k) to Collect Debts",
+    "description": "Featured as the bankruptcy attorney explaining when creditors can and cannot reach 401(k) retirement assets, including ERISA protections, judgment creditors, IRS collection, qualified domestic relations orders, and what can happen after funds are withdrawn. Yahoo Finance links directly to Casey Yontz's USBankruptcyHelp.com profile.",
+    "links": [
+      {
+        "label": "Read on Yahoo Finance",
+        "url": "https://finance.yahoo.com/markets/options/articles/bankruptcy-attorney-explains-exactly-creditors-093000489.html"
+      },
+      {
+        "label": "Additional Yahoo Finance edition",
+        "url": "https://finance.yahoo.com/markets/articles/bankruptcy-attorney-explains-exactly-creditors-121500208.html"
+      },
+      {
+        "label": "Read republication on AOL",
+        "url": "https://www.aol.com/articles/bankruptcy-attorney-explains-exactly-creditors-121500000.html"
+      }
+    ]
+  },
+  {
+    "outlet": "Moneywise",
+    "title": "I'm 45, Broke and Have More Than $50,000 in Debt — but My 401(k) Is Still Doing Well. Can Creditors Garnish It If I Can't Pay?",
+    "description": "Original Moneywise article featuring Casey Yontz's commentary on creditor protections for 401(k) retirement accounts, including ERISA protections, ordinary judgment creditors, IRS collection, qualified domestic relations orders, and what can happen after retirement funds are withdrawn.",
+    "url": "https://moneywise.com/managing-money/retirement-planning/401k-creditor-garnishment-debt-protection"
+  }
+];
+
 const useStyles = makeStyles((theme) => ({
   ...sectionTextStyle,
 
@@ -147,16 +283,22 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 0 11px",
   },
 
+  mediaLinks: {
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "10px 18px",
+  },
+
   mediaLink: {
     display: "inline-flex",
     alignItems: "center",
     gap: 5,
-    color: "#1a73e8",
+    color: "#0656d3",
     fontWeight: 600,
     textDecoration: "none",
 
-    "&:hover": {
-      color: "#1557b0",
+    "&:visited, &:hover, &:focus": {
+      color: "#0656d3",
       textDecoration: "underline",
       textUnderlineOffset: 2,
     },
@@ -436,6 +578,24 @@ export default function ArizonaBankrutpcyExemptions() {
                 </p>
 
                 <div className={classes.mediaGrid}>
+                  {additionalMedia.map((article) => (
+                    <div key={article.title} className={classes.mediaCard + " " + classes.mediaCardFeatured}>
+                      <div className={classes.mediaTopRow}>
+                        <p className={classes.mediaOutlet}>{article.outlet}</p>
+                        <span className={classes.mediaType}>Expert Commentary</span>
+                      </div>
+                      <p className={classes.mediaTitle}>{article.title}</p>
+                      <p className={classes.mediaDescription}>{article.description}</p>
+                      <div className={classes.mediaLinks}>
+                        {(article.links || [{ label: "Read on " + article.outlet, url: article.url }]).map((link) => (
+                          <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer" className={classes.mediaLink}>
+                            {link.label}<span aria-hidden="true">↗</span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+
                   <div
                     className={`${classes.mediaCard} ${classes.mediaCardFeatured}`}
                   >
@@ -476,6 +636,16 @@ export default function ArizonaBankrutpcyExemptions() {
                       className={classes.mediaLink}
                     >
                       Read the U.S. News article
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                    <a
+                      href="https://wtop.com/news/2026/08/student-loan-disability-discharge-heres-what-you-need-to-know/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={classes.mediaLink}
+                      style={{ marginLeft: 18 }}
+                    >
+                      Read republication on WTOP
                       <span aria-hidden="true">↗</span>
                     </a>
                   </div>
