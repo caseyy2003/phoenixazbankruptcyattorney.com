@@ -8,7 +8,7 @@ import Link from "next/link";
 //import BankruptcyQuizCta from "../components/BankruptcyQuizCta";
 //import dynamic from "next/dynamic";
 import NextImage from "next/image";
-
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import sectionTextStyle from "styles/jss/nextjs-material-kit-pro/pages/blogPostSections/sectionTextStyle.js";
 import MeansTestCalculator from "components/means-test/Chapter7MeansTestCalculator";
 
@@ -109,6 +109,31 @@ const useStyles = makeStyles((theme) => ({
     verticalAlign: 'top',
     color: '#333',
   },
+  meansTestSteps: {
+    margin: "24px 0",
+    padding: "4px 20px 4px 44px",
+    listStyleType: "decimal",
+    backgroundColor: "#f5f8fc",
+    border: "1px solid #d8e1ea",
+    borderRadius: 12,
+    color: "#333",
+    "& > li": {
+      padding: "14px 0 14px 4px",
+      lineHeight: 1.65,
+      "&::marker": {
+        color: "#0656d3",
+        fontWeight: 700,
+      },
+      "& + li": {
+        borderTop: "1px solid #d8e1ea",
+      },
+      "& > strong": {
+        display: "block",
+        marginBottom: 2,
+        color: "#17324d",
+      },
+    },
+  },
 }));
 
 export default function MeansTestCalculatorPageContent() {
@@ -154,8 +179,8 @@ export default function MeansTestCalculatorPageContent() {
       , Attorney (18+ years bankruptcy experience)
     </div>
     <div>
-      <time dateTime="2026-04-23" itemProp="dateModified">
-        Last updated: April 23, 2026
+      <time dateTime="2026-11-23" itemProp="dateModified">
+        Last updated: November 23, 2026
       </time>
     </div>
     <div style={{ marginTop: "0.5rem" }}>
@@ -174,62 +199,88 @@ export default function MeansTestCalculatorPageContent() {
 Chapter 7 Means Test Calculator
 </h1>
 
-<p>We created this chapter 7 means test calculator to help you estimate whether you may qualify for <Link
+<p>The Chapter 7  means test calculator below helps you estimate whether or not you your income could qualify for a discharge under <Link
         href="/chapter-7-bankruptcy-arizona"
         style={{ color: "#0656d3", textDecoration: "underline" }}
         prefetch={false}
       >
-        chapter 7 bankruptcy
-      </Link> based on the bankruptcy means test. You should use this as an educational tool only and not a final determination of whether or not you could pass the means test.</p>
+        Chapter 7 bankruptcy
+      </Link>.</p>
 
 
-
-
-<h2 className={classes.title}>How to Use the Chapter 7 Means Test Calculator</h2>
-
-<p>Simply answer the questions on the form and press continue as you move along. At the end of the test, you will see a final result with the following information:</p>
-<ul
-  style={{
-    listStyleType: "none",
-    padding: 0,
-    color: "#333",
-  }}
->
-<li style={{ marginBottom: 10 }}>
-    <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-    Whether or not you pass the means test based on your input
-  </li>
-  <li style={{ marginBottom: 10 }}>
-    <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-    Combined monthly income 
-  </li>
-
-  <li style={{ marginBottom: 10 }}>
-    <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-    Total monthly deductions (this number will include standard as well as actual deductions)
-  </li>
-  <li style={{ marginBottom: 10 }}>
-    <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-  Monthly disposable income
-  </li>
-  <li style={{ marginBottom: 10 }}>
-    <span aria-hidden="true" style={{ marginRight: "0.5ch" }}>•</span>
-  Projected 60 month disposable income (this figure is also useful for determining the amount needed to pay certain creditors in <Link
-        href="/chapter-13-bankruptcy-arizona"
-        style={{ color: "#0656d3", textDecoration: "underline" }}
-        prefetch={false}
-      >
-        chapter 13 bankruptcy
-      </Link>
-  </li>
-</ul>
-<p>The form also includes a button that lets you create a PDF of your results, which you can save or print for your records.</p>
-<MeansTestCalculator />
-
-<h2 className={classes.title}>More Means Test Help</h2>
+      <h2 className={classes.title}>
+  How to Use the Chapter 7 Means Test Calculator
+</h2>
 
 <p>
-  The test above will give you your median income results, but the{" "}
+Using the Chapter 7 Means Test Calculator is easy. The video and instructions below explain the steps and go through example cases.
+</p>
+
+<div
+  className={classes.videoItem}
+  style={{ position: "relative", aspectRatio: "16 / 9" }}
+>
+  <LiteYouTubeEmbed
+    id="Whmiyra5Qss"
+    title="How to Use the Chapter 7 Means Test Calculator"
+    poster="maxresdefault"
+    noCookie
+    adNetwork={false}
+    style={{
+      position: "absolute",
+      inset: 0,
+      width: "100%",
+      height: "100%",
+      borderRadius: 8,
+    }}
+  />
+</div>
+
+<ol className={classes.meansTestSteps}>
+  <li>
+    <strong>Enter your filing details.</strong>
+    Start by choosing the state your plan to file in, and whether you plan to file alone, or jointly with a spouse. Continue by answering the questions about housing, consumer debt and military service. Next, select the month you plan to file, and then click <b>Continue</b>.
+  </li>
+  <li>
+    <strong>Enter your average monthly income.</strong>
+    At the beginning of the next window (Step 2) enter your average gross monthly income for the months listed at the top of the calculator. Make sure you do not include income for  the month you wish to file. For example, someone wanting to file in December, would enter income form June 1, through November 30.
+  </li>
+  <li>
+    <strong>Calculate your median income. </strong>
+    Click <b>"Calculate Median Income Check"</b>, and the calculator will compare your income with the median for your state and household
+    size. If your results show you are below the median, click <b>See Result</b>. If you’re
+    above it, that doesn't mean your income can't qualify for Chapter 7 discharge. It just means more calculations are needed. Click <b>Continue</b>.
+  </li>
+  <li>
+  <strong>If you're above the median, continue filling out the remaning screens by entering your deductions and expenses.</strong>
+  Make sure to read each line item before entering an
+  amount, and don't count the same expense or deduction in more than one place. <b>No double dipping!</b>
+</li>
+<li>
+  <strong>Check any deduction you’re unsure about.</strong>
+  If you’re not sure what belongs on a line, check the instructions on{" "}
+  <a
+    href="https://www.uscourts.gov/sites/default/files/2025-04/b_122a-2_0425-form.pdf"
+    target="_blank"
+    rel="noreferrer noopener"
+    style={{ color: "#0656d3", textDecoration: "underline" }}
+  >
+    Official Form 122A-2
+  </a>
+  {" "}or consult a bankruptcy attorney.
+</li>
+</ol>
+
+<p>
+  Treat your results as an estimate. The results you get here don't determine whether or not you pass the means test.
+</p>
+
+<MeansTestCalculator />
+
+<h2 className={classes.title}>More Chapter 7 Means Test Help</h2>
+
+<p>
+  If you want to double check ythe median income limits in your state you you can review the{" "}
   <a
     href="https://www.justice.gov/ust/means-testing"
     target="_blank"
@@ -237,14 +288,14 @@ Chapter 7 Means Test Calculator
     style={{ color: "#0656d3", textDecoration: "underline" }}
   >
     U.S. Trustee median income tables
-  </a> are also a good place to check median income limits. The <a
+  </a>. The  <a
     href="https://www.uscourts.gov/forms-rules/forms/bankruptcy-forms"
     target="_blank"
     rel="noreferrer noopener"
     style={{ color: "#0656d3", textDecoration: "underline" }}
   >
     official means test forms
-  </a> are a great place to get descriptions and examples of expenses you may use in the means test. Not every expense is allowed, but the official forms and instructions can give you an idea of what you may be able to claim as a deduction in the means test. Also check out this <a
+  </a> are also available for review and are helpful for clarifying questions about deductions and expenses. Also check out this <a
     href="https://www.usbankruptcyhelp.com/means-test"
     target="_blank"
     rel="noreferrer noopener"

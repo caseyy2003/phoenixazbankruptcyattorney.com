@@ -15,7 +15,7 @@ const PRIMARY_IMAGE_ID = `${PAGE_URL}#hero-image`;
 const HERO_WEBP = "/img/bankruptcy-technical-topic.webp";
 const HERO_JPG = "/img/bankruptcy-technical-topic.jpg";
 const PUBLISHED_ISO = "2026-04-23T00:00:00-07:00";
-const MODIFIED_ISO = "2026-04-23T00:00:00-07:00";
+const MODIFIED_ISO = "2026-11-23T00:00:00-07:00";
 
 const YontzLawLogo = ({ width = 280 }) => (
   <svg
