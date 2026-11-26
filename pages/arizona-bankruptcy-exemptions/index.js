@@ -19,7 +19,7 @@ const HERO_WEBP = "/img/bankruptcy-technical-topic.webp";
 const HERO_JPG = "/img/bankruptcy-technical-topic.jpg";
 
 const PUBLISHED_ISO = "2026-01-10T00:00:00-07:00";
-const MODIFIED_ISO = "2026-04-29T00:00:00-07:00";
+const MODIFIED_ISO = "2026-11-25T00:00:00-07:00";
 
 const OPT_OUT_WEBP = "/img/arizona-opt-out-federal-bankruptcy-exemptions-arizona-state-flag.webp";
 const OPT_OUT_ID = `${PAGE_URL}#img-arizona-opt-out-federal-exemptions`;
@@ -148,51 +148,46 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "@id": `${PAGE_URL}#faq`,
-  "inLanguage": "en-US",
-  "mainEntity": [
+  inLanguage: "en-US",
+  mainEntity: [
     {
       "@type": "Question",
-      "name": "How long does a chapter 13 plan last?",
-      "acceptedAnswer": {
+      name: "Do exemptions mean I keep everything I own?",
+      acceptedAnswer: {
         "@type": "Answer",
-        "text":
-          "Plans are typically three to five years, and the required length often depends on income compared to the applicable median.",
+        text: "No. Exemptions protect specific property up to certain limits. If an item has non-exempt equity, that can create risk in Chapter 7 or affect plan payments in Chapter 13.",
       },
     },
     {
       "@type": "Question",
-      "name": "Can chapter 13 stop foreclosure in Arizona?",
-      "acceptedAnswer": {
+      name: "Can I choose the federal exemptions instead?",
+      acceptedAnswer: {
         "@type": "Answer",
-        "text":
-          "chapter 13 can stop foreclosure proceedings and may allow you to cure delinquent mortgage payments over time, as long as you keep up with the payments that come due during the plan.",
+        text: "Arizona is an opt-out state, so most Arizona filers use Arizona exemptions (A.R.S. § 33-1133). Recent movers may have a different outcome because of federal domicile rules.",
       },
     },
     {
       "@type": "Question",
-      "name": "Does a garnishment stop during a chapter 13 Arizona?",
-      "acceptedAnswer": {
+      name: "Does filing jointly double the homestead exemption?",
+      acceptedAnswer: {
         "@type": "Answer",
-        "text":
-          "In many cases, yes. Once a chapter 13 case is filed, the automatic stay generally stops most collection activity, including wage garnishments and bank garnishments. Exceptions exist and timing matters, so notify your attorney promptly if a garnishment is already in process. Some obligations, such as certain support-related collections, can follow different rules.",
+        text: "No. Arizona allows one homestead exemption per married couple. Filing together doesn't double the limit.",
       },
     },
     {
       "@type": "Question",
-      "name": "Do I need a minimum amount of debt to file?",
-      "acceptedAnswer": {
+      name: "What’s the biggest mistake people make with exemptions?",
+      acceptedAnswer: {
         "@type": "Answer",
-        "text":
-          "There’s no minimum debt requirement, but chapter 13 is usually most helpful when you need a court-backed structure to catch up on arrears, manage multiple debts, or protect assets while you repay over time.",
+        text: "The biggest practical mistake is usually a tie between (1) using the wrong exemption system because of recent relocation, and (2) poor valuations that create avoidable trustee scrutiny.",
       },
     },
     {
       "@type": "Question",
-      "name": "Where can I read the official basics?",
-      "acceptedAnswer": {
+      name: "How long do I need to live in Arizona to use Arizona exemptions?",
+      acceptedAnswer: {
         "@type": "Answer",
-        "text":
-          "The U.S. Courts publish an overview of chapter 13 basics on their website (search: “U.S. Courts Chapter 13 Bankruptcy Basics”).",
+        text: "Typically 730 days (2 years) before filing, under federal domicile rules (11 U.S.C. § 522(b)(3)(A)).",
       },
     },
   ],
@@ -289,7 +284,7 @@ const articleSchema = {
 
 
 
-export default function Chp13AZ() {
+export default function ArizonaBankruptcyExemptionsPage() {
   return (
     <PerfPageLayout
       title="Arizona Bankruptcy Exemptions | Yontz Law, PLLC"
